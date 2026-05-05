@@ -51,15 +51,6 @@ body {
 	z-index: 1;
 }
 
-.expand {
-	width: 40vw;
-}
-
-.expand-type,
-.expand-type a {
-	font-size: 18px;
-}
-
 .shrink {
 	width: auto;
 }
@@ -71,6 +62,26 @@ body {
 
     border: solid white 1px;
     overflow: hidden;
+}
+
+iframe {
+	height: 20vh;
+	width: calc(100vw / 8 - 1.25rem);
+
+}
+
+.expand {
+	width: 40vw;
+}
+
+.expand iframe {
+	height: 40vh;
+	width: calc(40vw - 0.25rem);
+}
+
+.expand-type,
+.expand-type a {
+	font-size: 18px;
 }
 
 
