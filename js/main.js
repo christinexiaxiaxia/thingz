@@ -9,6 +9,7 @@
 $('.shelf').hover(function(){
 	// $('.shelf').toggleClass('shrink');
 	$(this).toggleClass('expand');
+	$('.item', this).toggleClass('expand-type');
 })
 
 

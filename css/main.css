@@ -1,5 +1,9 @@
 /* STRUCTURE */
 
+* {
+	font-size: 12px;
+}
+
 body {
 	position: fixed;
 	top: 0;
@@ -19,7 +23,7 @@ body {
 
 	display: grid;
 	grid-template-rows: auto;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	align-items: center;
 }
 
@@ -49,6 +53,11 @@ body {
 
 .expand {
 	width: 40vw;
+}
+
+.expand-type,
+.expand-type a {
+	font-size: 18px;
 }
 
 .shrink {
