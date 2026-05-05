@@ -92,3 +92,9 @@ iframe {
 p {
 
 }
+
+
+/* CURSOR */
+a:hover {
+	cursor: alias;
+}
