@@ -61,7 +61,7 @@ body {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 
-    border: solid white 1px;
+    /*border: solid black 1px;*/
     overflow: hidden;
 }
 
@@ -69,6 +69,7 @@ iframe {
 	height: 20vh;
 	width: calc(100vw / 8 - 1.25rem);
 
+	border: solid black 1px;
 }
 
 .expand {
