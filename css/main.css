@@ -47,7 +47,7 @@ body {
 	padding: 0.5rem;
 
 	background: rgb(255,255,255);
-	outline: 1px dashed black;
+	border: 0.5px dashed black;
 
 	z-index: 1;
 }
