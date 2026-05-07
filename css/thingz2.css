@@ -17,8 +17,7 @@ body {
 	position: relative;
 	display: inline-block;
 	width: 100px; /* ADJUST THIS TO CHANGE THE TRACKING */
-	height: 350px; /* ADJUST THIS TO CHANGE THE LEADING */
-	margin: 15px;
+	height: 170px; /* ADJUST THIS TO CHANGE THE LEADING */
 }
 
 
@@ -42,6 +41,8 @@ body {
 
 /* MORE SPECIFIC DIMENSIONS + SHAPES */
 
+/* ROUNDED */
+
 .base-circ1 {
 	width: 100rem;
 	height: 100rem;
@@ -55,6 +56,49 @@ body {
 
 	border-radius: 40rem 40rem 0 0;
 }
+
+.base-semicirc2 {
+	width: 100rem;
+	height: 80rem;
+
+	border-radius: 40rem 0 0 40rem;
+}
+
+.base-semicirc3 {
+	width: 100rem;
+	height: 100rem;
+
+	border-radius: 50rem 50rem 0 0;
+}
+
+/* STICKS */
+
+.base-rectvert1 {
+	width: 20rem;
+	height: 125rem;
+}
+
+.base-rectvert2 {
+	width: 20rem;
+	height: 155rem;
+}
+
+.base-rectvert3 {
+	width: 20rem;
+	height: 95rem;
+}
+
+.base-rectvert4 {
+	width: 19rem;
+	height: 30rem;
+}
+
+.base-recthori1 {
+	width: 80rem;
+	height: 10rem;
+}
+
+/* COUNTERS */
 
 .counter-circ1 {
 	width: 80rem;
@@ -70,20 +114,291 @@ body {
 	border-radius: 40rem;
 }
 
+.counter-oval2 {
+	width: 120rem;
+	height: 60rem;
+
+	border-radius: 40rem;
+}
+
+.counter-semicirc1 {
+	width: 60rem;
+	height: 90rem;
+
+	border-radius: 40rem 40rem 0 0;
+}
+
+.counter-rect1 {
+	width: 50rem;
+	height: 40rem;
+}
+
 
 
 /* POSITIONING OF SHAPES FOR EACH LETTER */
 
+/* a */
+
+.letter.letter-a {
+	margin-left: 15rem;
+	margin-right: 35rem;
+}
+
+.base-circ1.letter-a {
+	top: 55rem;
+	left: 0rem;
+}
+
+.counter-oval1.letter-a {
+	top: 65rem;
+	left: 21rem;
+}
+
+.base-semicirc1.letter-a {
+	top: 125rem;
+	left: 88rem;
+	transform: rotate(180deg);
+}
+
+.base-rectvert4.letter-a {
+	top: 105rem;
+	left: 81rem;
+}
+
+/* b */
+
+.letter.letter-b {
+	margin-left: 15rem;
+	margin-right: 45rem;
+}
+
+.base-circ1.letter-b {
+	top: 55rem;
+	left: 48rem;
+}
+
+.counter-oval1.letter-b {
+	top: 65rem;
+	left: 69rem;
+}
+
+.base-semicirc1.letter-b {
+	top: 125rem;
+	left: 0rem;
+	transform: rotate(180deg);
+}
+
+.base-rectvert1.letter-b {
+	top: 0rem;
+	left: 48rem;
+}
+
+.base-semicirc1.letter-b2 {
+	top: 0rem;
+	left: 8rem;
+	transform: rotate(180deg);
+}
+
+/* d */
+
+.letter.letter-d {
+	margin-left: 15rem;
+	margin-right: 35rem;
+}
+
+.base-circ1.letter-d {
+	top: 55rem;
+	left: 0rem;
+}
+
+.counter-oval1.letter-d {
+	top: 65rem;
+	left: 21rem;
+}
+
+.base-semicirc1.letter-d {
+	top: 125rem;
+	left: 88rem;
+	transform: rotate(180deg);
+}
+
+.base-rectvert1.letter-d {
+	top: 0rem;
+	left: 81rem;
+}
+
+.base-semicirc1.letter-d2 {
+	top: 0rem;
+	left: 41rem;
+	transform: rotate(180deg);
+}
+
+/* e */
+
+.letter.letter-e {
+	margin-left: 15rem;
+	margin-right: 15rem;
+}
+
+.base-circ1.letter-e {
+	top: 55rem;
+}
+
+.counter-oval1.letter-e {
+	top: 65rem;
+	left: 21rem;
+}
+
+.base-recthori1.letter-e {
+	top: 95rem;
+	left: 5rem;
+}
+
+.counter-rect1.letter-e {
+	top: 105rem;
+	left: 50rem;
+}
+
+.base-recthori1.letter-e2 {
+	top: 145rem;
+	left: 30rem;
+
+	transform: scaleX(0.5);
+}
+
+/* f */
+
+.letter.letter-f {
+	margin-left: -25rem;
+	margin-right: 0rem;
+}
+
+.base-semicirc1.letter-f {
+	top: 185rem;
+	left: 0rem;
+	transform: rotate(180deg);
+}
+
+.base-rectvert2.letter-f {
+	top: 30rem;
+	left: 40rem;
+}
+
+.base-semicirc1.letter-f2 {
+	top: 0rem;
+	left: 40rem;
+}
+
+.base-recthori1.letter-f {
+	top: 55rem;
+	left: 40rem;
+
+	transform: scaleX(0.5);
+}
+
+/* g */
+
+.letter.letter-g {
+	margin-left: 5rem;
+	margin-right: 5rem;
+}
+
 .base-circ1.letter-g {
-	top: 25rem;
+	top: 55rem;
 }
 
 .base-semicirc1.letter-g {
-	top: 0;
+	top: 30rem;
 	left: 60rem;
 }
 
 .counter-oval1.letter-g {
-	top: 35rem;
+	top: 65rem;
+	left: 21rem;
+}
+
+.base-semicirc2.letter-g {
+	top: 150rem;
+	left: -5rem;
+}
+
+.counter-oval2.letter-g {
+	top: 160rem;
+	left: 15rem;
+}
+
+/* h */
+
+.letter.letter-h {
+	margin-left: 15rem;
+	margin-right: 65rem;
+}
+
+.base-semicirc3.letter-h {
+	top: 55rem;
+	left: 48rem;
+}
+
+.counter-semicirc1.letter-h {
+	top: 65rem;
+	left: 69rem;
+}
+
+.base-semicirc1.letter-h {
+	top: 125rem;
+	left: 0rem;
+}
+
+.base-rectvert2.letter-h {
+	top: 0rem;
+	left: 48rem;
+}
+
+.base-semicirc1.letter-h2 {
+	top: 0rem;
+	left: 8rem;
+	transform: rotate(180deg);
+}
+
+.base-semicirc1.letter-h3 {
+	top: 125rem;
+	left: 136rem;
+}
+
+/* i */
+
+.letter.letter-i {
+	margin-left: 15rem;
+	margin-right: 35rem;
+}
+.base-semicirc1.letter-i {
+	top: 125rem;
+	left: 52rem;
+}
+
+.base-rectvert3.letter-i {
+	top: 60rem;
+	left: 40rem;
+}
+
+.base-semicirc1.letter-i2 {
+	top: 60rem;
+	left: 0rem;
+	transform: rotate(180deg);
+}
+
+/* o */
+
+.letter.letter-o {
+	margin-left: 15rem;
+	margin-right: 15rem;
+}
+
+.base-circ1.letter-o {
+	top: 55rem;
+}
+
+.counter-oval1.letter-o {
+	top: 65rem;
 	left: 21rem;
 }
