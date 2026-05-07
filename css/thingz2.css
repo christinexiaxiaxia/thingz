@@ -10,7 +10,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;*/
-	/*background: red;*/
+	background: black;
 }
 
 .letter {
@@ -18,6 +18,7 @@ body {
 	display: inline-block;
 	width: 100px; /* ADJUST THIS TO CHANGE THE TRACKING */
 	height: 170px; /* ADJUST THIS TO CHANGE THE LEADING */
+	/*transform: skew(-15deg);*/
 }
 
 
@@ -29,12 +30,12 @@ body {
 }
 
 .base {
-	background-color: black;
+	background-color: white;
 	position: absolute;
 }
 
 .counter {
-	background-color: white;
+	background-color: black;
 	position: absolute;
 }
 
@@ -42,6 +43,13 @@ body {
 /* MORE SPECIFIC DIMENSIONS + SHAPES */
 
 /* ROUNDED */
+
+.base-oval1 {
+	width: 100rem;
+	height: 65rem;
+
+	border-radius: 50rem;
+}
 
 .base-circ1 {
 	width: 100rem;
@@ -71,6 +79,13 @@ body {
 	border-radius: 50rem 50rem 0 0;
 }
 
+.base-qrtrcirc1 {
+	width: 30rem;
+	height: 30rem;
+
+	border-radius: 40rem 0 0 0;
+}
+
 /* STICKS */
 
 .base-rectvert1 {
@@ -89,6 +104,11 @@ body {
 }
 
 .base-rectvert4 {
+	width: 19rem;
+	height: 35rem;
+}
+
+.base-rectvert5 {
 	width: 19rem;
 	height: 30rem;
 }
@@ -115,8 +135,8 @@ body {
 }
 
 .counter-oval2 {
-	width: 120rem;
-	height: 60rem;
+	width: 60rem;
+	height: 45rem;
 
 	border-radius: 40rem;
 }
@@ -160,7 +180,7 @@ body {
 	transform: rotate(180deg);
 }
 
-.base-rectvert4.letter-a {
+.base-rectvert5.letter-a {
 	top: 105rem;
 	left: 81rem;
 }
@@ -203,7 +223,7 @@ body {
 
 .letter.letter-d {
 	margin-left: 15rem;
-	margin-right: 35rem;
+	margin-right: 45rem;
 }
 
 .base-circ1.letter-d {
@@ -307,24 +327,24 @@ body {
 	top: 55rem;
 }
 
-.base-semicirc1.letter-g {
-	top: 30rem;
-	left: 60rem;
-}
-
 .counter-oval1.letter-g {
 	top: 65rem;
 	left: 21rem;
 }
 
-.base-semicirc2.letter-g {
+.base-semicirc1.letter-g {
+	top: 30rem;
+	left: 60rem;
+}
+
+.base-oval1.letter-g {
 	top: 150rem;
-	left: -5rem;
+	left: 0rem;
 }
 
 .counter-oval2.letter-g {
 	top: 160rem;
-	left: 15rem;
+	left: 20rem;
 }
 
 /* h */
@@ -363,28 +383,58 @@ body {
 .base-semicirc1.letter-h3 {
 	top: 125rem;
 	left: 136rem;
+	transform: rotate(180deg);
 }
 
 /* i */
 
 .letter.letter-i {
 	margin-left: 15rem;
-	margin-right: 35rem;
+	margin-right: 0rem;
 }
 .base-semicirc1.letter-i {
 	top: 125rem;
-	left: 52rem;
+	left: 41rem;
+	transform: rotate(180deg);
 }
 
-.base-rectvert3.letter-i {
-	top: 60rem;
-	left: 40rem;
+.base-rectvert4.letter-i {
+	top: 90rem;
+	left: 41rem;
 }
 
 .base-semicirc1.letter-i2 {
 	top: 60rem;
 	left: 0rem;
+}
+
+.base-qrtrcirc1.letter-i {
+	top: 10rem;
+	left: 30rem;
 	transform: rotate(180deg);
+}
+
+/* l */
+
+.letter.letter-l {
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
+.base-semicirc1.letter-l {
+	top: 125rem;
+	left: 40rem;
+	transform: rotate(180deg);
+}
+
+.base-rectvert3.letter-l {
+	top: 30rem;
+	left: 40rem;
+}
+
+.base-semicirc1.letter-l2 {
+	top: 0rem;
+	left: 0rem;
 }
 
 /* o */

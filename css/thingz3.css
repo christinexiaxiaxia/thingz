@@ -1,0 +1,38 @@
+.case {
+	position: fixed;
+	top: 0rem;
+	left: 0;
+	width: calc(100vw - 0rem);
+	height: calc(100vh + 0rem);
+	margin: 0rem 0rem 0rem 0rem;
+
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: top;
+}
+
+.plaque {
+	height: 100%;
+
+	grid-column: 1 / span 1;
+}
+
+.shelf {
+	height: 100%;
+
+	grid-column: 2 / span 3;
+
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: repeat(12, 1fr);
+	align-items: top;
+}
+
+.item {
+	height: 45vw;
+
+	grid-column: span 6;
+
+	/*background-color: black;*/
+}
