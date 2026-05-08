@@ -5,6 +5,20 @@
 	line-height: 13px;
 }
 
+::-webkit-scrollbar { /* WIDTH */
+	width: 0rem;
+	height: 0rem;
+}
+
+::-webkit-scrollbar-track { /* BACKGROUND */
+	background: white; 
+}
+
+::-webkit-scrollbar-thumb { /* HANDLE */
+	background: white; 
+	border: 0rem;
+}
+
 body {
 	position: fixed;
 	top: 0;
