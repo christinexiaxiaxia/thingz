@@ -46,38 +46,38 @@ body {
 	/*outline: 1px solid black;*/
 }
 
-.letter.a-lower {
+#a-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
 	padding-right: 0.5rem;
 }
 
-.letter.b-lower {
+#b-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
 	padding-left: 0.5rem;
 }
 
-.letter.c-lower {
+#c-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 }
 
-.letter.d-lower {
+#d-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
 	padding-left: 0.5rem;
 }
 
-.letter.e-lower {
+#e-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 }
 
-.letter.f-lower {
+#f-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 
@@ -85,7 +85,7 @@ body {
 	padding-right: 0.25rem;
 }
 
-.letter.g-lower-1 {
+#g-lower-1 {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
@@ -93,18 +93,18 @@ body {
 	padding-right: 1.25rem;
 }
 
-.letter.g-lower-2 {
+#g-lower-2 {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
 	padding-left: 1.25rem;}
 
-.letter.h-lower {
+#h-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 }
 
-.letter.i-lower {
+#i-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
@@ -112,7 +112,7 @@ body {
 	padding-right: 0.5rem;
 }
 
-.letter.j-lower {
+#j-lower {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
@@ -120,19 +120,19 @@ body {
 	padding-right: 0.25rem;
 }
 
-.letter.k-lower {
+#k-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
 	padding-right: 0.25rem;
 }
 
-.letter.l-lower {
+#l-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 }
 
-.letter.m-lower {
+#m-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
@@ -140,7 +140,7 @@ body {
 	padding-right: 0.5rem;
 }
 
-.letter.n-lower {
+#n-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
@@ -148,26 +148,26 @@ body {
 	padding-right: 0.5rem;
 }
 
-.letter.o-lower {
+#o-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 }
 
-.letter.p-lower {
+#p-lower {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
 	padding-left: 0.5rem;
 }
 
-.letter.q-lower {
+#q-lower {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
 	padding-right: 0.5rem;
 }
 
-.letter.r-lower {
+#r-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
@@ -175,19 +175,19 @@ body {
 	padding-right: 0.25rem;
 }
 
-.letter.s-lower-1 {
+#s-lower-1 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
 	padding-right: 0.5rem;
 }
 
-.letter.s-lower-2 {
+#s-lower-2 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 }
 
-.letter.t-lower {
+#t-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 
@@ -195,7 +195,7 @@ body {
 	padding-right: 0rem;
 }
 
-.letter.u-lower {
+#u-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
@@ -203,7 +203,7 @@ body {
 	padding-right: 0.5rem;
 }
 
-.letter.v-lower {
+#v-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
@@ -211,7 +211,7 @@ body {
 	padding-right: 0.75rem;
 }
 
-.letter.w-lower {
+#w-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
@@ -219,7 +219,7 @@ body {
 	padding-right: 0.5rem;
 }
 
-.letter.x-lower {
+#x-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
@@ -227,7 +227,7 @@ body {
 	padding-right: 0.5rem;
 }
 
-.letter.y-lower {
+#y-lower {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
@@ -235,7 +235,7 @@ body {
 	padding-right: 0.75rem;
 }
 
-.letter.z-lower {
+#z-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
