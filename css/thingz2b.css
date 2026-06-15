@@ -38,9 +38,10 @@ body {
 
 	width: auto;
 	padding: 1rem;
-	margin: 0;
+	margin: 0 0 -3rem 0;
 
 	background-color: white;
+	mix-blend-mode: multiply;
 
 	/*outline: 1px solid black;*/
 }
@@ -160,7 +161,7 @@ body {
 }
 
 .letter.q-lower {
-	grid-template-rows: repeat(9, 1rem);
+	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
 	padding-right: 0.5rem;
@@ -199,7 +200,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	padding-left: 0.5rem;
-	padding-right: 0.75rem;
+	padding-right: 0.5rem;
 }
 
 .letter.v-lower {
@@ -208,6 +209,38 @@ body {
 
 	padding-left: 0.5rem;
 	padding-right: 0.75rem;
+}
+
+.letter.w-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(9, 1rem);
+
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.letter.x-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(7, 1rem);
+
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.letter.y-lower {
+	grid-template-rows: repeat(12, 1rem);
+	grid-template-columns: repeat(7, 1rem);
+
+	padding-left: 0.5rem;
+	padding-right: 0.75rem;
+}
+
+.letter.z-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(6, 1rem);
+
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 
