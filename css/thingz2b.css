@@ -13,7 +13,7 @@ body {
 
 .blur {
 	/*filter: blur(0.5rem);*/
-	filter: blur(0.5rem) contrast(1000%) brightness(100%);
+	filter: blur(0.5rem) contrast(2000%) brightness(100%);
 }
 
 
@@ -226,7 +226,7 @@ body {
 .dot:hover {
 	width: 3.5rem;
 	height: 3.5rem;
-	background-color: red;
+	/*background-color: red;*/
 	z-index: 1000;
 }
 
