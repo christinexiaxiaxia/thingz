@@ -59,6 +59,23 @@ body {
 	padding-left: 0.5rem;
 }
 
+.letter.c-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+}
+
+.letter.d-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(6, 1rem);
+
+	padding-left: 0.5rem;
+}
+
+.letter.e-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+}
+
 .letter.f-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
@@ -71,13 +88,15 @@ body {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
+	padding-left: 1.25rem;
 	padding-right: 1.25rem;
 }
 
 .letter.g-lower-2 {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(5, 1rem);
-}
+
+	padding-left: 1.25rem;}
 
 .letter.h-lower {
 	grid-template-rows: repeat(9, 1rem);
@@ -89,7 +108,27 @@ body {
 	grid-template-columns: repeat(3, 1rem);
 
 	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.letter.j-lower {
+	grid-template-rows: repeat(12, 1rem);
+	grid-template-columns: repeat(3, 1rem);
+
+	padding-left: 0.75rem;
 	padding-right: 0.25rem;
+}
+
+.letter.k-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(7, 1rem);
+
+	padding-right: 0.25rem;
+}
+
+.letter.l-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(3, 1rem);
 }
 
 .letter.m-lower {
@@ -111,6 +150,20 @@ body {
 .letter.o-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
+}
+
+.letter.p-lower {
+	grid-template-rows: repeat(12, 1rem);
+	grid-template-columns: repeat(6, 1rem);
+
+	padding-left: 0.5rem;
+}
+
+.letter.q-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(6, 1rem);
+
+	padding-right: 0.5rem;
 }
 
 .letter.r-lower {
