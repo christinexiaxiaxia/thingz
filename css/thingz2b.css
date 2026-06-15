@@ -50,7 +50,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	padding-right: 0.5rem;
+	padding-right: 0.25rem;
 }
 
 #b-lower {
@@ -63,13 +63,15 @@ body {
 #c-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
+
+	padding-right: 0.75rem;
 }
 
 #d-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #e-lower {

@@ -12,14 +12,47 @@ var aLower = document.getElementById('a-lower'),
 
 aLowerClone.id = 'a-lower-clone';
 
+
+
+
+// TYPING LETTERS
+
 $('html').on('keypress', function (e) {
-    // console.log(e.keyCode);
 
-    // TYPING LETTERS
+    const keyID = [
+    	'#a-lower',
+    	'#b-lower',
+    	'#c-lower',
+    	'#d-lower',
+    	'#e-lower',
+    	'#f-lower',
+    	'#g-lower',
+    	'#h-lower',
+    	'#i-lower',
+    	'#j-lower',
+    	'#k-lower',
+    	'#l-lower',
+    	'#m-lower',
+    	'#n-lower',
+    	'#o-lower',
+    	'#p-lower',
+    	'#q-lower',
+    	'#r-lower',
+    	'#s-lower',
+    	'#t-lower',
+    	'#u-lower',
+    	'#v-lower',
+    	'#w-lower',
+    	'#x-lower',
+    	'#y-lower',
+    	'#z-lower'
+    ]
 
-    if (event.keyCode == 97) { // i have to make an array for the key codes and one for the ids, then create a loop so i don't have to brute force lol, i have to push myself to do this
-    	console.log(e.keyCode);
-    	$('#a-lower').clone().appendTo('.paper');
+    for (i = 0; i < 26; i++) {
+    	if (event.keyCode == i+97) {
+    		console.log(e.keyCode);
+    		$(keyID[i]).clone().appendTo('.paper');
+    	}
     }
 });
 
@@ -29,9 +62,10 @@ $('html').on('keypress', function (e) {
 
 // BACKSPACING
 
-$('html').keyup(function(e){
+$('html').keydown(function(e){
 	if (e.keyCode == 8) {
     	console.log("backspace");
     	$('.paper').children().last().remove();
 	}
 })  
+
