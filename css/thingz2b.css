@@ -6,6 +6,20 @@ body {
 	background-color: white;
 }
 
+
+
+
+/* SO I DON'T HAVE TO CONSTANTLY SQUINT */
+
+.blur {
+	filter: blur(0.5rem);
+	/*filter: blur(0.5rem) contrast(1000%) brightness(100%);*/
+}
+
+
+
+
+
 .paper {
 	position: fixed;
 	top: 0;
@@ -25,6 +39,8 @@ body {
 	width: auto;
 	padding: 1rem;
 	margin: 0;
+
+	background-color: white;
 
 	/*outline: 1px solid black;*/
 }
@@ -51,7 +67,12 @@ body {
 	padding-right: 0.5rem;
 }
 
-.letter.g-lower {
+.letter.g-lower-1 {
+	grid-template-rows: repeat(12, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+}
+
+.letter.g-lower-2 {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
@@ -76,7 +97,7 @@ body {
 	grid-template-columns: repeat(5, 1rem);
 
 	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	padding-right: 0.25rem;
 }
 
 .letter.u-lower {
@@ -154,8 +175,8 @@ body {
 }
 
 .dot:hover {
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 3.5rem;
+	height: 3.5rem;
 	background-color: red;
 	z-index: 1000;
 }
