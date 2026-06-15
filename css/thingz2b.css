@@ -4,6 +4,13 @@
 
 body {
 	background-color: white;
+
+	overflow: scroll;
+
+	margin-top: 0rem;
+	margin-left: 0rem;
+
+	transition-duration: 0.5s;
 }
 
 
@@ -14,9 +21,18 @@ body {
 .blur {
 	/*filter: blur(0.5rem);*/
 	filter: blur(0.5rem) contrast(2000%) brightness(100%);
+
+	margin-top: 0rem;
+	margin-left: 0rem;
+
+	transition-duration: 1.5s;
 }
 
 
+
+.hello-letter {
+	visibility: visible;
+}
 
 
 
@@ -25,7 +41,9 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: calc(9rem + 8 * 0.25rem + 2 * 1rem);
+	height: 100%;
+
+	padding: 2rem;
 }
 
 .letter {
@@ -46,60 +64,77 @@ body {
 	/*outline: 1px solid black;*/
 }
 
-#a-lower {
+/*#a-lower-1 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	padding-right: 0.25rem;
+	margin-right: 0.25rem;
+}*/
+
+#a-upper {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(8, 1rem);
+
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+#a-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+
+	margin-right: -0.75rem;
 }
 
 #b-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	padding-left: 0.5rem;
+	margin-left: -0.5rem;
 }
 
 #c-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	padding-right: 0.75rem;
+	margin-right: -0.75rem;
 }
 
 #d-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	padding-right: 0.5rem;
+	margin-right: -0.5rem;
 }
 
 #e-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
+
+	margin-right: -0.75rem;
 }
 
 #f-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 
-	padding-left: 0.75rem;
-	padding-right: 0.25rem;
+	margin-left: -0.5rem;
+	margin-right: -1rem;
 }
 
 #g-lower-1 {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
 }
 
-#g-lower-2 {
+#g-lower {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	padding-left: 1.25rem;}
+	margin-left: 0.25rem;}
 
 #h-lower {
 	grid-template-rows: repeat(9, 1rem);
@@ -110,23 +145,23 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 #j-lower {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
-	padding-left: 0.75rem;
-	padding-right: 0.25rem;
+	margin-left: -0.25rem;
+	margin-right: -0.75rem;
 }
 
 #k-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	padding-right: 0.25rem;
+	margin-right: -0.75rem;
 }
 
 #l-lower {
@@ -138,16 +173,16 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 #n-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 #o-lower {
@@ -159,32 +194,32 @@ body {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	padding-left: 0.5rem;
+	margin-left: -0.5rem;
 }
 
 #q-lower {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	padding-right: 0.5rem;
+	margin-right: -0.5rem;
 }
 
 #r-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.25rem;
+	margin-left: -0.5rem;
+	margin-right: -0.75rem;
 }
 
-#s-lower-1 {
+/*#s-lower-1 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	padding-right: 0.5rem;
-}
+	margin-right: 0.5rem;
+}*/
 
-#s-lower-2 {
+#s-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 }
@@ -193,56 +228,55 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 
-	padding-left: 0.25rem;
-	padding-right: 0rem;
+	margin-left: -0.75rem;
+	margin-right: -1rem;
 }
 
 #u-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 #v-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.75rem;
+	margin-left: -1.5rem;
+	margin-right: -1.75rem;
 }
 
 #w-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 #x-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
 }
 
 #y-lower {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.75rem;
+	margin-left: -1.5rem;
+	margin-right: -1.75rem;
 }
 
 #z-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	margin-right: -1.5rem;
 }
 
 

@@ -5,14 +5,25 @@ $('*').click(function(){
 })
 
 
+// SIZE JITTER ON MOUSE MOVE
+
+// function jitter(max) {
+// 	return Math.floor(Math.random() * max);
+// }
+
+// $('*').on("mousemove", function(event) {
+// 	var dotWidthJitter = jitter(2.5);
+// 	$('.dot', this).css({'width': dotWidthJitter + 'rem'})
+// } );
+
+
+
 // TYPING
 
 var aLower = document.getElementById('a-lower'),
 	aLowerClone = aLower.cloneNode(true);
 
 aLowerClone.id = 'a-lower-clone';
-
-
 
 
 // TYPING LETTERS
@@ -51,7 +62,7 @@ $('html').on('keypress', function (e) {
     for (i = 0; i < 26; i++) {
     	if (event.keyCode == i+97) {
     		console.log(e.keyCode);
-    		$(keyID[i]).clone().appendTo('.paper');
+    		$(keyID[i]).clone().appendTo('.paper').addClass('hello-letter');;
     	}
     }
 });
