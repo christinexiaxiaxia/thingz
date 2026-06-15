@@ -5,8 +5,6 @@
 body {
 	background-color: white;
 
-	overflow: scroll;
-
 	margin-top: 0rem;
 	margin-left: 0rem;
 
@@ -40,10 +38,12 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: calc(100% - 4rem);
-	height: calc(100% - 4rem);
+	width: calc(100vw - 4rem);
+	height: calc(100vh - 4rem);
 
 	padding: 2rem;
+
+	overflow: scroll;
 }
 
 .letter {
