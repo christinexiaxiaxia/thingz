@@ -61,27 +61,35 @@ body {
 
 .letter.f-lower {
 	grid-template-rows: repeat(9, 1rem);
-	grid-template-columns: repeat(5, 1rem);
+	grid-template-columns: repeat(4, 1rem);
 
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	padding-left: 0.75rem;
+	padding-right: 0.25rem;
 }
 
 .letter.g-lower-1 {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(5, 1rem);
+
+	padding-right: 1.25rem;
 }
 
 .letter.g-lower-2 {
 	grid-template-rows: repeat(12, 1rem);
-	grid-template-columns: repeat(6, 1rem);
-
-	padding-right: 0.5rem;
+	grid-template-columns: repeat(5, 1rem);
 }
 
 .letter.h-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
+}
+
+.letter.i-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(3, 1rem);
+
+	padding-left: 0.5rem;
+	padding-right: 0.25rem;
 }
 
 .letter.m-lower {
@@ -92,12 +100,45 @@ body {
 	padding-right: 0.5rem;
 }
 
+.letter.n-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(7, 1rem);
+
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.letter.o-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+}
+
 .letter.r-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
 	padding-left: 0.5rem;
 	padding-right: 0.25rem;
+}
+
+.letter.s-lower-1 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+
+	padding-right: 0.5rem;
+}
+
+.letter.s-lower-2 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(4, 1rem);
+}
+
+.letter.t-lower {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(4, 1rem);
+
+	padding-left: 0.75rem;
+	padding-right: 0rem;
 }
 
 .letter.u-lower {
