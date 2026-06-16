@@ -7,8 +7,21 @@ body {
 
 	margin-top: 0rem;
 	margin-left: 0rem;
+}
 
-	transition-duration: 0.5s;
+
+/* CURSOR */
+
+.cursor {
+	position: fixed;
+	width: 7rem;
+	height: 2rem;
+	padding: 0.85rem 0.5rem 0.15rem 0.5rem;
+
+	background-color: black;
+	color: white;
+	font-size: 1rem;
+	text-align: center;
 }
 
 
@@ -22,14 +35,16 @@ body {
 
 	margin-top: 0rem;
 	margin-left: 0rem;
-
-	/*transition-duration: 1.5s;*/
 }
 
 
 
 .hello-letter {
-	visibility: visible;
+	display: inline-grid;
+}
+
+.bye-letter {
+	display: none;
 }
 
 
@@ -44,11 +59,13 @@ body {
 	padding: 2rem;
 
 	overflow: scroll;
+
+	transition-duration: 2.5s;
 }
 
 .letter {
     position: relative;
-	display: inline-grid;
+	/*display: inline-grid;*/
 	grid-column-gap: 0.25rem;
 	grid-row-gap: 0.25rem;
 	align-items: center;
@@ -63,6 +80,11 @@ body {
 	mix-blend-mode: multiply;
 
 	/*outline: 1px solid black;*/
+}
+
+#space {
+	grid-template-rows: repeat(1, 1rem);
+	grid-template-columns: repeat(2, 1rem);
 }
 
 /*#a-lower-1 {
