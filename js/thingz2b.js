@@ -87,9 +87,9 @@ $('*').click(function(){
 
 $(document).ready(function(e){
     for (i = 0; i < 26; i++) {
-    	$(keyLower[i]).addClass('bye-letter');
-    	$(keyUpper[i]).addClass('bye-letter');
-    	$('#space').addClass('bye-letter');
+    	$(keyLower[i]+'.storage').addClass('bye-letter');
+    	$(keyUpper[i]+'.storage').addClass('bye-letter');
+    	$('#space'+'.storage').addClass('bye-letter');
     }
 })
 

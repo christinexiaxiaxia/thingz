@@ -47,6 +47,10 @@ body {
 	display: none;
 }
 
+.showcase {
+	display: inline-grid;
+}
+
 
 
 .paper {
@@ -63,9 +67,23 @@ body {
 	transition-duration: 2.5s;
 }
 
+
+.drawer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: calc(100vw - 4rem);
+	height: calc(100vh - 4rem);
+
+	padding: 2rem;
+
+	overflow: scroll;
+
+	transition-duration: 2.5s;
+}
+
 .letter {
     position: relative;
-	/*display: inline-grid;*/
 	grid-column-gap: 0.25rem;
 	grid-row-gap: 0.25rem;
 	align-items: center;
