@@ -58,9 +58,9 @@ const keyUpper = [
 
 
 
-$(document).mousemove(function(e){
-	$('.cursor').css({'top': e.clientY + 10, 'left': e.clientX + 10})
-})
+// $(document).mousemove(function(e){
+// 	$('.cursor').css({'top': e.clientY + 10, 'left': e.clientX + 10})
+// })
 
 
 

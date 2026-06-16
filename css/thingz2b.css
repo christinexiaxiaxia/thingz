@@ -80,6 +80,8 @@ body {
 	overflow: scroll;
 
 	transition-duration: 2.5s;
+
+	z-index: -1000;
 }
 
 .letter {
@@ -501,13 +503,8 @@ body {
 
 /* HOVER ANIMATION */
 
-@keyframes redhot {
-	0% {background-color: black;}
-	100% {background-color: red;}
-}
-
 .dot {
-	transition: 0.25s;
+	transition: 0.5s;
 }
 
 .dot:hover {
