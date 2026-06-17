@@ -68,6 +68,7 @@ const keyUpper = [
 
 $('*').click(function(){
 	$('.paper').toggleClass('blur');
+	$('.drawer').toggleClass('blur');
 })
 
 
