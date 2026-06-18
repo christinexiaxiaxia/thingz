@@ -305,7 +305,7 @@ body {
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: -0.25rem;
-	margin-right: 0rem;
+	margin-right: -0.25rem;
 }
 
 #m-upper {
