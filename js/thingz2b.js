@@ -67,8 +67,8 @@ const keyUpper = [
 // BLURRING
 
 $('*').click(function(){
-	$('.paper').toggleClass('blur');
-	$('.drawer').toggleClass('blur');
+	$('.showcase').toggleClass('blur');
+	$('.storage').toggleClass('blur');
 })
 
 
@@ -95,10 +95,14 @@ $(document).ready(function(e){
 })
 
 
+$(document).on('keypress', function() {
+	$('.drawer').css('opacity','0');
+})
+
 
 // TYPING LETTERS
 
-$(document).on('keypress', function (e) {
+$(document).on('keypress', function(e) {
 
     for (i = 0; i < 26; i++) {
     	if (event.keyCode == i+97) {
@@ -111,6 +115,7 @@ $(document).on('keypress', function (e) {
     		$(keyUpper[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
     	}
     }
+
 });
 
 

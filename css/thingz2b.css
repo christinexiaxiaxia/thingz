@@ -79,13 +79,14 @@ body {
 
 	overflow: scroll;
 
-	transition-duration: 2.5s;
+	/*transition-duration: 2.5s;*/
 
 	z-index: -1000;
 }
 
 .storage {
 	display: inline-grid; /*SWAP ALPHABET  TYPING*/
+	transition-duration: 2.5s;
 }
 
 .letter {
