@@ -38,6 +38,14 @@ body {
 	margin-left: 0rem;
 }
 
+.front {
+	z-index: 1000;
+}
+
+.back {
+	z-index: -1000;
+}
+
 
 
 .hello-letter {
@@ -68,7 +76,7 @@ body {
 }
 
 
-.drawer {
+.specimen {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -80,8 +88,6 @@ body {
 	overflow: scroll;
 
 	/*transition-duration: 2.5s;*/
-
-	z-index: -1000;
 }
 
 .storage {

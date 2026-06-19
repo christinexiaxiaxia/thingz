@@ -66,8 +66,9 @@ const keyUpper = [
 
 // BLURRING
 
-$('*').click(function(){
+$(document).click(function(){
 	$('.showcase').toggleClass('blur');
+	// $('.specimen').toggleClass('blur');
 	$('.storage').toggleClass('blur');
 })
 
@@ -95,8 +96,12 @@ $(document).ready(function(e){
 })
 
 
+
+// START TYPING MAKES SPECIMEN DISAPPEAR
+
 $(document).on('keypress', function() {
-	$('.drawer').css('opacity','0');
+	$('.specimen').css('opacity','0');
+	$('.specimen').addClass('back');
 })
 
 
