@@ -32,7 +32,7 @@ body {
 .blur {
 	/*filter: blur(0.5rem);*/
 	/*filter: blur(0.5rem) contrast(2000%) brightness(100%);*/
-	filter: blur(0.25rem) contrast(2000%) brightness(100%);
+	filter: blur(0.21rem) contrast(2000%) brightness(100%);
 
 	margin-top: 0rem;
 	margin-left: 0rem;
@@ -543,6 +543,186 @@ body {
 }
 
 
+
+#num-lining-3 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(6, 1rem);
+
+	margin-left: -0.25rem;
+	margin-right: 0rem;
+}
+
+#num-lining-4 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(8, 1rem);
+
+	margin-left: -1.75rem;
+	margin-right: -1.75rem;
+}
+
+#num-lining-5 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(6, 1rem);
+}
+
+#num-lining-6 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(6, 1rem);
+
+	margin-right: -0.5rem;
+}
+
+#num-lining-7 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(7, 1rem);
+
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+#num-lining-8 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(6, 1rem);
+}
+
+#num-lining-9 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(6, 1rem);
+
+	margin-left: -0.5rem;
+}
+
+
+
+#punc-period {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(1, 1rem);
+
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+#punc-comma {
+	grid-template-rows: repeat(12, 1rem);
+	grid-template-columns: repeat(2, 1rem);
+
+	margin-left: 0.5rem;
+	margin-right: -0.25rem;
+}
+
+#punc-colon {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(1, 1rem);
+
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+#punc-semicolon {
+	grid-template-rows: repeat(12, 1rem);
+	grid-template-columns: repeat(2, 1rem);
+
+	margin-left: 0.5rem;
+	margin-right: -0.25rem;
+}
+
+#punc-quote-left {
+	grid-template-rows: repeat(4, 1rem);
+	grid-template-columns: repeat(2, 1rem);
+
+	margin-left: -0.75rem;
+	margin-right: -0.25rem;
+}
+
+#punc-quote-right {
+	grid-template-rows: repeat(4, 1rem);
+	grid-template-columns: repeat(2, 1rem);
+
+	margin-left: -0.25rem;
+	margin-right: -0.75rem;
+}
+
+#punc-doublequote-left {
+	grid-template-rows: repeat(4, 1rem);
+	grid-template-columns: repeat(4, 1rem);
+
+	margin-left: -0.25rem;
+	margin-right: -0.25rem;
+}
+
+#punc-doublequote-right {
+	grid-template-rows: repeat(4, 1rem);
+	grid-template-columns: repeat(4, 1rem);
+
+	margin-left: -0.25rem;
+	margin-right: -0.25rem;
+}
+
+#punc-exclamation {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(3, 1rem);
+
+	margin-left: -0.25rem;
+	margin-right: -0.25rem;
+}
+
+#punc-question {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+
+	margin-left: -0.75rem;
+	margin-right: -0.25rem;
+}
+
+#punc-parentheses-left {
+	grid-template-rows: repeat(11, 1rem);
+	grid-template-columns: repeat(3, 1rem);
+
+	margin-left: 0.25rem;
+	margin-right: -0.5rem;
+	transform: translateY(-1rem);
+}
+
+#punc-parentheses-right {
+	grid-template-rows: repeat(11, 1rem);
+	grid-template-columns: repeat(3, 1rem);
+
+	margin-left: -0.5rem;
+	margin-right: 0.25rem;
+	transform: translateY(-1rem);
+}
+
+#punc-ampersand {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(9, 1rem);
+
+	margin-right: -1.5rem;
+}
+
+#punc-ampersand-alt1 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(9, 1rem);
+
+	margin-right: -1.5rem;
+}
+
+#punc-asterisk {
+	grid-template-rows: repeat(2, 1rem);
+	grid-template-columns: repeat(2, 1rem);
+
+	margin-left: -0.25rem;
+	margin-right: -0.25rem;
+}
+
+#punc-atsymbol {
+	grid-template-rows: repeat(11, 1rem);
+	grid-template-columns: repeat(11, 1rem);
+
+	transform: translateY(-1rem);
+}
+
+
+
 /* DOTS */
 
 .empty {
@@ -612,6 +792,13 @@ body {
 
 .letter:hover {
 	/*display: inline-block;*/
+}
+
+
+
+input {
+	opacity: 0;
+	z-index: -1000;
 }
 
 
