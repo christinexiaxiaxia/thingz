@@ -67,6 +67,9 @@ body {
 
 	overflow: scroll;
 
+	background-color: black;
+	mix-blend-mode: screen;
+
 	transition-duration: 1.5s;
 }
 
@@ -87,12 +90,18 @@ body {
 
 	overflow: scroll;
 
+	background-color: black;
+	mix-blend-mode: screen;
+
 	/*transition-duration: 2.5s;*/
 }
 
 .storage {
 	display: inline-grid; /*SWAP ALPHABET  TYPING*/
 	transition-duration: 2.5s;
+	
+	background-color: black;
+	mix-blend-mode: screen;
 }
 
 .letter {
