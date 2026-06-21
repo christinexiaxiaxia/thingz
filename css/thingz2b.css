@@ -859,3 +859,10 @@ input {
 }
 
 
+
+@media only screen and (max-width: 740px) {
+	* {
+		font-size: 5px;
+	}
+}
+
