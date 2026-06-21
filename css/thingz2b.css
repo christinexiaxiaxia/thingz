@@ -580,7 +580,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(8, 1rem);
 
-	margin-left: -1.75rem;
+	margin-left: -1.25rem;
 	margin-right: -1.75rem;
 }
 
@@ -720,6 +720,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
+	margin-lef: 0.5rem;
 	margin-right: -1.5rem;
 }
 
