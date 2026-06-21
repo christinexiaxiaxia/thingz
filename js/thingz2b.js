@@ -147,16 +147,18 @@ $(document).click(function(){
 $(document).ready(function(e){
     $('.specimen').addClass('front');
     $('.paper').addClass('back');
-    for (i = 0; i < 26; i++) {
-    	$(keyLower[i]+'.storage').addClass('bye-letter');
-    	$(keyUpper[i]+'.storage').addClass('bye-letter');
-    	$('#space'+'.storage').addClass('bye-letter');
-    	$('.specimen').removeClass('front');
-    	$('.specimen').addClass('back');
-    }
 })
 
+// START TYPING MAKES SPECIMEN DISAPPEAR
 
+$(document).on('keypress', function() {
+	$('.specimen').css('opacity','0');
+	$('.specimen').removeClass('front');
+	$('.specimen').addClass('back');
+
+    $('.paper').removeClass('back');
+   	$('.paper').addClass('front');
+})
 
 
 
@@ -169,12 +171,7 @@ $(document).on('keypress', function(e) {
     console.log(e.keyCode);
 })
 
-// START TYPING MAKES SPECIMEN DISAPPEAR
 
-$(document).on('keypress', function() {
-	$('.specimen').css('opacity','0');
-	$('.specimen').addClass('back');
-})
 
 // KEYBOARD APPEARS ON MOBILE
 
