@@ -32,7 +32,7 @@ body {
 .blur {
 	/*filter: blur(0.5rem);*/
 	/*filter: blur(0.5rem) contrast(2000%) brightness(100%);*/
-	filter: blur(0.21rem) contrast(2000%) brightness(100%);
+	filter: blur(0.25rem) brightness(130%) contrast(5000%);
 
 	margin-top: 0rem;
 	margin-left: 0rem;
@@ -116,6 +116,20 @@ body {
 #space {
 	grid-template-rows: repeat(1, 1rem);
 	grid-template-columns: repeat(1, 1rem);
+
+    position: relative;
+	grid-column-gap: 0.25rem;
+	grid-row-gap: 0.25rem;
+	align-items: center;
+	justify-items: center;
+
+	width: auto;
+	height: calc(12rem + 0.25rem*11);
+	padding: 1rem;
+	margin: 0 0 -3rem 0;
+
+	background-color: black;
+	mix-blend-mode: screen;
 }
 
 /*#a-lower-1 {
@@ -137,7 +151,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	margin-right: -1rem;
+	margin-left: 0.25rem;
+	margin-right: -0.75rem;
 }
 
 #b-upper {
@@ -182,7 +197,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-right: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #e-upper {
@@ -241,7 +256,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(8, 1rem);
 
-	margin-left: -0.25rem;
+	margin-left: -0.5rem;
 	margin-right: -0.25rem;
 }
 
@@ -249,8 +264,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.25rem;
-	margin-right: -0.5rem;
+	margin-left: -0.75rem;
+	margin-right: -1rem;
 }
 
 #i-upper {
@@ -295,7 +310,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.25rem;
+	margin-left: -0.5rem;
 	margin-right: -0.75rem;
 }
 
@@ -327,8 +342,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
-	margin-left: -0.25rem;
-	margin-right: -0.75rem;
+	margin-left: -0.5rem;
+	margin-right: -1rem;
 }
 
 #n-upper {
@@ -343,7 +358,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.25rem;
+	margin-left: -0.5rem;
 	margin-right: -1rem;
 }
 
@@ -360,7 +375,7 @@ body {
 	grid-template-columns: repeat(5, 1rem);
 
 	margin-left: 0rem;
-	margin-right: -0.5rem;
+	margin-right: 0rem;
 }
 
 #p-upper {
@@ -404,7 +419,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	margin-left: -0.75rem;
+	margin-left: -0.5rem;
 	margin-right: -1.75rem;
 }
 
@@ -427,8 +442,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 
-	margin-left: -0.5rem;
-	margin-right: -0.5rem;
+	margin-left: -0.25rem;
+	margin-right: -0.25rem;
 }
 
 #t-upper {
@@ -444,7 +459,7 @@ body {
 	grid-template-columns: repeat(4, 1rem);
 
 	margin-left: -0.75rem;
-	margin-right: -1.5rem;
+	margin-right: -1.25rem;
 }
 
 #u-upper {
@@ -459,7 +474,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.5rem;
+	margin-left: -0.75rem;
 	margin-right: -1rem;
 }
 
@@ -524,7 +539,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -1rem;
-	margin-right: -1.75rem;
+	margin-right: -1.5rem;
 }
 
 #z-upper {
@@ -606,7 +621,7 @@ body {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(2, 1rem);
 
-	margin-left: 0.5rem;
+	margin-left: 0.25rem;
 	margin-right: -0.25rem;
 }
 
@@ -623,39 +638,39 @@ body {
 	grid-template-columns: repeat(2, 1rem);
 
 	margin-left: 0.5rem;
-	margin-right: -0.25rem;
+	margin-right: 0rem;
 }
 
 #punc-quote-left {
 	grid-template-rows: repeat(4, 1rem);
 	grid-template-columns: repeat(2, 1rem);
 
-	margin-left: -0.75rem;
-	margin-right: -0.25rem;
+	margin-left: -0.5rem;
+	margin-right: 0.25rem;
 }
 
 #punc-quote-right {
 	grid-template-rows: repeat(4, 1rem);
 	grid-template-columns: repeat(2, 1rem);
 
-	margin-left: -0.25rem;
-	margin-right: -0.75rem;
+	margin-left: 0.25rem;
+	margin-right: -0.5rem;
 }
 
 #punc-doublequote-left {
 	grid-template-rows: repeat(4, 1rem);
-	grid-template-columns: repeat(4, 1rem);
+	grid-template-columns: repeat(5, 1rem);
 
-	margin-left: -0.25rem;
-	margin-right: -0.25rem;
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
 }
 
 #punc-doublequote-right {
 	grid-template-rows: repeat(4, 1rem);
-	grid-template-columns: repeat(4, 1rem);
+	grid-template-columns: repeat(5, 1rem);
 
-	margin-left: -0.25rem;
-	margin-right: -0.25rem;
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
 }
 
 #punc-exclamation {
@@ -707,6 +722,14 @@ body {
 }
 
 #punc-asterisk {
+	grid-template-rows: repeat(3, 1rem);
+	grid-template-columns: repeat(3, 1rem);
+
+	margin-left: -0.25rem;
+	margin-right: -0.25rem;
+}
+
+#punc-asterisk-alt1 {
 	grid-template-rows: repeat(2, 1rem);
 	grid-template-columns: repeat(2, 1rem);
 

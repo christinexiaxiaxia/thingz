@@ -71,7 +71,7 @@ const numberLining = [
 
 const punctuationA = [
 	'#punc-exclamation', 		//33
-	'#punc-doublequote-right', 	//34
+	'', 	//34
 	'#punc-hashtag', 			//35
 	'#punc-dollar', 			//36
 	'#punc-percent', 			//37
@@ -109,6 +109,11 @@ const punctuationB = [
 	'#punc-emdash', //8212
 ]
 
+const quoteDouble = [
+	'#punc-doublequote-left',
+	'#punc-doublequote-right' 	//34
+]
+
 
 
 // $(document).mousemove(function(e){
@@ -140,10 +145,14 @@ $(document).click(function(){
 // VISIBILITY
 
 $(document).ready(function(e){
+    $('.specimen').addClass('front');
+    $('.paper').addClass('back');
     for (i = 0; i < 26; i++) {
     	$(keyLower[i]+'.storage').addClass('bye-letter');
     	$(keyUpper[i]+'.storage').addClass('bye-letter');
     	$('#space'+'.storage').addClass('bye-letter');
+    	$('.specimen').removeClass('front');
+    	$('.specimen').addClass('back');
     }
 })
 
@@ -174,7 +183,7 @@ $(document).on('keypress', function() {
 // })
 
 $(document).click(function(){
-    $('input').focus();
+    $('#mobilekeyboard').focus();
 })
 
 
@@ -213,9 +222,26 @@ $(document).on('keypress', function(e) {
     }
 });
 
+// TYPING QUOTES
+
+$(document).on('keypress', function(e) {
+    if (event.keyCode == 34) {
+    	console.log($('.letter:last').class);
+
+    	if (!$('.letter:last').class == '.space') {
+    		// console.log('previous character is a space')
+    		$(quoteDouble[0]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    	} 
+    	else {
+    		// console.log('previous character is a letter')
+    		$(quoteDouble[1]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    	}
+    }
+});
+
 // TYPING SPACE
 
-$('html').keydown(function(e){
+$(document).keydown(function(e){
 	if (e.keyCode == 32) {
     	$('#space').clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
 	}
