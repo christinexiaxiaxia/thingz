@@ -566,7 +566,21 @@ body {
 	margin-right: -1.5rem;
 }
 
+#num-lining-0 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(7, 1rem);
 
+	margin-left: 0rem;
+	margin-right: -0.75rem;
+}
+
+#num-lining-1 {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(3, 1rem);
+
+	margin-left: -0.25rem;
+	margin-right: -0.5rem;
+}
 
 #num-lining-3 {
 	grid-template-rows: repeat(9, 1rem);
