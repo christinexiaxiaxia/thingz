@@ -160,7 +160,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	margin-left: 0.25rem;
+	margin-left: -0.25rem;
 	margin-right: -0.75rem;
 }
 
@@ -206,6 +206,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
+	margin-left: -0.25rem;
 	margin-right: -0.5rem;
 }
 
@@ -220,7 +221,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	margin-right: -1rem;
+	margin-left: -0.25rem;
+	margin-right: -0.25rem;
 }
 
 #f-upper {
@@ -258,7 +260,7 @@ body {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: 0.25rem;
+	margin-left: 0rem;
 	margin-right: -1.25rem;
 }
 
@@ -274,8 +276,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.75rem;
-	margin-right: -0.5rem;
+	margin-left: -0.5rem;
+	margin-right: -0.75rem;
 }
 
 #i-upper {
@@ -289,7 +291,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
-	margin-left: -0.5rem;
+	margin-left: -0.75rem;
 	margin-right: -0.5rem;
 }
 
@@ -430,7 +432,7 @@ body {
 	grid-template-columns: repeat(5, 1rem);
 
 	margin-left: -0.75rem;
-	margin-right: -1.75rem;
+	margin-right: -1.5rem;
 }
 
 /*#s-lower-1 {
