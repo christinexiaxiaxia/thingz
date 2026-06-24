@@ -10,6 +10,8 @@ body {
 }
 
 
+
+
 /* CURSOR */
 
 .cursor {
@@ -40,13 +42,13 @@ body {
 
 .front {
 	z-index: 1000;
+	transition-duration: 2.5s;
 }
 
 .back {
 	z-index: -1000;
+	/*transition-duration: 2.5s;*/
 }
-
-
 
 .hello-letter {
 	display: inline-grid;
@@ -55,6 +57,9 @@ body {
 .bye-letter {
 	display: none;
 }
+
+
+
 
 .paper {
 	position: fixed;
@@ -69,8 +74,6 @@ body {
 
 	background-color: black;
 	mix-blend-mode: screen;
-
-	transition-duration: 1.5s;
 }
 
 .showcase {
@@ -92,20 +95,20 @@ body {
 
 	background-color: black;
 	mix-blend-mode: screen;
-
-	/*transition-duration: 2.5s;*/
 }
 
 .storage {
 	display: inline-grid; /*SWAP ALPHABET  TYPING*/
-	transition-duration: 2.5s;
 
 	background-color: black;
 	mix-blend-mode: screen;
 }
 
+
+
+
+
 .letter {
-    position: relative;
 	grid-column-gap: 0.25rem;
 	grid-row-gap: 0.25rem;
 	align-items: center;
@@ -113,10 +116,12 @@ body {
 
 	width: auto;
 	height: calc(12rem + 0.25rem*11);
-	padding: 1rem;
+	padding: 1rem; /* DISPLAY */
+	/*padding: 1.25rem;*/ /* PARAGRAPH */
 	margin: 0 0 -3rem 0;
 
 	background-color: black;
+	/*background-color: red;*/
 	mix-blend-mode: screen;
 
 	/*outline: 1px solid black;*/
@@ -160,7 +165,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	margin-left: -0.25rem;
+	margin-left: 0rem;
 	margin-right: -0.75rem;
 }
 
@@ -191,6 +196,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
+	margin-left: 0rem;
 	margin-right: -0.75rem;
 }
 
@@ -206,7 +212,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.25rem;
+	margin-left: 0rem;
 	margin-right: -0.5rem;
 }
 
@@ -215,14 +221,15 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -0.25rem;
+	margin-right: -0.25rem;
 }
 
 #e-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	margin-left: -0.25rem;
-	margin-right: -0.25rem;
+	margin-left: 0rem;
+	margin-right: -1rem;
 }
 
 #f-upper {
@@ -277,7 +284,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -0.75rem;
+	margin-right: -0.5rem;
 }
 
 #i-upper {
@@ -285,6 +292,7 @@ body {
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: -0.5rem;
+	margin-right: -0.25rem;
 }
 
 #i-lower {
@@ -299,14 +307,15 @@ body {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 
-	margin-left: -1.5rem;
+	margin-left: -1.75rem;
+	margin-right: -0.25rem;
 }
 
 #j-lower {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
-	margin-left: -0.5rem;
+	margin-left: -0.75rem;
 	margin-right: -0.75rem;
 }
 
@@ -331,7 +340,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -0.75rem;
+	margin-right: -1.25rem;
 }
 
 #l-lower {
@@ -379,15 +388,15 @@ body {
 	grid-template-columns: repeat(8, 1rem);
 
 	margin-left: 0.25rem;
-	margin-right: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #o-lower {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	margin-left: 0rem;
-	margin-right: 0rem;
+	margin-left: -0.25rem;
+	margin-right: -0.25rem;
 }
 
 #p-upper {
@@ -416,6 +425,7 @@ body {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
+	margin-left: 0rem;
 	margin-right: -0.75rem;
 }
 
@@ -454,7 +464,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 
-	margin-left: -0.25rem;
+	margin-left: -0.5rem;
 	margin-right: -0.25rem;
 }
 
@@ -462,7 +472,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.75rem;
+	margin-left: -1.25rem;
 	margin-right: -1rem;
 }
 
@@ -470,15 +480,15 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 
-	margin-left: -1rem;
-	margin-right: -1.25rem;
+	margin-left: -0.75rem;
+	margin-right: -1rem;
 }
 
 #u-upper {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(8, 1rem);
 
-	margin-left: -0.25rem;
+	margin-left: -0.5rem;
 	margin-right: -1rem;
 }
 
@@ -494,8 +504,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
-	margin-left: -1rem;
-	margin-right: -1rem;
+	margin-left: -1.25rem;
+	margin-right: -1.25rem;
 }
 
 #v-lower {
@@ -727,8 +737,32 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	margin-left: -0.75rem;
+	margin-left: -1rem;
 	margin-right: -0.25rem;
+}
+
+#punc-hyphen {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(3, 1rem);
+
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
+#punc-endash {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
+#punc-emdash {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(8, 1rem);
+
+	margin-left: 0rem;
+	margin-right: 0rem;
 }
 
 #punc-parentheses-left {

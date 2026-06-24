@@ -124,9 +124,9 @@ const quoteDouble = [
 // BLURRING
 
 $(document).click(function(){
-	$('.showcase').toggleClass('blur');
+	$('.paper').toggleClass('blur');
 	// $('.specimen').toggleClass('blur');
-	$('.storage').toggleClass('blur');
+	$('.specimen').toggleClass('blur');
 })
 
 
@@ -215,6 +215,11 @@ $(document).on('keypress', function(e) {
     for (i = 0; i < 33; i++) {
     	if (event.keyCode == i+33) {
     		$(punctuationA[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    	}
+    }
+    for (i = 0; i < 2; i++) {
+    	if (event.keyCode == i+8211) {
+    		$(punctuationB[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
     	}
     }
 });
