@@ -599,40 +599,40 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.75rem;
-	margin-right: -0.25rem;
+	margin-left: -1.25rem;
+	margin-right: -0.5rem;
 }
 
 #num-lining-3 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.75rem;
-	margin-right: -0.25rem;
+	margin-left: -1rem;
+	margin-right: -0.5rem;
 }
 
 #num-lining-4 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(8, 1rem);
 
-	margin-left: -1.25rem;
-	margin-right: -1.25rem;
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
 }
 
 #num-lining-5 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.5rem;
-	margin-right: -0.5rem;
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
 }
 
 #num-lining-6 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: 0rem;
-	margin-right: -0.25rem;
+	margin-left: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #num-lining-7 {
@@ -640,23 +640,23 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -1rem;
-	margin-right: -0.5rem;
+	margin-right: -1.25rem;
 }
 
 #num-lining-8 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: 0.25rem;
-	margin-right: -0.25rem;
+	margin-left: -0.25rem;
+	margin-right: -0.75rem;
 }
 
 #num-lining-9 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.25rem;
-	margin-right: 0rem;
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 
@@ -765,6 +765,22 @@ body {
 	margin-right: 0rem;
 }
 
+#punc-plus {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
+#punc-equal {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
 #punc-parentheses-left {
 	grid-template-rows: repeat(11, 1rem);
 	grid-template-columns: repeat(3, 1rem);
@@ -783,12 +799,29 @@ body {
 	transform: translateY(-1rem);
 }
 
+#punc-slash-forward {
+	grid-template-rows: repeat(11, 1rem);
+	grid-template-columns: repeat(3, 1rem);
+
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
+	transform: translateY(-1rem);
+}
+
+#punc-percent {
+	grid-template-rows: repeat(9, 1rem);
+	grid-template-columns: repeat(8, 1rem);
+
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
 #punc-ampersand {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
-	margin-lef: 0.5rem;
-	margin-right: -1.5rem;
+	margin-lef: -0.25rem;
+	margin-right: -1.75rem;
 }
 
 #punc-ampersand-alt1 {
@@ -818,6 +851,8 @@ body {
 	grid-template-rows: repeat(11, 1rem);
 	grid-template-columns: repeat(11, 1rem);
 
+	margin-right: -1rem;
+
 	transform: translateY(-1rem);
 }
 
@@ -828,12 +863,22 @@ body {
 	transform: translateY(-1rem);
 }
 
+#punc-dollar {
+	grid-template-rows: repeat(11, 1rem);
+	grid-template-columns: repeat(7, 1rem);
+
+	margin-left: -0.25rem;
+	margin-right: -0.5rem;
+
+	transform: translateY(-1rem);
+}
+
 #punc-hashtag {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(8, 1rem);
 
 	margin-left: -0.75rem;
-	margin-right: -0.75rem;
+	margin-right: -1rem;
 }
 
 
