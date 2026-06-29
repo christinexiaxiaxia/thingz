@@ -900,7 +900,7 @@ body {
 
 	margin-left: 0.25rem;
 	margin-right: -0.5rem;
-	transform: translateY(-1rem);
+	transform: translateY(-1.25rem);
 }
 
 #punc-parentheses-right {
@@ -909,7 +909,7 @@ body {
 
 	margin-left: -0.5rem;
 	margin-right: 0.25rem;
-	transform: translateY(-1rem);
+	transform: translateY(-1.25rem);
 }
 
 #punc-slash-forward {
@@ -918,7 +918,7 @@ body {
 
 	margin-left: -0.5rem;
 	margin-right: -0.5rem;
-	transform: translateY(-1rem);
+	transform: translateY(-1.25rem);
 }
 
 #punc-percent {
@@ -966,14 +966,14 @@ body {
 
 	margin-right: -1rem;
 
-	transform: translateY(-1rem);
+	transform: translateY(-1.25rem);
 }
 
 #punc-atsymbol-alt1 {
 	grid-template-rows: repeat(11, 1rem);
 	grid-template-columns: repeat(11, 1rem);
 
-	transform: translateY(-1rem);
+	transform: translateY(-1.25rem);
 }
 
 #punc-dollar {
@@ -983,7 +983,7 @@ body {
 	margin-left: -0.25rem;
 	margin-right: -0.5rem;
 
-	transform: translateY(-1rem);
+	transform: translateY(-1.25rem);
 }
 
 #punc-hashtag {
