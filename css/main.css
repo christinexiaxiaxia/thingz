@@ -55,7 +55,6 @@ body {
 
 .shelf {
 	height: 100%;
-	/*max-height: calc(100vh - 0rem);*/
 	overflow-x: hidden;
 	overflow-y: auto;
 	padding: 0.5rem;
@@ -121,3 +120,34 @@ p {
 a:hover {
 	cursor: alias;
 }
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+	.case {
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: auto;
+		align-items: center;
+	}
+
+	.shrink {
+		height: auto;
+		width: 100%;
+	}
+
+	.expand {
+		height: 40vh;
+		width: auto;
+	}
+
+	.expand .frame {
+		height: 40vh;
+	}
+
+}
+
+
+
