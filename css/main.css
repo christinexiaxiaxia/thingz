@@ -125,7 +125,7 @@ a:hover {
 
 
 
-@media only screen and (max-width: 1000px) {
+/*@media only screen and (max-width: 1000px) {
 
 	.case {
 		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -147,7 +147,7 @@ a:hover {
 		height: 40vh;
 	}
 
-}
+}*/
 
 
 
