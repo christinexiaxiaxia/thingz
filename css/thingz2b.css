@@ -364,7 +364,7 @@ body {
 	grid-template-columns: repeat(4, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -0.5rem;
+	margin-right: -1rem;
 }
 
 #g-upper {
@@ -631,8 +631,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -1.25rem;
-	margin-right: -1.75rem;
+	margin-left: -1.75rem;
+	margin-right: -2rem;
 }
 
 #w-upper {
