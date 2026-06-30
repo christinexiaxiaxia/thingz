@@ -1013,5 +1013,18 @@ input {
 	* {
 		font-size: 5px;
 	}
+
+	.paper, .specimen {
+		padding-bottom: 10rem;
+		margin-bottom: 10rem;
+	}
+
+	.paper {
+		height: calc(100vh - 12rem);
+	}
+
+	.specimen {
+		height: calc(100vh - 12rem);
+	}
 }
 
