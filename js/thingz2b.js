@@ -110,8 +110,13 @@ const punctuationB = [
 ]
 
 const quoteDouble = [
-	'#punc-doublequote-left',
+	'#punc-doublequote-left',	//198? unconfirmed
 	'#punc-doublequote-right' 	//34
+]
+
+const quoteSingle = [
+	'#punc-quote-left',			//230? unconfirmed
+	'#punc-quote-right' 		//34
 ]
 
 
@@ -232,6 +237,16 @@ $(document).on('keypress', function(e) {
     for (i = 0; i < 2; i++) {
     	if (event.keyCode == i+8211) {
     		$(punctuationB[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    	}
+    }
+    for (i = 0; i < 1; i++) {
+    	if (event.keyCode == 230) {
+    		$(quoteSingle[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    	}
+    }
+    for (i = 0; i < 1; i++) {
+    	if (event.keyCode == 198) {
+    		$(quoteDouble[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
     	}
     }
 });
