@@ -130,7 +130,7 @@ body {
 	border-radius: 2rem;
 
 	position: relative;
-	transition: 0.5s;
+	transition: 3.5s;
 }
 
 .dot:hover {
@@ -138,6 +138,8 @@ body {
 	height: 3.5rem;
 
 	transition: 0.5s;
+
+	z-index: 1000;
 }
 
 .dot.first:hover {
@@ -238,6 +240,10 @@ body {
 
 	overflow: visible;
 	/*outline: 1px solid black;*/
+}
+
+.letter:hover {
+	z-index: 1000;
 }
 
 #space {
