@@ -127,7 +127,12 @@ $(document).click(function(){
 	$('.paper').toggleClass('blur');
 	// $('.specimen').toggleClass('blur');
 	$('.specimen').toggleClass('blur');
+
+	// $(document).toggle(){
+	// 	$("link[rel='icon']").attr('href','bye.png');
+	// }
 })
+
 
 
 // SIZE JITTER ON MOUSE MOVE
