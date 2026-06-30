@@ -150,6 +150,14 @@ $(document).click(function(){
 // VISIBILITY
 
 $(document).ready(function(e){
+
+	// var jitter = Math.random(1);
+
+    // $('.dot').css({
+    // 	'width' : '+=' + jitter + 'rem',
+    // 	'height' : '+=' + jitter + 'rem'
+    // });
+
     $('.specimen').addClass('front');
     $('.paper').addClass('back');
 })
@@ -164,7 +172,6 @@ $(document).on('keypress', function() {
     $('.paper').removeClass('back');
    	$('.paper').addClass('front');
 })
-
 
 
 
