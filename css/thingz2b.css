@@ -638,7 +638,7 @@ body {
 	grid-template-columns: repeat(13, 1rem);
 
 	margin-left: -1rem;
-	margin-right: -1rem;
+	margin-right: -1.75rem;
 }
 
 #w-lower {
