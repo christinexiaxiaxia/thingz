@@ -142,14 +142,19 @@ $(document).click(function(){
 
 // SIZE JITTER ON MOUSE MOVE
 
-// function jitter(max) {
-// 	return Math.floor(Math.random() * max);
-// }
+function jitter(max) {
+	return Math.floor(Math.random() * max);
+}
 
-// $('*').on("mousemove", function(event) {
+// $(document).on("mousemove", function(event) {
 // 	var dotWidthJitter = jitter(2.5);
-// 	$('.dot', this).css({'width': dotWidthJitter + 'rem'})
+// 	$('.dot', this).css({'border': dotWidthJitter + 'rem' + 'solid white'})
 // } );
+
+$(document).ready(function(event) {
+	var dotWidthJitter = jitter(2.5);
+	$('.dot', this).css({'border': dotWidthJitter + 'rem' + 'solid rgb(255,255,255)'})
+} );
 
 
 // VISIBILITY

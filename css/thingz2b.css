@@ -129,6 +129,9 @@ body {
 	background-color: white;
 	border-radius: 2rem;
 
+	/*border: 0.25rem solid rgb(0 0 0 / 0.0);*/
+	/*outline: 1rem outset red;*/
+
 	position: relative;
 	transition: 3.5s;
 }
@@ -576,7 +579,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -0.25rem;
-	margin-right: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #s-lower {
