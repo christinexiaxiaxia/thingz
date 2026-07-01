@@ -111,8 +111,8 @@ body {
 
 /* TYPE */
 
-p {
-
+p.underline {
+	text-decoration: underline;
 }
 
 
