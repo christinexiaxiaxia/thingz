@@ -146,29 +146,36 @@ a:hover {
 
 
 
-/*@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 700px) {
 
 	.case {
-		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-		grid-template-columns: auto;
-		align-items: center;
+		grid-template-columns: repeat(9, 1fr);
+		overflow-x: scroll;
+	}
+
+	.shelf {
+		width: 40vw;
 	}
 
 	.shrink {
-		height: auto;
-		width: 100%;
-	}
-
-	.expand {
-		height: 40vh;
 		width: auto;
 	}
 
-	.expand .frame {
-		height: 40vh;
+	.expand {
+		width: 70vw;
+
+		cursor: zoom-out;
 	}
 
-}*/
+	.frame {
+		height: 16vh;
+	}
+
+	.expand .frame {
+		height: 30vh;
+	}
+
+}
 
 
 
