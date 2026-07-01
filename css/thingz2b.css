@@ -77,8 +77,7 @@ body {
 }
 
 .showcase {
-	/*display: inline-grid;*/ /*SWAP ALPHABET  TYPING*/
-	display: none; /*SWAP ALPHABET  TYPING*/
+	display: none;
 }
 
 
@@ -98,7 +97,7 @@ body {
 }
 
 .storage {
-	display: inline-grid; /*SWAP ALPHABET  TYPING*/
+	display: inline-grid;
 
 	background-color: black;
 	mix-blend-mode: screen;
@@ -119,18 +118,11 @@ body {
 	display: block;
 	width: 0.75rem;
 	height: 0.75rem;
-	
-	/*align-items: center;*/
-	/*justify-content: center;*/
-	/*place-items: center;*/
 }
 
 .dot {
 	background-color: white;
 	border-radius: 2rem;
-
-	/*border: 0.25rem solid rgb(0 0 0 / 0.0);*/
-	/*outline: 1rem outset red;*/
 
 	position: relative;
 	transition: 3.5s;
@@ -1012,7 +1004,7 @@ input {
 
 
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 600px) {
 	* {
 		font-size: 5px;
 	}
