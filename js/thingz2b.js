@@ -158,24 +158,24 @@ $(document).ready(function(e){
     $('.specimen').addClass('front'); // ALLOWS YOU TO HOVER OVER SPECIMEN DOTS
     $('.paper').addClass('back'); // AVOIDS BLOCKING SPECIMEN
 
-    $('#punc-exclamation').clone().addClass('text').prependTo('.specimen.small');
-    $('#e-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#p-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#y-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#t-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#space').clone().addClass('text').prependTo('.specimen.small');
-    $('#n-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#a-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#c-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#space').clone().addClass('text').prependTo('.specimen.small');
-    $('#u-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#o-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#y-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#space').clone().addClass('text').prependTo('.specimen.small');
-    $('#punc-comma').clone().addClass('text').prependTo('.specimen.small');
-    $('#s-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#e-lower').clone().addClass('text').prependTo('.specimen.small');
-    $('#y-upper').clone().addClass('text').prependTo('.specimen.small');
+    // $('#punc-exclamation').clone().addClass('text').prependTo('.specimen.small');
+    // $('#e-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#p-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#y-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#t-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#space').clone().addClass('text').prependTo('.specimen.small');
+    // $('#n-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#a-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#c-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#space').clone().addClass('text').prependTo('.specimen.small');
+    // $('#u-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#o-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#y-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#space').clone().addClass('text').prependTo('.specimen.small');
+    // $('#punc-comma').clone().addClass('text').prependTo('.specimen.small');
+    // $('#s-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#e-lower').clone().addClass('text').prependTo('.specimen.small');
+    // $('#y-upper').clone().addClass('text').prependTo('.specimen.small');
 })
 
 
