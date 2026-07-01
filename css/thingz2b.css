@@ -72,20 +72,32 @@ body {
 	display: none;
 }
 
-
 .specimen {
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	width: calc(100vw - 4rem);
-	height: calc(100vh - 4rem);
+	height: auto;
 
 	padding: 2rem;
 
-	overflow: scroll;
-
 	background-color: black;
 	mix-blend-mode: screen;
+}
+
+.specimen.small {
+	font-size: 1px;
+}
+
+.letter > .small {
+	padding: 1.25rem;
+}
+
+.text {
+	/*zoom: 0.1;*/
+}
+
+.specimen.large {
 }
 
 .storage {
@@ -234,10 +246,6 @@ body {
 
 .letter:hover {
 	z-index: 1000;
-}
-
-.text {
-	zoom: 0.1;
 }
 
 #space {
@@ -997,6 +1005,7 @@ body {
 
 
 input {
+	position: fixed;
 	opacity: 0;
 	z-index: -1000;
 }
