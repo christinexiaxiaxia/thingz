@@ -130,12 +130,7 @@ const quoteSingle = [
 
 $(document).click(function(){
 	$('.paper').toggleClass('blur');
-	// $('.specimen').toggleClass('blur');
-	$('.specimen').toggleClass('blur');
-
-	// $(document).toggle(){
-	// 	$("link[rel='icon']").attr('href','bye.png');
-	// }
+	$('.specimen.large').toggleClass('blur');
 })
 
 
@@ -151,26 +146,39 @@ function jitter(max) {
 // 	$('.dot', this).css({'border': dotWidthJitter + 'rem' + 'solid white'})
 // } );
 
-$(document).ready(function(event) {
-	var dotWidthJitter = jitter(2.5);
-	$('.dot', this).css({'border': dotWidthJitter + 'rem' + 'solid rgb(255,255,255)'})
-} );
+// $(document).ready(function(event) {
+// 	var dotWidthJitter = jitter(2.5);
+// 	$('.dot', this).css({'border': dotWidthJitter + 'rem' + 'solid rgb(255,255,255)'})
+// } );
 
 
-// VISIBILITY
+// ON LOAD
 
 $(document).ready(function(e){
+    $('.specimen').addClass('front'); // ALLOWS YOU TO HOVER OVER SPECIMEN DOTS
+    $('.paper').addClass('back'); // AVOIDS BLOCKING SPECIMEN
 
-	// var jitter = Math.random(1);
-
-    // $('.dot').css({
-    // 	'width' : '+=' + jitter + 'rem',
-    // 	'height' : '+=' + jitter + 'rem'
-    // });
-
-    $('.specimen').addClass('front');
-    $('.paper').addClass('back');
+    $('#punc-exclamation').clone().addClass('text').prependTo('.specimen.small');
+    $('#e-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#p-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#y-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#t-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#space').clone().addClass('text').prependTo('.specimen.small');
+    $('#n-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#a-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#c-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#space').clone().addClass('text').prependTo('.specimen.small');
+    $('#u-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#o-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#y-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#space').clone().addClass('text').prependTo('.specimen.small');
+    $('#punc-comma').clone().addClass('text').prependTo('.specimen.small');
+    $('#s-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#e-lower').clone().addClass('text').prependTo('.specimen.small');
+    $('#y-upper').clone().addClass('text').prependTo('.specimen.small');
 })
+
+
 
 // START TYPING MAKES SPECIMEN DISAPPEAR
 
@@ -213,10 +221,10 @@ $(document).click(function(){
 $(document).on('keypress', function(e) {
     for (i = 0; i < 26; i++) {
     	if (event.keyCode == i+97) {
-    		$(keyLower[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    		$(keyLower[i]).clone().appendTo('.paper');
     	}
     	if (event.keyCode == i+65) {
-    		$(keyUpper[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    		$(keyUpper[i]).clone().appendTo('.paper');
     	}
     }
 });
@@ -226,7 +234,7 @@ $(document).on('keypress', function(e) {
 $(document).on('keypress', function(e) {
     for (i = 0; i < 10; i++) {
     	if (event.keyCode == i+48) {
-    		$(numberLining[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    		$(numberLining[i]).clone().appendTo('.paper');
     	}
     }
 });
@@ -236,22 +244,22 @@ $(document).on('keypress', function(e) {
 $(document).on('keypress', function(e) {
     for (i = 0; i < 33; i++) {
     	if (event.keyCode == i+33) {
-    		$(punctuationA[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    		$(punctuationA[i]).clone().appendTo('.paper');
     	}
     }
     for (i = 0; i < 2; i++) {
     	if (event.keyCode == i+8211) {
-    		$(punctuationB[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    		$(punctuationB[i]).clone().appendTo('.paper');
     	}
     }
     for (i = 0; i < 1; i++) {
     	if (event.keyCode == 230) {
-    		$(quoteSingle[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    		$(quoteSingle[i]).clone().appendTo('.paper');
     	}
     }
     for (i = 0; i < 1; i++) {
     	if (event.keyCode == 198) {
-    		$(quoteDouble[i]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    		$(quoteDouble[i]).clone().appendTo('.paper');
     	}
     }
 });
@@ -264,11 +272,11 @@ $(document).on('keypress', function(e) {
 
     	if (!$('.letter:last').class == '.space') {
     		// console.log('previous character is a space')
-    		$(quoteDouble[0]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    		$(quoteDouble[0]).clone().appendTo('.paper');
     	} 
     	else {
     		// console.log('previous character is a letter')
-    		$(quoteDouble[1]).clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    		$(quoteDouble[1]).clone().appendTo('.paper');
     	}
     }
 });
@@ -277,7 +285,7 @@ $(document).on('keypress', function(e) {
 
 $(document).keydown(function(e){
 	if (e.keyCode == 32) {
-    	$('#space').clone().appendTo('.paper').addClass('hello-letter').removeClass('bye-letter');
+    	$('#space').clone().appendTo('.paper');
 	}
 })  
 

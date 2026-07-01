@@ -50,14 +50,6 @@ body {
 	/*transition-duration: 2.5s;*/
 }
 
-.hello-letter {
-	display: inline-grid;
-}
-
-.bye-letter {
-	display: none;
-}
-
 
 
 
@@ -242,6 +234,10 @@ body {
 
 .letter:hover {
 	z-index: 1000;
+}
+
+.text {
+	zoom: 0.1;
 }
 
 #space {

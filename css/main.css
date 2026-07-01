@@ -132,7 +132,7 @@ body {
 
 .strike {
 	text-decoration: underline;
-	text-underline-offset: -0.35em;
+	text-underline-offset: -0.35rem;
 	text-decoration-skip-ink: none;
 }
 
