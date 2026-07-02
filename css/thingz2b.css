@@ -3,8 +3,6 @@
 }
 
 body {
-	background-color: black;
-
 	margin-top: 0rem;
 	margin-left: 0rem;
 }
@@ -28,19 +26,101 @@ body {
 
 
 
-
 /* SO I DON'T HAVE TO CONSTANTLY SQUINT */
 
 .blur {
 	/*filter: blur(0.5rem);*/
 	/*filter: blur(0.5rem) contrast(2000%) brightness(100%);*/
-	filter: blur(0.25rem) brightness(130%) contrast(5000%);
 
 	margin-top: 0rem;
 	margin-left: 0rem;
-
-	/*transition-duration: 2.5s;*/ /*putting the transition here causes the specimen to fade away instead of just disappearing when typing, also only smooths out the blur in one direction and not back*/
 }
+
+
+
+/* COLOUR - BLACK BG WHITE TYPE */
+
+/*body {
+	background-color: black;
+}
+
+.blur {
+	filter: blur(0.25rem) brightness(130%) contrast(5000%);
+}
+
+.paper {
+	background-color: black;
+	mix-blend-mode: screen;
+}
+
+.specimen {
+	background-color: black;
+	mix-blend-mode: screen;
+}
+
+.storage {
+	background-color: black;
+	mix-blend-mode: screen;
+}
+
+.dot {
+	background-color: white;
+	border-radius: 3rem;
+
+	border: 0.5rem solid black; 
+	mix-blend-mode: screen;
+}
+
+.letter {
+	background-color: black;
+	mix-blend-mode: screen;
+}*/
+
+
+/* COLOUR - WHITE BG BLACK TYPE */
+
+body {
+	background-color: white;
+}
+
+.blur {
+	filter: blur(0.25rem) brightness(70%) contrast(5000%);
+}
+
+.paper {
+	background-color: white;
+	mix-blend-mode: multiply;
+}
+
+.specimen {
+	background-color: white;
+	mix-blend-mode: multiply;
+}
+
+.storage {
+	background-color: white;
+	mix-blend-mode: multiply;
+}
+
+.dot {
+	background-color: black;
+	border-radius: 3rem;
+
+	border: 0.5rem solid white;
+	mix-blend-mode: multiply;
+}
+
+.letter {
+	background-color: white;
+	mix-blend-mode: multiply;
+}
+
+
+
+
+
+
+
 
 .front {
 	z-index: 1000;
@@ -68,9 +148,6 @@ body {
 	padding: 2rem;
 
 	overflow: scroll;
-
-	background-color: black;
-	mix-blend-mode: screen;
 }
 
 .showcase {
@@ -85,9 +162,6 @@ body {
 	height: auto;
 
 	padding: 2rem;
-
-	background-color: black;
-	mix-blend-mode: screen;
 }
 
 .specimen.small {
@@ -107,9 +181,6 @@ body {
 
 .storage {
 	display: inline-grid;
-
-	background-color: black;
-	mix-blend-mode: screen;
 }
 
 
@@ -118,7 +189,6 @@ body {
 /* DOTS */
 
 .empty {
-	/*background-color: rgba(0, 100, 0, 1.0);*/
 	width: 0.75rem;
 	height: 0.75rem;
 }
@@ -130,12 +200,6 @@ body {
 }
 
 .dot {
-	background-color: white;
-	border-radius: 3rem;
-
-	border: 0.5rem solid black; /*ADD HOVER AREA*/
-	mix-blend-mode: screen;
-
 	position: relative;
 	transition: 3.5s;
 }
@@ -241,12 +305,7 @@ body {
 	/*padding: 1.25rem;*/ /* PARAGRAPH SIZE*/
 	margin: 0 0 -3rem 0;
 
-	background-color: black;
-	/*background-color: rgba(255, 0, 0, 1.0);*/
-	mix-blend-mode: screen;
-
 	overflow: visible;
-	/*outline: 1px solid black;*/
 }
 
 .letter:hover {
@@ -267,9 +326,6 @@ body {
 	height: calc(12rem + 0.25rem*11);
 	padding: 1rem;
 	margin: 0 0 -3rem 0;
-
-	background-color: black;
-	mix-blend-mode: screen;
 }
 
 /*#a-lower-1 {
