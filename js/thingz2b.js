@@ -131,7 +131,15 @@ const quoteSingle = [
 $(document).click(function(){
 	$('.paper').toggleClass('blur');
 	$('.specimen.large').toggleClass('blur');
+	$('.front').removeClass('no-transition');
 })
+
+
+// REMOVE TRANSITION DURATION WHEN RESIZING WINDOW
+
+$(window).resize(function(){
+	$('.front').addClass('no-transition');
+});
 
 
 

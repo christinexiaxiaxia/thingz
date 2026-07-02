@@ -30,7 +30,7 @@
 			<!-- <div class="item frame"><iframe src="https://web.xiaxiaxia.design/" class="picture"></iframe></div> -->
 			<!-- <p class="item"><a href="https://medium.com/@ozaniraj19/building-a-real-time-typing-indicator-feature-using-node-js-8cf463c7e6a1" target="_blank">node/socket to show live typing, but can use to indicate when anyone is online?</a></p> -->
 			<p class="item"><span class="strike"><a href="https://api.jquery.com/not/" target="_blank">.not() might solve my toggle issues (on click make everything that’s not this shrink?)</a></span> yuuuuup</p>
-			<p class="item">need to fix how things are laggy whenever the recollection iframe gets resized—likely because of the transition-duration stuff that happens when you resize the actual site</p>
+			<p class="item"><span class="strike">need to fix how things are laggy whenever the recollection iframe gets resized—likely because of the transition-duration stuff that happens when you resize the actual site—THIS IS SO HARD. trying to detect when window is being resized to toggle class, but only finding ways to add/remove once after the first window resize or associating with specific window sizes</span> FIXED IT! doing addClass for a class that sets the transition-duration to 0 on window resize wasn't working at first since it completely removes the blur transition, but removing the class on click brings it back!</p>
 			<p class="item">lower priority fix: the dashed border/outline on mobile. on desktop i'm using a 0.5px border to resolve the fact that using a 1px outline displays weirdly once i expand one of the columns (all the columns on the right no longer have visible outlines). however, on mobile the 0.5px border doesn't render so i've opted to use a 1px outline for now. do i make the outline work better on desktop and mobile? if i do i'd have to stick with the longer line length of dashes instead of the current short length.</p>
 		</div>
 		<div class="shelf">
@@ -87,8 +87,8 @@
 			<p class="item">(used to have an iframe of this site here to show the infinite loop but obviously making the site lag when resizing/hovering lol)</p>
 			<!-- <div class="item frame"><iframe src="https://thingz.xiaxiaxia.design/" class="picture"></iframe></div> -->
 			<p class="item">css hue shift on mouse move to shift the colour as you navigate?</p>
-			<div class="item frame"><iframe src="https://orteil.dashnet.org/nested" class="picture"></iframe></div>
-			<p class="item">from the maker of the cookie clicker game, orteil. his "PretendEverything" game also has this abstract, expanding looping expreience that's interesting</p>
+			<!-- <div class="item frame"><iframe src="https://orteil.dashnet.org/nested" class="picture"></iframe></div> -->
+			<p class="item"><a href="https://orteil.dashnet.org/nested" target="_blank">from the maker of the cookie clicker game, orteil</a>: his "PretendEverything" game also has this abstract, expanding looping expreience that's interesting</p>
 		</div>
 		<div class="shelf">
 			<p class="item underline">thingz 6: archive of feelings</p>

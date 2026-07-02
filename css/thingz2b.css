@@ -38,16 +38,21 @@ body {
 
 	margin-top: 0rem;
 	margin-left: 0rem;
+
+	/*transition-duration: 2.5s;*/ /*putting the transition here causes the specimen to fade away instead of just disappearing when typing, also only smooths out the blur in one direction and not back*/
 }
 
 .front {
 	z-index: 1000;
-	transition-duration: 2.5s;
+	transition-duration: 2.5s; /*putting the transition here makes the screen laggy when resizing, especially an issue when embedding as an iframe on the main thingz site*/
 }
 
 .back {
 	z-index: -1000;
-	/*transition-duration: 2.5s;*/
+}
+
+.no-transition {
+	transition-duration: 0s;
 }
 
 
