@@ -25,7 +25,7 @@ body {
 }
 
 .plaque {
-	position: relative;
+	position: fixed;
 	width: 38vw;
 }
 
@@ -139,11 +139,13 @@ body {
 
 
 .front {
+	position: relative;
 	z-index: 1000;
 	transition-duration: 2.5s; /*putting the transition here makes the screen laggy when resizing, especially an issue when embedding as an iframe on the main thingz site*/
 }
 
 .back {
+	position: fixed;
 	z-index: -1000;
 }
 
@@ -155,7 +157,7 @@ body {
 
 
 .paper {
-	position: fixed;
+	/*position: relative;*/
 	top: 0;
 	left: 0;
 	width: calc(100vw - 4rem);
@@ -171,7 +173,7 @@ body {
 }
 
 .specimen {
-	position: relative;
+	/*position: relative;*/
 	top: 0;
 	left: 0;
 	width: calc(100vw - 4rem);

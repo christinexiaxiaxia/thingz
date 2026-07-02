@@ -167,6 +167,7 @@ $(document).ready(function(e){
     $('.plaque').addClass('front');
     $('.paper').addClass('back'); // AVOIDS BLOCKING SPECIMEN
 
+
     // $('#punc-exclamation').clone().addClass('text').prependTo('.specimen.small');
     // $('#e-lower').clone().addClass('text').prependTo('.specimen.small');
     // $('#p-lower').clone().addClass('text').prependTo('.specimen.small');
@@ -196,12 +197,16 @@ $(document).on('keypress', function() {
 	$('.specimen').removeClass('front');
 	$('.specimen').addClass('back');
 
-	$('.plaque').css('opacity','0');
-	$('.plaque').removeClass('front');
-	$('.plaque').addClass('back');
+	// $('.plaque.for-specimen').css('opacity','0');
+	// $('.plaque.for-specimen').removeClass('front');
+	// $('.plaque.for-specimen').addClass('back');
 
     $('.paper').removeClass('back');
    	$('.paper').addClass('front');
+
+	// $('.plaque.for-paper').css('opacity','0');
+	// $('.plaque.for-paper').removeClass('front');
+	// $('.plaque.for-paper').addClass('back');
 })
 
 
