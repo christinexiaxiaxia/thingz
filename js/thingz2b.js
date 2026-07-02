@@ -164,6 +164,7 @@ function jitter(max) {
 
 $(document).ready(function(e){
     $('.specimen').addClass('front'); // ALLOWS YOU TO HOVER OVER SPECIMEN DOTS
+    $('.plaque').addClass('front');
     $('.paper').addClass('back'); // AVOIDS BLOCKING SPECIMEN
 
     // $('#punc-exclamation').clone().addClass('text').prependTo('.specimen.small');
@@ -194,6 +195,10 @@ $(document).on('keypress', function() {
 	$('.specimen').css('opacity','0');
 	$('.specimen').removeClass('front');
 	$('.specimen').addClass('back');
+
+	$('.plaque').css('opacity','0');
+	$('.plaque').removeClass('front');
+	$('.plaque').addClass('back');
 
     $('.paper').removeClass('back');
    	$('.paper').addClass('front');
