@@ -31,13 +31,15 @@ body {
 
 .description {
 	font-size: 2rem;
+	line-height: 2.1rem;
 	top: 0;
 	margin: 0;
-	padding: 1.5rem 2rem 0rem 2rem;
+	padding: 1.65rem 2rem 0rem 2rem;
 }
 
 .date {
 	font-size: 1rem;
+	line-height: 0rem;
 }
 
 
@@ -595,7 +597,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	margin-left: -0.25rem;
+	margin-left: 0rem;
 	margin-right: -0.25rem;
 }
 
@@ -642,7 +644,7 @@ body {
 	grid-template-columns: repeat(5, 1rem);
 
 	margin-left: -0.75rem;
-	margin-right: -1.5rem;
+	margin-right: -1.75rem;
 }
 
 /*#s-lower-1 {
@@ -784,7 +786,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: 0rem;
-	margin-right: -0.75rem;
+	margin-right: -0.25rem;
 }
 
 #num-lining-1 {
@@ -792,71 +794,71 @@ body {
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: -0.25rem;
-	margin-right: -0.5rem;
+	margin-right: -0.25rem;
 }
 
 #num-lining-2 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -1.25rem;
-	margin-right: -0.5rem;
+	margin-left: -1rem;
+	margin-right: -0.25rem;
 }
 
 #num-lining-3 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -1rem;
-	margin-right: -0.5rem;
+	margin-left: -0.75rem;
+	margin-right: -0.25rem;
 }
 
 #num-lining-4 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(8, 1rem);
 
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
+	margin-left: -1.25rem;
+	margin-right: -1.25rem;
 }
 
 #num-lining-5 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.75rem;
-	margin-right: -0.75rem;
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 #num-lining-6 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.25rem;
-	margin-right: -0.5rem;
+	margin-left: -0rem;
+	margin-right: -0.25rem;
 }
 
 #num-lining-7 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -1rem;
-	margin-right: -1.25rem;
+	margin-left: -1.25rem;
+	margin-right: -0.75rem;
 }
 
 #num-lining-8 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.25rem;
-	margin-right: -0.75rem;
+	margin-left: -0rem;
+	margin-right: -0.5rem;
 }
 
 #num-lining-9 {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.5rem;
-	margin-right: -0.5rem;
+	margin-left: -0.25rem;
+	margin-right: -0.25rem;
 }
 
 
