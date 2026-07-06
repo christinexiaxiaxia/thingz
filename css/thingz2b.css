@@ -276,6 +276,50 @@ body {
 }
 
 
+
+.dot-uniform-0-25 {
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.dot-uniform-0-5 {
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.dot-uniform-0-75 {
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.dot-uniform-1-0 {
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.dot-uniform-1-25 {
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.dot-uniform-1-5 {
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.dot-uniform-1-75 {
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.dot-uniform-2-0 {
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+
+
+
 .dot-0-25 {
 	width: 0.25rem;
 	height: 0.25rem;
@@ -477,7 +521,7 @@ body {
 	grid-template-columns: repeat(5, 1rem);
 
 	margin-left: 0rem;
-	margin-right: -1rem;
+	margin-right: -0.75rem;
 }
 
 #f-upper {
@@ -515,7 +559,7 @@ body {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: 0rem;
+	margin-left: -0.25rem;
 	margin-right: -1.25rem;
 }
 
@@ -531,8 +575,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.5rem;
-	margin-right: -0.5rem;
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
 }
 
 #i-upper {
@@ -596,7 +640,7 @@ body {
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #m-upper {
@@ -611,8 +655,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
-	margin-left: -0.5rem;
-	margin-right: -1rem;
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
 }
 
 #n-upper {
@@ -627,8 +671,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.5rem;
-	margin-right: -1rem;
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
 }
 
 #o-upper {
@@ -659,7 +703,8 @@ body {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.5rem;
+	margin-left: -0.75rem;
+	margin-right: 0rem;
 }
 
 #q-upper {
@@ -712,7 +757,7 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 
-	margin-left: -0.5rem;
+	margin-left: -0.25rem;
 	margin-right: -0.25rem;
 }
 
@@ -729,7 +774,7 @@ body {
 	grid-template-columns: repeat(4, 1rem);
 
 	margin-left: -0.75rem;
-	margin-right: -1rem;
+	margin-right: -1.25rem;
 }
 
 #u-upper {
@@ -761,7 +806,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -1.75rem;
-	margin-right: -2rem;
+	margin-right: -1.75rem;
 }
 
 #w-upper {
@@ -792,8 +837,8 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.5rem;
-	margin-right: -0.75rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
 }
 
 #y-upper {
@@ -977,16 +1022,16 @@ body {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
-	margin-left: -0.25rem;
-	margin-right: -0.25rem;
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 #punc-question {
 	grid-template-rows: repeat(9, 1rem);
 	grid-template-columns: repeat(5, 1rem);
 
-	margin-left: -1rem;
-	margin-right: -0.25rem;
+	margin-left: -1.5rem;
+	margin-right: -0.75rem;
 }
 
 #punc-hyphen {
