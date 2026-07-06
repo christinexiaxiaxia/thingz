@@ -164,10 +164,10 @@ $(window).resize(function(){
 // BUTTONS
 
 $('.button-text').click(function(){
-	$('.letter').addClass('zoom-text')
-	$('.letter').removeClass('zoom-display')
 	$('.button-text').addClass('button-selected')
 	$('.button-display').removeClass('button-selected')
+	$('.letter').addClass('zoom-text')
+	$('.letter').removeClass('zoom-display')
 	if ($('.specimen').hasClass('blur-display')) {
 		$('.specimen').addClass('blur-text');
 		$('.paper').addClass('blur-text');
@@ -177,10 +177,10 @@ $('.button-text').click(function(){
 })
 
 $('.button-display').click(function(){
-	$('.letter').removeClass('zoom-text')
-	$('.letter').addClass('zoom-display')
 	$('.button-display').addClass('button-selected')
 	$('.button-text').removeClass('button-selected')
+	$('.letter').removeClass('zoom-text')
+	$('.letter').addClass('zoom-display')
 	if ($('.specimen').hasClass('blur-text')) {
 		$('.specimen').addClass('blur-display');
 		$('.paper').addClass('blur-display');
@@ -197,10 +197,8 @@ $('.button-display').click(function(){
 // })
 
 $('.button-condensed').click(function(){
-	$('.letter').toggleClass('width-condensed')
-	// $('.letter').removeClass('width-regular')
 	$('.button-condensed').toggleClass('button-selected')
-	// $('.button-regular').removeClass('button-selected')
+	$('.letter').toggleClass('width-condensed')
 })
 
 $('.button-blurred').click(function(){
@@ -221,6 +219,7 @@ $('.button-blurred').click(function(){
 })
 
 $('.button-inverted').click(function(){
+	$('.button-inverted').toggleClass('button-selected')
 	$('html').toggleClass('colour-inverted')
 })
 
