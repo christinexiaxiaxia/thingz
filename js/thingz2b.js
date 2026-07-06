@@ -158,6 +158,8 @@ $(document).ready(function(e){
 
 $(window).resize(function(){
 	$('.front').addClass('no-transition');
+	$('.html').addClass('no-transition');
+	$('.letter').addClass('no-transition');
 });
 
 
@@ -199,6 +201,7 @@ $('.button-display').click(function(){
 $('.button-condensed').click(function(){
 	$('.button-condensed').toggleClass('button-selected')
 	$('.letter').toggleClass('width-condensed')
+	$('.letter').removeClass('no-transition');
 })
 
 $('.button-blurred').click(function(){
@@ -221,6 +224,7 @@ $('.button-blurred').click(function(){
 $('.button-inverted').click(function(){
 	$('.button-inverted').toggleClass('button-selected')
 	$('html').toggleClass('colour-inverted')
+	$('.html').removeClass('no-transition');
 })
 
 
