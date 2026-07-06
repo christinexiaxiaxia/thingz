@@ -71,11 +71,13 @@ button:hover {
 .zoom-display {
 	zoom: 1;
 	padding: 0.9rem;
+	margin: 0 0 -3rem 0;
 }
 
 .zoom-text {
 	zoom: 0.125;
-	padding: 1rem;
+	padding: 1.1rem;
+	margin: 0 0 -5rem 0;
 }
 
 .colour-inverted {
@@ -359,7 +361,6 @@ body {
 	height: calc(12rem + 0.25rem*11);
 	/*padding: 1rem;*/ /* DISPLAY SIZE*/
 	/*padding: 1.25rem;*/ /* PARAGRAPH SIZE*/
-	margin: 0 0 -3rem 0;
 
 	overflow: visible;
 
@@ -1183,6 +1184,12 @@ input {
 
 	.specimen {
 		height: calc(100vh - 12rem);
+	}
+
+	.zoom-text {
+		zoom: 0.25;
+		padding: 1.2rem;
+		margin: 0 0 -2.5rem 0;
 	}
 }
 
