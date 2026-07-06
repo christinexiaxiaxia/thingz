@@ -193,7 +193,7 @@ body {
 .front {
 	position: relative;
 	z-index: 1000;
-	transition-duration: 2.5s; /*putting the transition here makes the screen laggy when resizing, especially an issue when embedding as an iframe on the main thingz site*/
+	transition-duration: 2.5s;
 }
 
 .back {
@@ -259,7 +259,7 @@ body {
 
 .dot {
 	position: relative;
-	transition: 3.5s;
+	transition: 8s;
 }
 
 .dot:hover {
