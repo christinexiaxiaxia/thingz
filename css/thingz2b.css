@@ -1167,6 +1167,11 @@ input {
 		margin-right: 0.2rem;
 	}
 
+	/*TEMPORARILY REMOVING TEXT SIZE BUTTON BC ZOOM DOESN'T WORK ON MOBILE*/
+	.button-text {
+		display: none;
+	}
+
 	.paper, .specimen {
 		padding-bottom: 10rem;
 		margin-bottom: 10rem;
