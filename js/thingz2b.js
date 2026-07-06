@@ -227,6 +227,16 @@ $('.button-inverted').click(function(){
 	$('.html').removeClass('no-transition');
 })
 
+function toggleUniform(){	
+
+}
+
+$('.button-uniform').click(function(){
+	$('.button-uniform').toggleClass('button-selected')
+	$('.dot-0-25').removeClass('dot-0-25').addClass('dot-uniform-0-25')
+}, function(){
+	$('.dot-uniform-0-25').addClass('dot-0-25').removeClass('dot-uniform-0-25')
+})
 
 
 
