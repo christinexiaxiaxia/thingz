@@ -35,15 +35,15 @@ body {
 }
 
 .description {
-	font-size: 2rem;
-	line-height: 2rem;
+	font-size: 1.75rem;
+	line-height: 1.75rem;
 	top: 0;
 	margin: 0;
 	padding: 1.65rem 2rem 0rem 2rem;
 }
 
 .date {
-	font-size: 1rem;
+	font-size: 0.85rem;
 	line-height: 0rem;
 }
 
@@ -51,6 +51,8 @@ button {
 	background-color: white;
 	color: black;
 	border: 1px solid black;
+
+	font-size: 0.85rem;
 
 	padding: 0.25rem 0.5rem;
 	margin-right: 0.1rem;
@@ -1195,19 +1197,19 @@ input {
 	}
 
 	.description {
-		font-size: 4rem;
-		line-height: 4rem;
+		font-size: 3.5rem;
+		line-height: 3.5rem;
 		top: 0;
 		margin: 0;
 		padding: 1.5rem 2rem 0rem 2rem;
 	}
 
 	.date {
-		font-size: 2rem;
+		font-size: 1.7rem;
 	}
 
 	button {
-		font-size: 2rem;
+		font-size: 1.7rem;
 
 		padding: 0.5rem 1rem;
 		margin-right: 0.2rem;
