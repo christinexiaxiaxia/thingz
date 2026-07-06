@@ -120,8 +120,8 @@ body {
 .expand-type,
 .expand-type a,
 .expand-type span {
-	font-size: 18px;
-	line-height: 19px;
+	font-size: 1.5rem;
+	line-height: 1.583333rem;
 
 	cursor: text;
 }
@@ -137,6 +137,12 @@ body {
 	text-decoration: underline;
 	text-underline-offset: -0.35rem;
 	text-decoration-skip-ink: none;
+}
+
+span.small,
+.small {
+	font-size: 1rem;
+	line-height: 0rem;
 }
 
 
