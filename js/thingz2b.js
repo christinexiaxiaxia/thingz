@@ -141,25 +141,13 @@ $(document).ready(function(e){
 })
 
 
-// BLURRING
-
-// $('.specimen').click(function(){
-// 	$('.specimen').toggleClass('blur');
-// 	$('.front').removeClass('no-transition');
-// })
-
-// $('.paper').click(function(){
-// 	$('.paper').toggleClass('blur');
-// 	$('.front').removeClass('no-transition');
-// })
-
-
 // REMOVE TRANSITION DURATION WHEN RESIZING WINDOW
 
 $(window).resize(function(){
-	$('.front').addClass('no-transition');
-	$('.html').addClass('no-transition');
-	$('.letter').addClass('no-transition');
+	// $('.front').addClass('no-transition');
+	// $('.html').addClass('no-transition');
+	// $('.letter').addClass('no-transition');
+	$('*').addClass('no-transition');
 });
 
 
@@ -201,7 +189,7 @@ $('.button-display').click(function(){
 $('.button-condensed').click(function(){
 	$('.button-condensed').toggleClass('button-selected')
 	$('.letter').toggleClass('width-condensed')
-	$('.letter').removeClass('no-transition');
+	$('*').removeClass('no-transition');
 })
 
 $('.button-blurred').click(function(){
@@ -218,13 +206,13 @@ $('.button-blurred').click(function(){
 		$('.specimen').removeClass('blur-display');
 		$('.paper').removeClass('blur-display');
 	}
-	$('.front').removeClass('no-transition');
+	$('*').removeClass('no-transition');
 })
 
 $('.button-inverted').click(function(){
 	$('.button-inverted').toggleClass('button-selected')
 	$('html').toggleClass('colour-inverted')
-	$('.html').removeClass('no-transition');
+	$('*').removeClass('no-transition');
 })
 
 function toggleUniform(){	
