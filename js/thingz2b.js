@@ -220,6 +220,10 @@ $('.button-blurred').click(function(){
 	$('.front').removeClass('no-transition');
 })
 
+$('.button-inverted').click(function(){
+	$('html').toggleClass('colour-inverted')
+})
+
 
 
 

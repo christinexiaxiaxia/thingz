@@ -2,6 +2,10 @@
 	font-size: 10px;
 }
 
+html {
+	transition-duration: 0.25s;
+}
+
 body {
 	margin-top: 0rem;
 	margin-left: 0rem;
@@ -72,6 +76,10 @@ button:hover {
 .zoom-text {
 	zoom: 0.125;
 	padding: 1rem;
+}
+
+.colour-inverted {
+	filter: invert(1);
 }
 
 
