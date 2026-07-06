@@ -42,16 +42,48 @@ body {
 	line-height: 0rem;
 }
 
+button {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	font-family: serif;
+
+	padding: 0.25rem 0.5rem;
+	margin-right: 0.1rem;
+}
+
+button:hover {
+	background-color: black;
+	color: white;
+
+	cursor: pointer;
+}
+
+.button-selected {
+	background-color: black;
+	color: white;
+}
+
+.zoom-display {
+	zoom: 1;
+	padding: 0.9rem;
+}
+
+.zoom-text {
+	zoom: 0.125;
+	padding: 1rem;
+}
+
+
+
 
 
 /* SO I DON'T HAVE TO CONSTANTLY SQUINT */
 
 .blur {
+	/*moved to colour (see below) to have a diff amount of brightness for black vs white*/
 	/*filter: blur(0.5rem);*/
 	/*filter: blur(0.5rem) contrast(2000%) brightness(100%);*/
-
-	margin-top: 0rem;
-	margin-left: 0rem;
 }
 
 
@@ -103,6 +135,14 @@ body {
 
 .blur {
 	filter: blur(0.25rem) brightness(70%) contrast(5000%);
+}
+
+.blur-display {
+	filter: blur(0.25rem) brightness(70%) contrast(5000%);
+}
+
+.blur-text {
+	filter: blur(0.05rem) brightness(70%) contrast(5000%);
 }
 
 .paper {
@@ -175,7 +215,6 @@ body {
 }
 
 .specimen {
-	/*position: relative;*/
 	top: 0;
 	left: 0;
 	width: calc(100vw - 4rem);
@@ -184,19 +223,8 @@ body {
 	padding: 2rem;
 }
 
-.specimen.small {
-	font-size: 1px;
-}
-
-.letter > .small {
-	padding: 1.25rem;
-}
-
 .text {
 	/*zoom: 0.1;*/
-}
-
-.specimen.large {
 }
 
 .storage {
@@ -315,17 +343,26 @@ body {
 
 
 .letter {
-	grid-column-gap: 0.25rem;
+	/*grid-column-gap: 0.25rem;*/
 	grid-row-gap: 0.25rem;
 	place-items: center;
 
 	width: auto;
 	height: calc(12rem + 0.25rem*11);
-	padding: 1rem; /* DISPLAY SIZE*/
+	/*padding: 1rem;*/ /* DISPLAY SIZE*/
 	/*padding: 1.25rem;*/ /* PARAGRAPH SIZE*/
 	margin: 0 0 -3rem 0;
 
 	overflow: visible;
+
+	transition-duration: 1s;
+}
+
+.width-regular {
+	grid-column-gap: 0.25rem;
+}
+.width-condensed {
+	grid-column-gap: 0;
 }
 
 .letter:hover {
@@ -534,7 +571,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -0.75rem;
+	margin-right: -1rem;
 }
 
 #l-upper {
@@ -1105,6 +1142,7 @@ input {
 
 	.description {
 		font-size: 4rem;
+		line-height: 3.8rem;
 		top: 0;
 		margin: 0;
 		padding: 1.5rem 2rem 0rem 2rem;
@@ -1112,6 +1150,13 @@ input {
 
 	.date {
 		font-size: 2rem;
+	}
+
+	button {
+		font-size: 2rem;
+
+		padding: 0.5rem 1rem;
+		margin-right: 0.2rem;
 	}
 
 	.paper, .specimen {

@@ -126,13 +126,32 @@ const quoteSingle = [
 // })
 
 
+
+
+// ON LOAD
+
+$(document).ready(function(e){
+    $('.specimen').addClass('front'); // ALLOWS YOU TO HOVER OVER SPECIMEN DOTS
+    $('.plaque').addClass('front');
+    $('.paper').addClass('back'); // AVOIDS BLOCKING SPECIMEN
+	$('.letter').addClass('zoom-display')
+	$('.letter').addClass('width-regular')
+	$('.button-display').addClass('button-selected')
+	$('.button-regular').addClass('button-selected')
+})
+
+
 // BLURRING
 
-$(document).click(function(){
-	$('.paper').toggleClass('blur');
-	$('.specimen.large').toggleClass('blur');
-	$('.front').removeClass('no-transition');
-})
+// $('.specimen').click(function(){
+// 	$('.specimen').toggleClass('blur');
+// 	$('.front').removeClass('no-transition');
+// })
+
+// $('.paper').click(function(){
+// 	$('.paper').toggleClass('blur');
+// 	$('.front').removeClass('no-transition');
+// })
 
 
 // REMOVE TRANSITION DURATION WHEN RESIZING WINDOW
@@ -142,12 +161,73 @@ $(window).resize(function(){
 });
 
 
+// BUTTONS
+
+$('.button-text').click(function(){
+	$('.letter').addClass('zoom-text')
+	$('.letter').removeClass('zoom-display')
+	$('.button-text').addClass('button-selected')
+	$('.button-display').removeClass('button-selected')
+	if ($('.specimen').hasClass('blur-display')) {
+		$('.specimen').addClass('blur-text');
+		$('.paper').addClass('blur-text');
+		$('.specimen').removeClass('blur-display');
+		$('.paper').removeClass('blur-display');
+	}
+})
+
+$('.button-display').click(function(){
+	$('.letter').removeClass('zoom-text')
+	$('.letter').addClass('zoom-display')
+	$('.button-display').addClass('button-selected')
+	$('.button-text').removeClass('button-selected')
+	if ($('.specimen').hasClass('blur-text')) {
+		$('.specimen').addClass('blur-display');
+		$('.paper').addClass('blur-display');
+		$('.specimen').removeClass('blur-text');
+		$('.paper').removeClass('blur-text');
+	}
+})
+
+// $('.button-regular').click(function(){
+// 	$('.letter').removeClass('width-condensed')
+// 	$('.letter').addClass('width-regular')
+// 	$('.button-regular').addClass('button-selected')
+// 	$('.button-condensed').removeClass('button-selected')
+// })
+
+$('.button-condensed').click(function(){
+	$('.letter').toggleClass('width-condensed')
+	// $('.letter').removeClass('width-regular')
+	$('.button-condensed').toggleClass('button-selected')
+	// $('.button-regular').removeClass('button-selected')
+})
+
+$('.button-blurred').click(function(){
+	$('.button-blurred').toggleClass('button-selected')
+	if ($('.letter').hasClass('zoom-display')) {
+		$('.specimen').toggleClass('blur-display');
+		$('.paper').toggleClass('blur-display');
+		$('.specimen').removeClass('blur-text');
+		$('.paper').removeClass('blur-text');
+	}
+	if (!$('.letter').hasClass('zoom-display')) {
+		$('.specimen').toggleClass('blur-text');
+		$('.paper').toggleClass('blur-text');
+		$('.specimen').removeClass('blur-display');
+		$('.paper').removeClass('blur-display');
+	}
+	$('.front').removeClass('no-transition');
+})
+
+
+
 
 // SIZE JITTER ON MOUSE MOVE
 
-function jitter(max) {
-	return Math.floor(Math.random() * max);
-}
+// function jitter(max) {
+// 	return Math.floor(Math.random() * max);
+// }
 
 // $(document).on("mousemove", function(event) {
 // 	var dotWidthJitter = jitter(2.5);
@@ -160,35 +240,6 @@ function jitter(max) {
 // } );
 
 
-// ON LOAD
-
-$(document).ready(function(e){
-    $('.specimen').addClass('front'); // ALLOWS YOU TO HOVER OVER SPECIMEN DOTS
-    $('.plaque').addClass('front');
-    $('.paper').addClass('back'); // AVOIDS BLOCKING SPECIMEN
-
-
-    // $('#punc-exclamation').clone().addClass('text').prependTo('.specimen.small');
-    // $('#e-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#p-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#y-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#t-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#space').clone().addClass('text').prependTo('.specimen.small');
-    // $('#n-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#a-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#c-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#space').clone().addClass('text').prependTo('.specimen.small');
-    // $('#u-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#o-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#y-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#space').clone().addClass('text').prependTo('.specimen.small');
-    // $('#punc-comma').clone().addClass('text').prependTo('.specimen.small');
-    // $('#s-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#e-lower').clone().addClass('text').prependTo('.specimen.small');
-    // $('#y-upper').clone().addClass('text').prependTo('.specimen.small');
-})
-
-
 
 // START TYPING MAKES SPECIMEN DISAPPEAR
 
@@ -197,16 +248,8 @@ $(document).on('keypress', function() {
 	$('.specimen').removeClass('front');
 	$('.specimen').addClass('back');
 
-	// $('.plaque.for-specimen').css('opacity','0');
-	// $('.plaque.for-specimen').removeClass('front');
-	// $('.plaque.for-specimen').addClass('back');
-
     $('.paper').removeClass('back');
    	$('.paper').addClass('front');
-
-	// $('.plaque.for-paper').css('opacity','0');
-	// $('.plaque.for-paper').removeClass('front');
-	// $('.plaque.for-paper').addClass('back');
 })
 
 
@@ -222,10 +265,6 @@ $(document).on('keypress', function(e) {
 
 
 // KEYBOARD APPEARS ON MOBILE
-
-// $(document).ready(function(){
-//     prompt('Type something');
-// })
 
 $(document).click(function(){
     $('#mobilekeyboard').focus();
@@ -306,8 +345,6 @@ $(document).keydown(function(e){
     	$('#space').clone().appendTo('.paper');
 	}
 })  
-
-
 
 // BACKSPACING
 
