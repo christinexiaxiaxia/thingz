@@ -1155,6 +1155,8 @@ input {
 		top: 0;
 		margin: 0;
 		padding: 1.5rem 2rem 0rem 2rem;
+
+		z-index: 1000;
 	}
 
 	.date {
