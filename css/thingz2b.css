@@ -351,15 +351,12 @@ body {
 
 
 .letter {
-	/*grid-column-gap: 0.25rem;*/
 	grid-row-gap: 0.25rem;
 	place-items: center;
 	transform: translateY(-1rem);
 
 	width: auto;
 	height: calc(12rem + 0.25rem*11);
-	/*padding: 1rem;*/ /* DISPLAY SIZE*/
-	/*padding: 1.25rem;*/ /* PARAGRAPH SIZE*/
 
 	overflow: visible;
 
@@ -1030,30 +1027,30 @@ body {
 }
 
 #punc-parentheses-left {
-	grid-template-rows: repeat(11, 1rem);
+	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: 0.25rem;
 	margin-right: -0.5rem;
-	transform: translateY(-1.25rem);
+	transform: translateY(-2.25rem);
 }
 
 #punc-parentheses-right {
-	grid-template-rows: repeat(11, 1rem);
+	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: -0.5rem;
 	margin-right: 0.25rem;
-	transform: translateY(-1.25rem);
+	transform: translateY(-2.25rem);
 }
 
 #punc-slash-forward {
-	grid-template-rows: repeat(11, 1rem);
+	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: -0.5rem;
 	margin-right: -0.5rem;
-	transform: translateY(-1.25rem);
+	transform: translateY(-2.25rem);
 }
 
 #punc-percent {
@@ -1080,45 +1077,45 @@ body {
 }
 
 #punc-asterisk {
-	grid-template-rows: repeat(3, 1rem);
+	grid-template-rows: repeat(4, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: -0.25rem;
 	margin-right: -0.25rem;
 }
 
-#punc-asterisk-alt1 {
+/*#punc-asterisk-alt1 {
 	grid-template-rows: repeat(2, 1rem);
 	grid-template-columns: repeat(2, 1rem);
 
 	margin-left: -0.25rem;
 	margin-right: -0.25rem;
-}
+}*/
 
 #punc-atsymbol {
-	grid-template-rows: repeat(11, 1rem);
+	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(11, 1rem);
 
 	margin-right: -1rem;
 
-	transform: translateY(-1.25rem);
+	transform: translateY(-2.25rem);
 }
 
-#punc-atsymbol-alt1 {
-	grid-template-rows: repeat(11, 1rem);
+/*#punc-atsymbol-alt1 {
+	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(11, 1rem);
 
-	transform: translateY(-1.25rem);
-}
+	transform: translateY(-2.25rem);
+}*/
 
 #punc-dollar {
-	grid-template-rows: repeat(11, 1rem);
+	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -0.25rem;
 	margin-right: -0.5rem;
 
-	transform: translateY(-1.25rem);
+	transform: translateY(-2.25rem);
 }
 
 #punc-hashtag {
