@@ -71,7 +71,7 @@ const numberLining = [
 
 const punctuationA = [
 	'#punc-exclamation', 		//33
-	'', 	//34
+	'punc-', 					//34
 	'#punc-hashtag', 			//35
 	'#punc-dollar', 			//36
 	'#punc-percent', 			//37
@@ -107,6 +107,13 @@ const punctuationA = [
 const punctuationB = [
 	'#punc-endash', //8211
 	'#punc-emdash', //8212
+]
+
+const punctuationC = [
+	'#punc-slash-backward',		// 92
+	'#punc-',					// 93
+	'#punc-',					// 94
+	'#punc-underscore'			// 95
 ]
 
 const quoteDouble = [
@@ -312,6 +319,11 @@ $(document).on('keypress', function(e) {
     for (i = 0; i < 2; i++) {
     	if (event.keyCode == i+8211) {
     		$(punctuationB[i]).clone().appendTo('.paper');
+    	}
+    }
+    for (i = 0; i < 5; i++) {
+    	if (event.keyCode == i+92) {
+    		$(punctuationC[i]).clone().appendTo('.paper');
     	}
     }
     for (i = 0; i < 1; i++) {
