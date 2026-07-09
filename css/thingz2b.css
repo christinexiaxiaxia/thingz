@@ -15,19 +15,6 @@ body {
 
 
 
-/* CURSOR */
-
-.cursor {
-	position: fixed;
-	width: 7rem;
-	height: 2rem;
-	padding: 0.85rem 0.5rem 0.15rem 0.5rem;
-
-	background-color: black;
-	color: white;
-	font-size: 1rem;
-	text-align: center;
-}
 
 .plaque {
 	position: fixed;
@@ -70,76 +57,16 @@ button:hover {
 	color: white;
 }
 
-.zoom-display {
-	zoom: 1;
-	padding: 0.9rem;
-	margin: 0 0 -4rem 0;
-}
 
-.zoom-text {
-	zoom: 0.125;
-	padding: 1.1rem;
-	margin: 0 0 -5rem 0;
-}
+
+
+
+/* COLOUR - WHITE BG BLACK TYPE */
 
 .colour-inverted {
 	filter: invert(1);
 }
 
-
-
-
-
-/* SO I DON'T HAVE TO CONSTANTLY SQUINT */
-
-.blur {
-	/*moved to colour (see below) to have a diff amount of brightness for black vs white*/
-	/*filter: blur(0.5rem);*/
-	/*filter: blur(0.5rem) contrast(2000%) brightness(100%);*/
-}
-
-
-
-/* COLOUR - BLACK BG WHITE TYPE */
-
-/*body {
-	background-color: black;
-}
-
-.blur {
-	filter: blur(0.25rem) brightness(130%) contrast(5000%);
-}
-
-.paper {
-	background-color: black;
-	mix-blend-mode: screen;
-}
-
-.specimen {
-	background-color: black;
-	mix-blend-mode: screen;
-}
-
-.storage {
-	background-color: black;
-	mix-blend-mode: screen;
-}
-
-.dot {
-	background-color: white;
-	border-radius: 3rem;
-
-	border: 0.5rem solid black; 
-	mix-blend-mode: screen;
-}
-
-.letter {
-	background-color: black;
-	mix-blend-mode: screen;
-}*/
-
-
-/* COLOUR - WHITE BG BLACK TYPE */
 
 body {
 	background-color: white;
@@ -189,9 +116,6 @@ body {
 
 
 
-
-
-
 .front {
 	position: relative;
 	z-index: 1000;
@@ -211,15 +135,12 @@ body {
 
 
 .paper {
-	/*position: relative;*/
 	top: 0;
 	left: 0;
 	width: calc(100vw - 4rem);
 	height: auto;
 
 	padding: 2rem;
-
-	/*overflow: scroll;*/
 }
 
 .showcase {
@@ -233,10 +154,6 @@ body {
 	height: auto;
 
 	padding: 2rem;
-}
-
-.text {
-	/*zoom: 0.1;*/
 }
 
 .storage {
@@ -267,49 +184,6 @@ body {
 
 	z-index: -1000;
 }
-
-
-
-/*.dot-uniform-0-25 {
-	width: 0.75rem;
-	height: 0.75rem;
-}
-
-.dot-uniform-0-5 {
-	width: 0.75rem;
-	height: 0.75rem;
-}
-
-.dot-uniform-0-75 {
-	width: 0.75rem;
-	height: 0.75rem;
-}
-
-.dot-uniform-1-0 {
-	width: 0.75rem;
-	height: 0.75rem;
-}
-
-.dot-uniform-1-25 {
-	width: 0.75rem;
-	height: 0.75rem;
-}
-
-.dot-uniform-1-5 {
-	width: 0.75rem;
-	height: 0.75rem;
-}
-
-.dot-uniform-1-75 {
-	width: 0.75rem;
-	height: 0.75rem;
-}
-
-.dot-uniform-2-0 {
-	width: 0.75rem;
-	height: 0.75rem;
-}*/
-
 
 
 
@@ -353,14 +227,35 @@ body {
 .letter {
 	grid-row-gap: 0.25rem;
 	place-items: center;
-	transform: translateY(-1rem);
+	/*transform: translateY(-1rem);*/
 
-	width: auto;
-	height: calc(12rem + 0.25rem*11);
+	/*width: auto;*/
+	/*height: calc(12rem + 0.25rem*11);*/
 
 	overflow: visible;
 
 	transition-duration: 1s;
+}
+
+.zoom-display {
+	zoom: 1;
+	/*transform: translateY(-1rem) scale(1);*/
+	padding: 0.9rem;
+	margin: 0 0 -4rem 0;
+
+	width: auto;
+	height: calc(12rem + 0.25rem*11);
+}
+
+.zoom-text {
+	zoom: 0.125;
+	/*transform: translateY(-1rem) scale(0.125);*/
+	padding: 1.1rem;
+	margin: 0rem 0rem -5rem 0rem;
+	/*margin: 0rem 0rem 0rem 0rem;*/
+
+	width: auto;
+	height: calc(12rem + 0.25rem*11);
 }
 
 .width-regular {
@@ -377,25 +272,7 @@ body {
 #space {
 	grid-template-rows: repeat(1, 1rem);
 	grid-template-columns: repeat(1, 1rem);
-
-    position: relative;
-	grid-column-gap: 0.25rem;
-	grid-row-gap: 0.25rem;
-	align-items: center;
-	justify-items: center;
-
-	width: auto;
-	height: calc(12rem + 0.25rem*11);
-	padding: 1rem;
-	margin: 0 0 -3rem 0;
 }
-
-/*#a-lower-1 {
-	grid-template-rows: repeat(10, 1rem);
-	grid-template-columns: repeat(6, 1rem);
-
-	margin-right: 0.25rem;
-}*/
 
 #a-upper {
 	grid-template-rows: repeat(10, 1rem);
@@ -690,13 +567,6 @@ body {
 	margin-right: -1.75rem;
 }
 
-/*#s-lower-1 {
-	grid-template-rows: repeat(10, 1rem);
-	grid-template-columns: repeat(5, 1rem);
-
-	margin-right: 0.5rem;
-}*/
-
 #s-upper {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(7, 1rem);
@@ -906,6 +776,7 @@ body {
 
 
 
+
 #punc-period {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(2, 1rem);
@@ -1092,14 +963,6 @@ body {
 	margin-right: -0.5rem;
 }
 
-/*#punc-asterisk-alt1 {
-	grid-template-rows: repeat(2, 1rem);
-	grid-template-columns: repeat(2, 1rem);
-
-	margin-left: -0.25rem;
-	margin-right: -0.25rem;
-}*/
-
 #punc-atsymbol {
 	grid-template-rows: repeat(12, 1rem);
 	grid-template-columns: repeat(11, 1rem);
@@ -1108,13 +971,6 @@ body {
 
 	transform: translateY(-2.25rem);
 }
-
-/*#punc-atsymbol-alt1 {
-	grid-template-rows: repeat(12, 1rem);
-	grid-template-columns: repeat(11, 1rem);
-
-	transform: translateY(-2.25rem);
-}*/
 
 #punc-dollar {
 	grid-template-rows: repeat(12, 1rem);
