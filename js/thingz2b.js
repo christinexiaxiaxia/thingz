@@ -143,6 +143,7 @@ $(document).ready(function(e){
     $('.paper').addClass('back'); // AVOIDS BLOCKING SPECIMEN
 	$('.letter').addClass('zoom-display')
 	$('.letter').addClass('width-regular')
+	$('.letter').addClass('grid')
 	$('.button-display').addClass('button-selected')
 	$('.button-regular').addClass('button-selected')
 })
