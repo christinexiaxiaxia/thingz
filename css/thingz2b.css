@@ -163,10 +163,6 @@ body {
 	padding: 2rem;
 }
 
-.storage {
-	display: inline-grid;
-}
-
 
 
 
@@ -270,6 +266,14 @@ body {
 }
 .width-condensed {
 	grid-column-gap: 0;
+}
+
+.grid {
+	display: inline-grid;
+}
+
+.inline {
+	display: flex;
 }
 
 .letter:hover {
