@@ -279,7 +279,11 @@ $(document).on('keypress', function(e) {
 
 // KEYBOARD APPEARS ON MOBILE
 
-$(document).click(function(){
+$('.specimen').click(function(){
+    $('#mobilekeyboard').focus();
+})
+
+$('.paper').click(function(){
     $('#mobilekeyboard').focus();
 })
 
