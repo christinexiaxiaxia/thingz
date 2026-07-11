@@ -230,7 +230,7 @@ body {
 .letter {
 	grid-row-gap: 0.25rem;
 	place-items: center;
-	/*transform: translateY(-1rem);*/
+	transform: translateY(-1rem);
 
 	width: auto;
 	height: calc(12rem + 0.25rem*11);
@@ -524,8 +524,8 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(10, 1rem);
 
-	margin-left: -0.5rem;
-	margin-right: -0.25rem;
+	margin-left: -0.75rem;
+	margin-right: -0.5rem;
 }
 
 #m-lower {
@@ -540,8 +540,8 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
-	margin-left: -0.5rem;
-	margin-right: -1.25rem;
+	margin-left: -0.75rem;
+	margin-right: -1rem;
 }
 
 #n-lower {
@@ -581,14 +581,14 @@ body {
 	grid-template-columns: repeat(6, 1rem);
 
 	margin-left: -0.75rem;
-	margin-right: -0.25rem;
+	margin-right: 0rem;
 }
 
 #q-upper {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
-	margin-right: -1rem;
+	margin-right: -1.5rem;
 }
 
 #q-lower {
@@ -604,7 +604,7 @@ body {
 	grid-template-columns: repeat(8, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -0.75rem;
+	margin-right: -1.5rem;
 }
 
 #r-lower {
@@ -747,7 +747,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: 0rem;
-	margin-right: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #num-lining-1 {
