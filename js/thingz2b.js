@@ -356,7 +356,7 @@ $(document).on('keypress', function(e) {
 	// TYPING QUOTES
 
     if (event.keyCode == 34) {
-    	console.log($('.letter:last').class);
+    	// console.log($('.letter:last').class);
 
     	// if (!$('.letter:last').class == '.space') {
     	// 	// console.log('previous character is a space')
@@ -374,7 +374,11 @@ $(document).on('keypress', function(e) {
 $('html').keydown(function(e){
 	if (e.keyCode == 8) {
     	console.log("backspace");
-    	$('.paper').children().last().remove();
+    	$('.word').last().children().last().remove();
+
+    	if ($('.word').last().is(':empty') && $('.paper').children().length > 1) {
+    		$('.paper').children().last().remove();
+    	}
 	}
 })  
 
