@@ -835,7 +835,7 @@ body {
 }
 
 #punc-comma {
-	grid-template-rows: repeat(12, 1rem);
+	grid-template-rows: repeat(13, 1rem);
 	grid-template-columns: repeat(2, 1rem);
 
 	margin-left: 0.25rem;
@@ -851,7 +851,7 @@ body {
 }
 
 #punc-semicolon {
-	grid-template-rows: repeat(12, 1rem);
+	grid-template-rows: repeat(13, 1rem);
 	grid-template-columns: repeat(2, 1rem);
 
 	margin-left: 0.5rem;
