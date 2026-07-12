@@ -71,7 +71,7 @@ const numberLining = [
 
 const punctuationA = [
 	'#punc-exclamation', 		//33
-	'punc-', 					//34
+	'#punc-doublequote-right', 	//34
 	'#punc-hashtag', 			//35
 	'#punc-dollar', 			//36
 	'#punc-percent', 			//37
@@ -123,7 +123,7 @@ const quoteDouble = [
 
 const quoteSingle = [
 	'#punc-quote-left',			//230? unconfirmed
-	'#punc-quote-right' 		//34
+	'#punc-quote-right' 		//39
 ]
 
 
@@ -342,20 +342,20 @@ $(document).on('keypress', function(e) {
     		$('.word').last().append($(punctuationC[i]).clone());
     	}
     }
-    for (i = 0; i < 1; i++) {
-    	if (event.keyCode == 230) {
-    		$('.word').last().append($(quoteSingle[i]).clone());
-    	}
-    }
-    for (i = 0; i < 1; i++) {
-    	if (event.keyCode == 198) {
-    		$('.word').last().append($(quoteDouble[i]).clone());
-    	}
-    }
+    // for (i = 0; i < 1; i++) {
+    // 	if (event.keyCode == 230) {
+    // 		$('.word').last().append($(quoteSingle[i]).clone());
+    // 	}
+    // }
+    // for (i = 0; i < 1; i++) {
+    // 	if (event.keyCode == 198) {
+    // 		$('.word').last().append($(quoteDouble[i]).clone());
+    // 	}
+    // }
 
 	// TYPING QUOTES
 
-    if (event.keyCode == 34) {
+    // if (event.keyCode == 34) {
     	// console.log($('.letter:last').class);
 
     	// if (!$('.letter:last').class == '.space') {
@@ -366,7 +366,7 @@ $(document).on('keypress', function(e) {
     		// console.log('previous character is a letter')
     		// $(quoteDouble[1]).clone().appendTo('.word');
     	// }
-    }
+    // }
 })  
 
 // BACKSPACING
