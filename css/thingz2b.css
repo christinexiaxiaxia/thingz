@@ -433,16 +433,8 @@ body {
 	margin-right: -1.25rem;
 }
 
-#g-lower-1 {
-	grid-template-rows: repeat(12, 1rem);
-	grid-template-columns: repeat(5, 1rem);
-
-	margin-left: 0.25rem;
-	margin-right: 0.25rem;
-}
-
 #g-lower {
-	grid-template-rows: repeat(12, 1rem);
+	grid-template-rows: repeat(13, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
 	margin-left: -0.25rem;
@@ -482,7 +474,7 @@ body {
 }
 
 #j-upper {
-	grid-template-rows: repeat(12, 1rem);
+	grid-template-rows: repeat(13, 1rem);
 	grid-template-columns: repeat(4, 1rem);
 
 	margin-left: -1.75rem;
@@ -490,7 +482,7 @@ body {
 }
 
 #j-lower {
-	grid-template-rows: repeat(12, 1rem);
+	grid-template-rows: repeat(13, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: -0.75rem;
@@ -586,7 +578,7 @@ body {
 }
 
 #p-lower {
-	grid-template-rows: repeat(12, 1rem);
+	grid-template-rows: repeat(13, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
 	margin-left: -0.75rem;
@@ -601,7 +593,7 @@ body {
 }
 
 #q-lower {
-	grid-template-rows: repeat(12, 1rem);
+	grid-template-rows: repeat(13, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
 	margin-left: 0rem;
@@ -729,7 +721,7 @@ body {
 }
 
 #y-lower {
-	grid-template-rows: repeat(12, 1rem);
+	grid-template-rows: repeat(13, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -1rem;
