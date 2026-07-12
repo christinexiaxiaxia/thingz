@@ -541,7 +541,7 @@ body {
 	grid-template-columns: repeat(9, 1rem);
 
 	margin-left: -0.75rem;
-	margin-right: -0.75rem;
+	margin-right: -1rem;
 }
 
 #n-lower {
