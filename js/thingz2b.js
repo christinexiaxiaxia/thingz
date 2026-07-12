@@ -146,6 +146,7 @@ $(document).ready(function(e){
 	$('.letter').addClass('grid')
 	$('.button-display').addClass('button-selected')
 	$('.button-regular').addClass('button-selected')
+	$('.paper').append('<div class="word"></div>')
 })
 
 
@@ -289,83 +290,83 @@ $('.paper').click(function(){
 
 
 
-
-// TYPING LETTERS
-
 $(document).on('keypress', function(e) {
+
+	// CREATING WORDS (to create proper line/word breaks?)
+	// TYPING SPACE
+
+	// if (event.keyCode != 32) { //if key is not space
+	// 	$('.paper').append(word)
+	// }
+
+	if (e.keyCode == 32) {
+		var word = $('<div class="word"></div>');
+
+    	$('.word').last().append($('#space').clone());
+    	$('.paper').append(word);
+	}
+
+	// TYPING LETTERS
+
     for (i = 0; i < 26; i++) {
     	if (event.keyCode == i+97) {
-    		$(keyLower[i]).clone().appendTo('.paper');
+    		$('.word').last().append($(keyLower[i]).clone());
     	}
     	if (event.keyCode == i+65) {
-    		$(keyUpper[i]).clone().appendTo('.paper');
+    		$('.word').last().append($(keyUpper[i]).clone());
     	}
     }
-});
 
-// TYPING NUMBERS
+	// TYPING NUMBERS
 
-$(document).on('keypress', function(e) {
     for (i = 0; i < 10; i++) {
     	if (event.keyCode == i+48) {
-    		$(numberLining[i]).clone().appendTo('.paper');
+    		$('.word').last().append($(numberLining[i]).clone());
     	}
     }
-});
 
-// TYPING PUNCTUATION
+	// TYPING PUNCTUATION
 
-$(document).on('keypress', function(e) {
     for (i = 0; i < 33; i++) {
     	if (event.keyCode == i+33) {
-    		$(punctuationA[i]).clone().appendTo('.paper');
+    		$('.word').last().append($(punctuationA[i]).clone());
     	}
     }
     for (i = 0; i < 2; i++) {
     	if (event.keyCode == i+8211) {
-    		$(punctuationB[i]).clone().appendTo('.paper');
+    		$('.word').last().append($(punctuationB[i]).clone());
     	}
     }
     for (i = 0; i < 5; i++) {
     	if (event.keyCode == i+92) {
-    		$(punctuationC[i]).clone().appendTo('.paper');
+    		$('.word').last().append($(punctuationC[i]).clone());
     	}
     }
     for (i = 0; i < 1; i++) {
     	if (event.keyCode == 230) {
-    		$(quoteSingle[i]).clone().appendTo('.paper');
+    		$('.word').last().append($(quoteSingle[i]).clone());
     	}
     }
     for (i = 0; i < 1; i++) {
     	if (event.keyCode == 198) {
-    		$(quoteDouble[i]).clone().appendTo('.paper');
+    		$('.word').last().append($(quoteDouble[i]).clone());
     	}
     }
-});
 
-// TYPING QUOTES
+	// TYPING QUOTES
 
-$(document).on('keypress', function(e) {
     if (event.keyCode == 34) {
     	console.log($('.letter:last').class);
 
-    	if (!$('.letter:last').class == '.space') {
-    		// console.log('previous character is a space')
-    		$(quoteDouble[0]).clone().appendTo('.paper');
-    	} 
-    	else {
+    	// if (!$('.letter:last').class == '.space') {
+    	// 	// console.log('previous character is a space')
+    	// 	$(quoteDouble[0]).clone().appendTo('.word');
+    	// } 
+    	// else {
     		// console.log('previous character is a letter')
-    		$(quoteDouble[1]).clone().appendTo('.paper');
-    	}
+    		// $(quoteDouble[1]).clone().appendTo('.word');
+    	// }
     }
-});
-
-// TYPING SPACE
-
-$(document).keydown(function(e){
-	if (e.keyCode == 32) {
-    	$('#space').clone().appendTo('.paper');
-	}
 })  
 
 // BACKSPACING
