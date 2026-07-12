@@ -148,6 +148,10 @@ body {
 	height: auto;
 
 	padding: 2rem;
+
+/*	display: inline-flex;
+	justify-content: center;
+	align-items: center;*/
 }
 
 .word {
