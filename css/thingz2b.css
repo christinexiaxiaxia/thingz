@@ -728,7 +728,7 @@ body {
 	grid-template-rows: repeat(13, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -1rem;
+	margin-left: -1.25rem;
 	margin-right: -1.5rem;
 }
 
