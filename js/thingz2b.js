@@ -128,12 +128,6 @@ const quoteSingle = [
 
 
 
-// $(document).mousemove(function(e){
-// 	$('.cursor').css({'top': e.clientY + 10, 'left': e.clientX + 10})
-// })
-
-
-
 
 // ON LOAD
 
@@ -153,9 +147,6 @@ $(document).ready(function(e){
 // REMOVE TRANSITION DURATION WHEN RESIZING WINDOW
 
 $(window).resize(function(){
-	// $('.front').addClass('no-transition');
-	// $('.html').addClass('no-transition');
-	// $('.letter').addClass('no-transition');
 	$('*').addClass('no-transition');
 });
 
@@ -187,13 +178,6 @@ $('.button-display').click(function(){
 		$('.paper').removeClass('blur-text');
 	}
 })
-
-// $('.button-regular').click(function(){
-// 	$('.letter').removeClass('width-condensed')
-// 	$('.letter').addClass('width-regular')
-// 	$('.button-regular').addClass('button-selected')
-// 	$('.button-condensed').removeClass('button-selected')
-// })
 
 $('.button-condensed').click(function(){
 	$('.button-condensed').toggleClass('button-selected')
@@ -255,28 +239,6 @@ $('.button-uniform').click(function(){
 
 
 
-// START TYPING MAKES SPECIMEN DISAPPEAR
-
-$(document).on('keypress', function() {
-	$('.specimen').css('opacity','0');
-	$('.specimen').removeClass('front');
-	$('.specimen').addClass('back');
-
-    $('.paper').removeClass('back');
-   	$('.paper').addClass('front');
-})
-
-
-
-
-
-
-// KEYCODE INPUT
-$(document).on('keypress', function(e) {
-    console.log(e.keyCode);
-})
-
-
 
 // KEYBOARD APPEARS ON MOBILE
 
@@ -289,16 +251,28 @@ $('.paper').click(function(){
 })
 
 
+// START TYPING MAKES SPECIMEN DISAPPEAR
+function displayPaper() {
+	$('.specimen').css('opacity','0');
+	$('.specimen').removeClass('front');
+	$('.specimen').addClass('back');
+
+	$('.paper').removeClass('back');
+	$('.paper').addClass('front');
+}
+
 
 $(document).on('keypress', function(e) {
 
+    displayPaper();
+
+	// KEYCODE INPUT
+    console.log(e.keyCode);
+
+
 	// CREATING WORDS (to create proper line/word breaks?)
+
 	// TYPING SPACE
-
-	// if (event.keyCode != 32) { //if key is not space
-	// 	$('.paper').append(word)
-	// }
-
 	if (e.keyCode == 32) {
 		var word = $('<div class="word"></div>');
 
@@ -307,7 +281,6 @@ $(document).on('keypress', function(e) {
 	}
 
 	// TYPING LETTERS
-
     for (i = 0; i < 26; i++) {
     	if (event.keyCode == i+97) {
     		$('.word').last().append($(keyLower[i]).clone());
@@ -318,7 +291,6 @@ $(document).on('keypress', function(e) {
     }
 
 	// TYPING NUMBERS
-
     for (i = 0; i < 10; i++) {
     	if (event.keyCode == i+48) {
     		$('.word').last().append($(numberLining[i]).clone());
@@ -326,7 +298,6 @@ $(document).on('keypress', function(e) {
     }
 
 	// TYPING PUNCTUATION
-
     for (i = 0; i < 33; i++) {
     	if (event.keyCode == i+33) {
     		$('.word').last().append($(punctuationA[i]).clone());
@@ -367,17 +338,29 @@ $(document).on('keypress', function(e) {
     		// $(quoteDouble[1]).clone().appendTo('.word');
     	// }
     // }
-})  
+})
+
 
 // BACKSPACING
 
-$('html').keydown(function(e){
+$(document).keydown(function(e){
 	if (e.keyCode == 8) {
     	console.log("backspace");
     	$('.word').last().children().last().remove();
 
     	if ($('.word').last().is(':empty') && $('.paper').children().length > 1) {
     		$('.paper').children().last().remove();
+    	}
+
+    	if ($('.word').last().is(':empty') && $('.paper').children().length == 1) {
+			$('*').addClass('no-transition');
+
+			$('.specimen').css('opacity','1');
+			$('.specimen').removeClass('back');
+			$('.specimen').addClass('front');
+
+		    $('.paper').removeClass('front');
+		   	$('.paper').addClass('back');
     	}
 	}
 })  
