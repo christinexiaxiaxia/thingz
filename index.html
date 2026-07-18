@@ -26,28 +26,37 @@
 		</div>
 		<div class="shelf">
 			<p class="item underline">thingz 1: this site</p>
-			<p class="item">an evolution of my <a href="https://web.xiaxiaxia.design/" target="_blank">interactive media: web class archive</a></p>
-			<!-- <div class="item frame"><iframe src="https://web.xiaxiaxia.design/" class="picture"></iframe></div> -->
+			<p class="item">an evolution of my <a href="https://web.christinexia.com/" target="_blank">interactive media: web class archive</a></p>
+			<!-- <div class="item frame"><iframe src="https://web.christinexia.com/" class="picture"></iframe></div> -->
 			<!-- <p class="item"><a href="https://medium.com/@ozaniraj19/building-a-real-time-typing-indicator-feature-using-node-js-8cf463c7e6a1" target="_blank">node/socket to show live typing, but can use to indicate when anyone is online?</a></p> -->
-			<!-- <p class="item"><span class="strike"><a href="https://api.jquery.com/not/" target="_blank">.not() might solve my toggle issues (on click make everything that’s not this shrink?)</a></span> yuuuuup</p> -->
-			<!-- <p class="item"><span class="strike">need to fix how things are laggy whenever the recollection iframe gets resized—likely because of the transition-duration stuff that happens when you resize the actual site—THIS IS SO HARD. trying to detect when window is being resized to toggle class, but only finding ways to add/remove once after the first window resize or associating with specific window sizes</span> FIXED IT! doing addClass for a class that sets the transition-duration to 0 on window resize wasn’t working at first since it completely removes the blur transition, but removing the class on click brings it back!</p> -->
+			<button type="button" class="collapse">resolved</button>
+			<p class="item"><span class="strike"><a href="https://api.jquery.com/not/" target="_blank">.not() might solve my toggle issues that i never figured out on the original web class site (on click make everything that’s not this shrink?)</a></span> yuuuuup</p>
+			<button type="button" class="collapse">resolved</button>
+			<p class="item"><span class="strike">need to fix how things are laggy whenever the recollection iframe gets resized—likely because of the transition-duration stuff that happens when you resize the actual site—THIS IS SO HARD. trying to detect when window is being resized to toggle class, but only finding ways to add/remove once after the first window resize or associating with specific window sizes</span> FIXED IT! doing addClass for a class that sets the transition-duration to 0 on window resize wasn’t working at first since it completely removes the blur transition, but removing the class on click brings it back!</p>
 			<p class="item">lower priority fix: the dashed border/outline on mobile. on desktop i’m using a 0.5px border to resolve the fact that using a 1px outline displays weirdly once i expand one of the columns (all the columns on the right no longer have visible outlines). however, on mobile the 0.5px border doesn’t render so i’ve opted to use a 1px outline for now. do i make the outline work better on desktop and mobile? if i do i’d have to stick with the longer line length of dashes instead of the current short length.</p>
+			<p class="item">lower priority design update: toggle button text on click (swtich between + and - to reflect the collapsed/expanded state of the text below)</p>
 		</div>
 		<div class="shelf">
 			<p class="item underline">thingz 2: fontz</p>
-			<p class="item">à la <a href="https://web.xiaxiaxia.design/act-1/Rave_in_Berlin_1100/" target="_blank">rave in berlin 1100</a></p>
+			<button type="button" class="collapse">reference</button>
+			<p class="item">à la <a href="https://web.christinexia.com/act-1/Rave_in_Berlin_1100/" target="_blank">rave in berlin 1100</a></p>
 			<!-- <p class="item"><a href="https://css-tricks.com/the-shapes-of-css/" target="_blank">types of shapes, basic and more complex (some good reverse corners, an egg shape)</a></p> -->
 			<p class="item"><a href="2a" target="_blank">idk?</a></p>
 			<div class="item frame"><iframe src="2a/index.html" class="picture"></iframe></div>
-			<p class="item"><a href="2b" target="_blank">inkblot matrix (recollection)</a>:</p>
+			<p class="item"><a href="2b" target="_blank">Recollection</a>:</p>
+			<button type="button" class="collapse">yup</button>
+			<p class="item">dot matrix serif font where the size of the dots are bigger and smaller to create contrast (inkblot matrix)</p>
 			<div class="item frame"><iframe src="2b/index.html" class="picture"></iframe></div>
-			<p class="item">^ activate with a gesture, can display on portable 3:4 tv screen i have to add more softness + texture? the smaller supporting type could be a pixel font that aligns with the resolution of the screen</p>
-			<p class="item">^ could also make a narrative type specimen (zine)? would be great to contrast the display size with tiny pencil handwriting/illustrations</p>
-			<!-- <p class="item">dot matrix serif font where the size of the dots are bigger and smaller to create contrast</p> -->
+			<button type="button" class="collapse">^ activation idea</button>
+			<p class="item">activate with a gesture, can display on portable 3:4 tv screen i have to add more softness + texture? the smaller supporting type could be a pixel font that aligns with the resolution of the screen</p>
+			<button type="button" class="collapse">^ activation idea</button>
+			<p class="item">could also make a narrative type specimen (zine)? would be great to contrast the display size with tiny pencil handwriting/illustrations</p>
+			<button type="button" class="collapse">^ make it an actual font</button>
+			<p class="item">could make a proper font (as software, in glyphs) and have the light weight be sharp and “normal” and the bold weight soft/blurry/bleed-y</p>
 			<p class="item">italic font made of vertical lines (sketchbook drawings coming soon)</p>
 			<p class="item">gridded font (like the early earlier cover sketch of type that was retro videogame-y, wherever that sketch went lol)</p>
 			<p class="item">also make a grotesque font à la grotesque from peignot’s type foundry before they lost ownership—something designed optically for print, having an awkwardness in digital. start with bold weight?</p>
-			<p class="item">is there a way to automatically update on the site if it’s something i’m designing in glyphs similar to working on a site?</p>
+			<p class="item">is there a way to automatically update on the site if it’s something i’m designing in glyphs similar to working on a site? (maybe it’s just constantly exporting font files under the same name to the same github folder?)</p>
 		</div>
 		<div class="shelf">
 			<p class="item underline">thingz 3: platez</p>
@@ -84,9 +93,10 @@
 			<p class="item">could be cool to create complex landscapes for a point and click, and putting/hiding actual type in the landscapes as the clickable things</p>
 			<p class="item">infinite (not actually) chain of iframes embedded in one another</p>
 			<p class="item">(used to have an iframe of this site here to show the infinite loop but obviously making the site lag when resizing/hovering lol)</p>
-			<!-- <div class="item frame"><iframe src="https://thingz.xiaxiaxia.design/" class="picture"></iframe></div> -->
+			<!-- <div class="item frame"><iframe src="https://thingz.christinexia.com/" class="picture"></iframe></div> -->
 			<p class="item">css hue shift on mouse move to shift the colour as you navigate?</p>
-			<!-- <div class="item frame"><iframe src="https://orteil.dashnet.org/nested" class="picture"></iframe></div> -->
+			<button type="button" class="collapse">reference: Nested</button>
+			<div class="item frame"><iframe src="https://orteil.dashnet.org/nested" class="picture"></iframe></div>
 			<p class="item"><a href="https://orteil.dashnet.org/nested" target="_blank">from the maker of the cookie clicker game, orteil</a>: his “Nested” game also has this abstract, expanding looping experience that’s interesting</p>
 		</div>
 		<div class="shelf">
