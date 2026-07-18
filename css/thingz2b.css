@@ -442,7 +442,7 @@ body {
 	grid-template-columns: repeat(6, 1rem);
 
 	margin-left: -0.25rem;
-	margin-right: -1.5rem;
+	margin-right: -1.25rem;
 }
 
 #h-upper {
@@ -498,7 +498,7 @@ body {
 	grid-template-columns: repeat(8, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -0.75rem;
+	margin-right: -1.25rem;
 }
 
 #k-lower {
@@ -638,10 +638,10 @@ body {
 
 #t-upper {
 	grid-template-rows: repeat(10, 1rem);
-	grid-template-columns: repeat(7, 1rem);
+	grid-template-columns: repeat(9, 1rem);
 
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
+	margin-left: -2.75rem;
+	margin-right: -2.75rem;
 }
 
 #t-lower {
@@ -689,7 +689,7 @@ body {
 	grid-template-columns: repeat(13, 1rem);
 
 	margin-left: -1.5rem;
-	margin-right: -2.75rem;
+	margin-right: -3rem;
 }
 
 #w-lower {
@@ -729,15 +729,15 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -1.25rem;
-	margin-right: -1.5rem;
+	margin-right: -1.75rem;
 }
 
 #z-upper {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(8, 1rem);
 
-	margin-left: -1rem;
-	margin-right: -0.5rem;
+	margin-left: -0.25rem;
+	margin-right: -1rem;
 }
 
 #z-lower {
