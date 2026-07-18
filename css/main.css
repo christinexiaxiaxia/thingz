@@ -67,13 +67,17 @@ body {
 	cursor: zoom-in;
 }
 
-.shelf:hover {
+.shelf:hover,
+.shelf:hover > li,
+.shelf:hover > button {
 	/*background-color: white;*/
-	/*color: rgb(150,150,150);*/
-	opacity: 0.65;
+	color: rgb(150,150,150);
+	/*opacity: 0.6;*/
 }
 
-.expand:hover {
+.expand:hover,
+.expand:hover > li,
+.expand:hover > button {
 	color: black;
 	opacity: 1;
 }
@@ -192,8 +196,9 @@ button {
 }
 
 button:hover {
-	background-color: black;
-	color: white;
+	/*background-color: black;*/
+	/*color: white;*/
+	border: 1px dashed black;
 
 	cursor: pointer;
 }
