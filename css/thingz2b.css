@@ -110,7 +110,7 @@ body {
 	background-color: black;
 	border-radius: 3rem;
 
-	border: 0.5rem solid white;
+	border: 0.25rem solid white;
 	mix-blend-mode: multiply;
 }
 
@@ -379,7 +379,7 @@ body {
 	grid-template-columns: repeat(5, 1rem);
 
 	margin-left: 0rem;
-	margin-right: -0.75rem;
+	margin-right: -1rem;
 }
 
 #d-upper {
@@ -411,7 +411,7 @@ body {
 	grid-template-columns: repeat(5, 1rem);
 
 	margin-left: 0rem;
-	margin-right: -0.75rem;
+	margin-right: -1rem;
 }
 
 #f-upper {
@@ -442,7 +442,7 @@ body {
 	grid-template-columns: repeat(6, 1rem);
 
 	margin-left: -0.25rem;
-	margin-right: -1.25rem;
+	margin-right: -1.5rem;
 }
 
 #h-upper {
@@ -450,7 +450,7 @@ body {
 	grid-template-columns: repeat(8, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #h-lower {
@@ -466,14 +466,14 @@ body {
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #i-lower {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
-	margin-left: -0.75rem;
+	margin-left: -0.5rem;
 	margin-right: -0.5rem;
 }
 
@@ -482,14 +482,14 @@ body {
 	grid-template-columns: repeat(4, 1rem);
 
 	margin-left: -1.75rem;
-	margin-right: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #j-lower {
 	grid-template-rows: repeat(13, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
-	margin-left: -0.75rem;
+	margin-left: -0.5rem;
 	margin-right: -0.75rem;
 }
 
@@ -506,7 +506,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -1rem;
+	margin-right: -1.25rem;
 }
 
 #l-upper {
@@ -514,7 +514,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -1.5rem;
+	margin-right: -1rem;
 }
 
 #l-lower {
@@ -633,7 +633,7 @@ body {
 	grid-template-columns: repeat(4, 1rem);
 
 	margin-left: -0.25rem;
-	margin-right: -0.5rem;
+	margin-right: -0.25rem;
 }
 
 #t-upper {
@@ -672,8 +672,8 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
+	margin-left: -1.75rem;
+	margin-right: -1.75rem;
 }
 
 #v-lower {
@@ -688,16 +688,16 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(13, 1rem);
 
-	margin-left: -1.25rem;
-	margin-right: -2.5rem;
+	margin-left: -1.5rem;
+	margin-right: -2.75rem;
 }
 
 #w-lower {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(9, 1rem);
 
-	margin-left: -0.75rem;
-	margin-right: -1rem;
+	margin-left: -1rem;
+	margin-right: -1.25rem;
 }
 
 #x-upper {
@@ -734,10 +734,10 @@ body {
 
 #z-upper {
 	grid-template-rows: repeat(10, 1rem);
-	grid-template-columns: repeat(9, 1rem);
+	grid-template-columns: repeat(8, 1rem);
 
-	margin-left: -0.75rem;
-	margin-right: -1.5rem;
+	margin-left: -1rem;
+	margin-right: -0.5rem;
 }
 
 #z-lower {
@@ -760,7 +760,7 @@ body {
 	grid-template-columns: repeat(3, 1rem);
 
 	margin-left: -0.25rem;
-	margin-right: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #num-lining-2 {
@@ -768,7 +768,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -1rem;
-	margin-right: -0.25rem;
+	margin-right: -0.75rem;
 }
 
 #num-lining-3 {
@@ -776,7 +776,7 @@ body {
 	grid-template-columns: repeat(6, 1rem);
 
 	margin-left: -0.75rem;
-	margin-right: -0.25rem;
+	margin-right: -0.5rem;
 }
 
 #num-lining-4 {
@@ -807,8 +807,8 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -1.25rem;
-	margin-right: -0.75rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
 }
 
 #num-lining-8 {
@@ -832,10 +832,10 @@ body {
 
 #punc-period {
 	grid-template-rows: repeat(10, 1rem);
-	grid-template-columns: repeat(2, 1rem);
+	grid-template-columns: repeat(1, 1rem);
 
 	margin-left: 0.5rem;
-	margin-right: -0.75rem;
+	margin-right: 0.5rem;
 }
 
 #punc-comma {
@@ -848,10 +848,10 @@ body {
 
 #punc-colon {
 	grid-template-rows: repeat(10, 1rem);
-	grid-template-columns: repeat(2, 1rem);
+	grid-template-columns: repeat(1, 1rem);
 
 	margin-left: 0.5rem;
-	margin-right: -0.75rem;
+	margin-right: 0.5rem;
 }
 
 #punc-semicolon {
