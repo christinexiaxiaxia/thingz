@@ -223,13 +223,14 @@ $('.button-uniform').click(function(){
 
 // SIZE JITTER ON MOUSE MOVE
 
-// function jitter(max) {
-// 	return Math.floor(Math.random() * max);
-// }
-
 // $(document).on("mousemove", function(event) {
-// 	var dotWidthJitter = jitter(2.5);
-// 	$('.dot', this).css({'border': dotWidthJitter + 'rem' + 'solid white'})
+
+// 	function jitter(max) {
+// 		return Math.random() * max;
+// 	}
+
+// 	console.log('mouse is moving')
+// 	$('.dot').css({'transform': 'scale(' + jitter(2) + ')'})
 // } );
 
 // $(document).ready(function(event) {
