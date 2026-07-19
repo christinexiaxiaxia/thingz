@@ -60,9 +60,7 @@ body {
 	padding: 0.5rem;
 
 	background-color: white;
-	/*border: 0.5px dashed black;*/
 	border-right: 1px dashed black;
-	/*outline: 1px dashed black;*/
 
 	z-index: 1;
 }
@@ -72,7 +70,7 @@ body {
 }
 
 .shelf:hover {
-	background-color: rgb(240,240,240);
+	background-color: rgb(245,245,245);
 }
 
 .shelf:hover,
