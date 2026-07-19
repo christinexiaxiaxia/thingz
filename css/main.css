@@ -67,20 +67,24 @@ body {
 	cursor: zoom-in;
 }
 
+.shelf:hover {
+	background-color: rgb(240,240,240);
+}
+
 .shelf:hover,
 .shelf:hover > li,
 .shelf:hover > button {
 	/*background-color: white;*/
-	color: rgb(150,150,150);
+	/*color: rgb(150,150,150);*/
 	/*opacity: 0.6;*/
 }
 
-.expand:hover,
+/*.expand:hover,
 .expand:hover > li,
 .expand:hover > button {
 	color: black;
 	opacity: 1;
-}
+}*/
 
 .shrink {
 	width: auto;
@@ -185,13 +189,13 @@ button {
 	margin-top: 0.5rem;
 	margin-bottom: calc(0.5rem - 1px);
 
-	font-family: sans-serif;
+	/*font-family: sans-serif;*/
 	font-size: 0.75rem;
 	text-align: left;
 	line-height: 0.75rem;
 
 	border: 1px solid black;
-	background-color: white;
+	background-color: rgba(255,255,255,0);
 	color: black;
 }
 
@@ -231,7 +235,7 @@ a:hover {
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 960px) {
 
 	.case {
 		height: 100vh;
