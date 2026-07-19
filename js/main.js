@@ -13,6 +13,7 @@ $(document).ready(function(){
 	$('.collapse').next().addClass('closed');
 	$('.collapse').next().addClass('indent');
 	$('button').addClass('button-closed');
+	$('.plus').addClass('closed');
 })
 
 
@@ -40,14 +41,23 @@ $('.collapse').on('click', function(){
 		$(this).next().addClass('open')
 		$(this).addClass('button-open')
 		$(this).removeClass('button-closed')
+
+		$(this).find('.minus').removeClass('closed')
+		$(this).find('.plus').addClass('closed')
 	} else {
 		$(this).next().removeClass('open')
 		$(this).next().addClass('closed')
 		$(this).removeClass('button-open')
 		$(this).addClass('button-closed')
+
+		$(this).find('.minus').addClass('closed')
+		$(this).find('.plus').removeClass('closed')
 	}
 })
 
 $('.collapse').hover(function(){
 	$(this).toggleClass('hover-button')
+
+	$(this).find('.minus').toggleClass('closed')
+	$(this).find('.plus').toggleClass('closed')
 })
