@@ -67,6 +67,10 @@ body {
 	z-index: 1;
 }
 
+.shelf.last {
+	border: 0;
+}
+
 .shelf:hover {
 	background-color: rgb(240,240,240);
 }
