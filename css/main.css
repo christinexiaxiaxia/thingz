@@ -138,9 +138,12 @@ ul > .frame {
 }
 
 .picture {
-	width: 100%;
-	height: 100%;
-	zoom: 0.1;
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*zoom: 0.1;*/
+	width: 1000%;
+	height: 1000%;
+	transform: scale(0.1) translate(-450%,-450%);
 	border: none;
 }
 
@@ -153,7 +156,10 @@ ul > .frame {
 }
 
 .expand .picture {
-	zoom: 0.3;
+	/*zoom: 0.3;*/
+	width: 335%;
+	height: 335%;
+	transform: scale(0.3) translate(-117%,-117%);
 }
 
 .expand-type,
