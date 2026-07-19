@@ -103,22 +103,30 @@ body {
 }
 
 img {
-	width: calc(100% + 1rem - 1px);
-	margin-bottom: -2px;
+	width: calc(100%);
+	margin: 0;
 
-	border: solid black 1px;
+	outline: solid black 1px;
+	outline-line-style: inset;
 }
 
 ul > img {
-	margin-top: calc(-0.5rem + 3px);
-	margin-left: calc(-1rem - 1px);
+	width: calc(100% + 1rem - 1px);
+
+	margin-top: calc(-2px);
+	margin-left: calc(-1rem);
+	margin-bottom: -1px;
+}
+
+.shelf.expand > ul.open > img {
+	margin-bottom: -3px;
 }
 
 .frame {
 	height: 20vh;
 
 	background-color: white;
-	border: solid black 1px;
+	border: 1px solid black;
 }
 
 ul > .frame {
