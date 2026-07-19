@@ -26,8 +26,6 @@ $('.shelf').on('click', function(){
 		$('.shelf').not(this).removeClass('expand');
 		$('.item').not($(this).find('.item')).removeClass('expand-type');
 		$('ul.item').children().not($(this).find('li')).removeClass('expand-type'); // shrink type for all list items not in this shelf
-	} else {
-
 	}
 })
 
