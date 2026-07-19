@@ -36,7 +36,8 @@
 			<p class="item"><span class="strike"><a href="https://api.jquery.com/not/" target="_blank">.not() might solve my toggle issues that i never figured out on the original web class site (on click make everything that’s not this shrink?)</a></span> yuuuuup</p>
 			<button type="button" class="collapse">resolved +</button>
 			<p class="item"><span class="strike">need to fix how things are laggy whenever the recollection iframe gets resized—likely because of the transition-duration stuff that happens when you resize the actual site—THIS IS SO HARD. trying to detect when window is being resized to toggle class, but only finding ways to add/remove once after the first window resize or associating with specific window sizes</span> FIXED IT! doing addClass for a class that sets the transition-duration to 0 on window resize wasn’t working at first since it completely removes the blur transition, but removing the class on click brings it back!</p>
-			<p class="item">lower priority fix: the dashed border/outline on mobile. on desktop i’m using a 0.5px border to resolve the fact that using a 1px outline displays weirdly once i expand one of the columns (all the columns on the right no longer have visible outlines). however, on mobile the 0.5px border doesn’t render so i’ve opted to use a 1px outline for now. do i make the outline work better on desktop and mobile? if i do i’d have to stick with the longer line length of dashes instead of the current short length.</p>
+			<button type="button" class="collapse">resolved +</button>
+			<p class="item"><span class="strike">lower priority fix: the dashed border/outline on mobile. on desktop i’m using a 0.5px border to resolve the fact that using a 1px outline displays weirdly once i expand one of the columns (all the columns on the right no longer have visible outlines). however, on mobile the 0.5px border doesn’t render so i’ve opted to use a 1px outline for now. do i make the outline work better on desktop and mobile? if i do i’d have to stick with the longer line length of dashes instead of the current short length.</span> i just used border-right and have no border on the last column (been tryna avoid needed to add “first”/“last” classes in html to things to format stuff but will accept it this time lol)</p>
 			<p class="item">lower priority design update: toggle button text on click (swtich between + and - to reflect the collapsed/expanded state of the text below)</p>
 		</div>
 		<div class="shelf">
@@ -142,7 +143,7 @@
 				<li>maybe some times of day are more peaceful as well</li>
 			</ul>
 		</div>
-		<div class="shelf">
+		<div class="shelf last">
 			<p class="item underline">somethingz: initial seeds and fleeting thoughts</p>
 
 			<p class="item">thermal/receipt paper? marquis, scraper? burning “disregarded” info, records. could be made for mobile to have more vertical format.</p>
