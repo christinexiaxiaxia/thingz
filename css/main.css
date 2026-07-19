@@ -60,11 +60,11 @@ body {
 	padding: 0.5rem;
 
 	background-color: white;
-	border: 0.5px dashed black;
+	/*border: 0.5px dashed black;*/
+	border-right: 1px dashed black;
+	/*outline: 1px dashed black;*/
 
 	z-index: 1;
-
-	cursor: zoom-in;
 }
 
 .shelf:hover {
@@ -124,8 +124,6 @@ ul > .frame {
 
 .expand {
 	width: 30vw;
-
-	cursor: zoom-out;
 }
 
 .expand .frame {
@@ -141,8 +139,6 @@ ul > .frame {
 .expand-type span {
 	font-size: 1.5rem;
 	line-height: 1.583333rem;
-
-	cursor: text;
 }
 
 li.expand-type {
@@ -195,17 +191,24 @@ button {
 	line-height: 0.75rem;
 	letter-spacing: 0;
 
-	border: 1px solid black;
 	background-color: rgba(255,255,255,0);
 	color: black;
 }
 
-button:hover {
-	/*background-color: black;*/
-	/*color: white;*/
-	border: 1px dashed black;
+.button-open {
+	border: 1px solid black;
+}
 
-	cursor: pointer;
+.button-open:hover {
+	border: 1px dashed black;
+}
+
+.button-closed {
+	border: 1px dashed black;
+}
+
+.button-closed:hover {
+	border: 1px solid black;
 }
 
 .button-hover {} /* only adding this for js */
@@ -226,10 +229,29 @@ button:hover {
 
 
 
+
 /* CURSOR */
 
-a:hover {
+.shelf {
+	cursor: zoom-in;
+}
+
+.expand {
+	cursor: zoom-out;
+}
+
+.expand-type,
+.expand-type a,
+.expand-type span {
+	/*cursor: text;*/
+}
+
+a {
 	cursor: alias;
+}
+
+button {
+	cursor: pointer;
 }
 
 
@@ -248,8 +270,8 @@ a:hover {
 	.shelf {
 		width: 30vw;
 
-		border: none;
-		outline: 1px dashed black;
+/*		border: none;
+		outline: 1px dashed black;*/
 	}
 
 	.shrink {
@@ -258,8 +280,6 @@ a:hover {
 
 	.expand {
 		width: 70vw;
-
-		cursor: zoom-out;
 	}
 
 	.frame {
