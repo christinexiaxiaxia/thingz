@@ -781,7 +781,7 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(8, 1rem);
 
-	margin-left: -1.25rem;
+	margin-left: -1rem;
 	margin-right: -1.25rem;
 }
 
@@ -954,6 +954,22 @@ body {
 
 	margin-left: 0rem;
 	margin-right: 0rem;
+}
+
+#punc-anglebracket-left {
+	grid-template-rows: repeat(10, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+}
+
+#punc-anglebracket-right {
+	grid-template-rows: repeat(10, 1rem);
+	grid-template-columns: repeat(5, 1rem);
+
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
 }
 
 #punc-parentheses-left {
