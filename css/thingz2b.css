@@ -518,7 +518,7 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(3, 1rem);
 
-	margin-left: -0.75rem;
+	margin-left: -0.5rem;
 	margin-right: -0.5rem;
 }
 
@@ -606,7 +606,7 @@ body {
 	grid-template-columns: repeat(8, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -1.5rem;
+	margin-right: -1.25rem;
 }
 
 #r-lower {
