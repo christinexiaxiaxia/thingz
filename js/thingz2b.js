@@ -164,6 +164,8 @@ $('.button-text').click(function(){
 		$('.specimen').removeClass('blur-display');
 		$('.paper').removeClass('blur-display');
 	}
+	// $('.specimen').css('font-size', '1.25px')
+	// $('.letter').css('font-size', '1.25px')
 })
 
 $('.button-display').click(function(){
