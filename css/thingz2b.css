@@ -750,7 +750,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: 0rem;
-	margin-right: -0.5rem;
+	margin-right: -0.25rem;
 }
 
 #num-lining-1 {
@@ -765,16 +765,16 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -1rem;
-	margin-right: -0.75rem;
+	margin-left: -0.75rem;
+	margin-right: -0.5rem;
 }
 
 #num-lining-3 {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.75rem;
-	margin-right: -0.5rem;
+	margin-left: -0.5rem;
+	margin-right: -0.25rem;
 }
 
 #num-lining-4 {
@@ -789,8 +789,8 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(6, 1rem);
 
-	margin-left: -0.5rem;
-	margin-right: -0.5rem;
+	margin-left: -0.25rem;
+	margin-right: -0.25rem;
 }
 
 #num-lining-6 {
@@ -805,8 +805,8 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -1rem;
-	margin-right: -1rem;
+	margin-left: -0.75rem;
+	margin-right: -0.75rem;
 }
 
 #num-lining-8 {
@@ -814,7 +814,7 @@ body {
 	grid-template-columns: repeat(6, 1rem);
 
 	margin-left: 0.25rem;
-	margin-right: -0.5rem;
+	margin-right: -0.25rem;
 }
 
 #num-lining-9 {
@@ -822,7 +822,7 @@ body {
 	grid-template-columns: repeat(6, 1rem);
 
 	margin-left: -0.25rem;
-	margin-right: -0.25rem;
+	margin-right: 0rem;
 }
 
 
