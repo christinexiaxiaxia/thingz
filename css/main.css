@@ -230,6 +230,12 @@ p.caption-indent {
 	/*outline: 1px solid black;*/
 }
 
+.caption > a,
+.caption-indent > a {
+	font-size: 0.75rem;
+	line-height: 0.75rem;
+}
+
 .expand-type > p.caption {
 }
 
