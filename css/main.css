@@ -102,7 +102,7 @@ body {
 
 img {
 	width: calc(100%);
-	margin: 0;
+	margin: calc(0.25rem - 1px) 0 calc(0.25rem - 0px) 0;
 
 	outline: solid black 1px;
 	outline-line-style: inset;
@@ -210,21 +210,27 @@ li {
 }
 
 p.caption {
-	max-width: 8vw;
+	margin-top: -2px;
+
+	font-family: sans-serif;
+	font-size: 0.75rem;
+	line-height: 0.75rem;
+}
+
+p.caption-indent {
+	max-width: 80%;
 	padding: 0.2rem 0.3rem;
 	margin: -0rem -1rem 0.5rem -1rem;
 
 	font-family: sans-serif;
 	font-size: 0.75rem;
 	line-height: 0.75rem;
-	vertical-align: text-bottom;
 
 	/*background-color: red;*/
 	/*outline: 1px solid black;*/
 }
 
 .expand-type > p.caption {
-	max-width: 24vw;
 }
 
 
@@ -346,10 +352,6 @@ button {
 
 	.expand .frame {
 		height: 30vh;
-	}
-
-	.expand-type > p.caption {
-		/*margin: -0.7rem 0rem 0rem -0.5rem;*/
 	}
 
 }
