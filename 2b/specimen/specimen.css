@@ -1,0 +1,26 @@
+iframe {
+	position: fixed;
+	margin: -0.5rem;
+	border: 0;
+
+	z-index: 1000;
+}
+
+.specimen {
+	mix-blend-mode: normal;
+	z-index: -1000;
+}
+
+.letter {
+	mix-blend-mode: normal;
+	background-color: rgba(0,0,0,0);
+}
+
+.dot {
+	mix-blend-mode: normal;
+	border: none;
+}
+
+iframe {
+	position: fixed;
+}

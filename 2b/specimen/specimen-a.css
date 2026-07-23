@@ -1,0 +1,36 @@
+* {
+	font-size: 1.2vw;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100vw;
+	height: 100vh;
+
+	background-color: rgb(40,30,30);
+}
+
+.specimen {
+	display: flex;
+	column-gap: 0rem;
+
+	width: fit-content;
+	height: fit-content;
+	padding: 0rem 1rem 3rem 1rem;
+
+	background-color: rgba(0,0,0,0);
+}
+
+.dot {
+	background-color: rgb(180,195,215);
+}
+
+iframe {
+	width: 20vw;
+	height: 20vw;
+	border-radius: 25vw;
+	mix-blend-mode: exclusion;
+}
