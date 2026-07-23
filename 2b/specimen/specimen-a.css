@@ -19,7 +19,7 @@
 	margin-bottom: 3rem;
 
 	background-color: rgba(0,0,0,0);
-	mix-blend-mode: exclusion;
+	/*mix-blend-mode: exclusion;*/
 }
 
 @media only screen and (max-width: 600px) {
@@ -35,10 +35,4 @@
 
 .dot {
 	background-color: rgb(180,195,215);
-}
-
-iframe {
-	width: 20vw;
-	height: 20vw;
-	border-radius: 25vw;
 }

@@ -1,13 +1,36 @@
+.container {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+}
+
 .door {
 	position: fixed;
 	border: 0;
 
-	z-index: 1000;
+	z-index: 100;
 }
 
 iframe {
+	/*position: fixed;*/
 	margin: -0.5rem;
 	border: 0;
+}
+
+iframe.root {
+	position: fixed;
+}
+
+iframe:not(.root) {
+	width: 14vw;
+	height: 14vw;
+	border-radius: 25vw;
+}
+
+iframe:not(.root):hover {
+	width: 20vw;
+	height: 20vw;
+	border-radius: 25vw;
 }
 
 .key-in {
@@ -18,14 +41,6 @@ iframe {
 	height: 100%;
 
 	cursor: zoom-in;	
-}
-
-.container {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-
-	/*margin: 0.5rem;*/
 }
 
 .specimen {
@@ -80,8 +95,9 @@ iframe {
 	/*flex: 1;*/
 }
 
-.header > .favicon {
+.header > a > .favicon {
 	height: 1.25rem;
+	cursor: alias;
 }
 
 .header > p {
