@@ -4,11 +4,13 @@ iframe {
 	border: 0;
 
 	z-index: 1000;
+	cursor: zoom-in;
 }
 
 .specimen {
 	mix-blend-mode: normal;
 	z-index: -1000;
+	cursor: zoom-in;
 }
 
 .letter {
@@ -19,8 +21,4 @@ iframe {
 .dot {
 	mix-blend-mode: normal;
 	border: none;
-}
-
-iframe {
-	position: fixed;
 }
