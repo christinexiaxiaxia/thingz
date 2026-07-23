@@ -1,13 +1,11 @@
 * {
-	font-size: 1.20vw;
+	font-size: 1.24vw;
 }
 
 .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	padding-top: 3rem;
 
 	background-color: white;
 }
@@ -18,14 +16,19 @@
 
 	width: fit-content;
 	height: fit-content;
-	margin-bottom: 1rem;
+	margin-bottom: 3rem;
 
 	background-color: rgba(0,0,0,0);
 }
 
 @media only screen and (max-width: 600px) {
+	* {
+		font-size: 1.24vw;
+	}
+
 	.specimen {
-		margin-bottom: 1rem;
+		height: fit-content;
+		margin-bottom: 3rem;
 	}
 }
 

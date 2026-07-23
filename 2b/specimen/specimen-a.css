@@ -23,7 +23,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+	* {
+		font-size: 1.24vw;
+	}
+
 	.specimen {
+		height: fit-content;
 		margin-bottom: 3rem;
 	}
 }
