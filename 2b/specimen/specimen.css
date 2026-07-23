@@ -4,10 +4,14 @@ iframe {
 	border: 0;
 
 	z-index: 1000;
+}
+
+iframe.specimen {
 	cursor: zoom-in;
 }
 
-body {
+.container {
+	position: fixed;
 	width: 100vw;
 	height: 100vh;
 
@@ -17,7 +21,6 @@ body {
 .specimen {
 	mix-blend-mode: normal;
 	z-index: -1000;
-	cursor: zoom-in;
 }
 
 .specimen-frame.root {
@@ -34,3 +37,5 @@ body {
 	mix-blend-mode: normal;
 	border: none;
 }
+
+

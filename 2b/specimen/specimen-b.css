@@ -2,10 +2,12 @@
 	font-size: 1.2vw;
 }
 
-body {
+.container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	padding-top: 3rem;
 
 	background-color: white;
 }
@@ -16,9 +18,15 @@ body {
 
 	width: fit-content;
 	height: fit-content;
-	padding: 0rem 1rem 0rem 1rem;
+	margin-bottom: 1rem;
 
 	background-color: rgba(0,0,0,0);
+}
+
+@media only screen and (max-width: 600px) {
+	.specimen {
+		margin-bottom: 1rem;
+	}
 }
 
 .dot {
