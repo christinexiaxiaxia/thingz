@@ -7,10 +7,22 @@ iframe {
 	cursor: zoom-in;
 }
 
+body {
+	width: 100vw;
+	height: 100vh;
+
+	/*margin: 0.5rem;*/
+}
+
 .specimen {
 	mix-blend-mode: normal;
 	z-index: -1000;
 	cursor: zoom-in;
+}
+
+.specimen-frame.root {
+	width: 100vw;
+	height: 100vh;
 }
 
 .letter {
