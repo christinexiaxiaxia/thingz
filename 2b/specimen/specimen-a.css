@@ -19,9 +19,10 @@ body {
 
 	width: fit-content;
 	height: fit-content;
-	padding: 0rem 1rem 3rem 1rem;
+	padding: 0rem;
 
 	background-color: rgba(0,0,0,0);
+	mix-blend-mode: exclusion;
 }
 
 .dot {
@@ -32,5 +33,4 @@ iframe {
 	width: 20vw;
 	height: 20vw;
 	border-radius: 25vw;
-	mix-blend-mode: exclusion;
 }
