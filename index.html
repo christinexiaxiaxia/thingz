@@ -79,10 +79,10 @@
 			<button type="button" class="collapse">to do <span class="plus">+</span><span class="minus">–</span></button>
 			<ul class="item">
 				<li>switch from zoom to transform: scale() for the text size (more reliable and less laggy across devices + the scaling/rounding of the dot edges will look better too)</li>
-				<li>remove rows of empty dots and replace with a margin-top so that the empty spaces don't block .dot:hover for other letters</li>
+				<li>remove rows of empty dots and replace with a margin-top so that the empty spaces don’t block .dot:hover for other letters</li>
 				<li>maybe: make a reset button</li>
 				<li>maybe: add a typing cursor, maybe allows you to put the cursor anywhere and backspace from that position? once i can place the cursor based on where you click then backspacing should be easy by using .previous(). cursor placement can probably have you click on a .letter and it places the cursor before()</li>
-				<li>eventually make a non-typing specimen page? that could be the main page and this typing one is secondary. that way i can lead with a nicer-looking specimen page lol. can still be interactive! i'll need to think about how to build it to achieve different scales since zoom is so unreliable. could it be using iframes of html files that have a different rem font size? or could it just be selecting children() (the .dots) of each section and changing the size there somehow? idk</li>
+				<li>eventually make a non-typing specimen page? that could be the main page and this typing one is secondary. that way i can lead with a nicer-looking specimen page lol. can still be interactive! i’ll need to think about how to build it to achieve different scales since zoom is so unreliable. could it be using iframes of html files that have a different rem font size? or could it just be selecting children() (the .dots) of each section and changing the size there somehow? idk</li>
 			</ul>
 			<div class="item frame"><iframe src="2b/specimen/index.html" class="picture"></iframe></div>
 			<p class="caption">WIP non-typing specimen (gonna try out the series of iframes embedded in one another and set mix-blend-mode to exclusion or something)</p>
@@ -93,13 +93,15 @@
 			</ul>
 			<button type="button" class="collapse">actual font version <span class="plus">+</span><span class="minus">–</span></button>
 			<ul class="item">
-				<img src="2b/img/Screenshot 2026-07-21 at 4.08.07 PM.png">
-				<p class="caption-indent">initial *SUPER ROUGH* sketch / Book Text</p>
 				<li>make a proper font (as software, in glyphs) and have the regular weight be sharp and the bold/blur weight soft/blob-y/bleed-y</li>
 				<li>regular (text), regular (display), blur (text), blur (display), and then the condensed versions for all that too lol</li>
 				<li>could have a bunch of different alt glyphs/sets because of how ambiguous the dot matrix is (see below)</li>
-				<img src="2b/img/Screenshot 2026-07-21 at 8.37.51 PM.png" class="img-margin">
+				<img class="img-margin" src="2b/img/Screenshot 2026-07-21 at 4.08.07 PM.png">
+				<p class="caption-indent">initial *SUPER ROUGH* sketch / Book Text</p>
+				<img src="2b/img/Screenshot 2026-07-21 at 8.37.51 PM.png" >
 				<p class="caption-indent">*REALLY ROUGH* sketches of glyph sets / Book Text</p>
+				<li>overall so far i think i’ll need to add a bit more softness, be less mechanical</li>
+				<li>i like the R a lot and i think it’s because there’s a bit more curve on the leg and the bowl kicks upwards on the bottom left</li>
 			</ul>
 			<p class="item">-----</p>
 			<p class="item">italic font made of vertical lines:</p>
@@ -131,30 +133,46 @@
 			</ul>
 				<img src="2d/img/Screenshot 2026-07-23 at 11.44.40 PM.png">
 				<p class="caption">initial rough sketch in glyphs</p>
-			<p class="item">it’s so cheesy lol, which was kinda the point but also it kinda lost the interesting more organic details from the sketch</p>
-			<p class="item">make it blobbier? add some contrast back?</p>
-			<p class="item">it also may never have the charm of the sketch or being a since wordmark/title since i’d have to make a bunch of situational alternates to reduce the mechanical feeling of the letters always feeling the same despite being a “handwritten” font</p>
-			<p class="item">maybe shortening the ascenders and descenders could make it feel a bit more interesting?</p>
+			<p class="item">it’s so cheesy lol, which was kinda the point but also it kinda lost the interesting more organic details from the sketch. the r still feels kinda cool</p>
+			<button type="button" class="collapse">how to salvage this? <span class="plus">+</span><span class="minus">–</span></button>
+			<ul class="item">
+				<li>make it blobbier? add some contrast back?</li>
+				<li>it also may never have the charm of the sketch or being a since wordmark/title since i’d have to make a bunch of situational alternates to reduce the mechanical feeling of the letters always feeling the same despite being a “handwritten” font</li>
+				<li>maybe shortening the ascenders and descenders could make it feel a bit more interesting?</li>
+			</ul>
 			<p class="item">-----</p>
 			<p class="item"><a href="2a" target="_blank">idk yet?:</a></p>
 			<div class="item frame"><iframe src="2a/index.html" class="picture"></iframe></div>
 			<p class="item">-----</p>
-			<button type="button" class="collapse">misc sketches <span class="plus">+</span><span class="minus">–</span></button>
+			<p class="item">misc font ideas</p>
+			<button type="button" class="collapse">some sketches <span class="plus">+</span><span class="minus">–</span></button>
 			<ul class="item">
 				<img src="box/0miscsketch/miscsketch1.jpg">
 			</ul>
-			<p class="item">-----</p>
-			<p class="item">backwards serif (vertically flipped contrast, like a v would look backwards, would need to explore what it would mean for a b, like where the serif would go)</p>
-			<p class="item">-----</p>
-			<p class="item">gridded font (like the early earlier cover sketch of type that was retro videogame-y, wherever that sketch went lol)</p>
-			<p class="item">-----</p>
-			<p class="item">also make a grotesque font à la grotesque from peignot’s type foundry before they lost ownership—something designed optically for print, having an awkwardness in digital. start with bold weight?</p>
-			<p class="item">-----</p>
+			<button type="button" class="collapse">backwards serif <span class="plus">+</span><span class="minus">–</span></button>
+			<ul class="item">
+				<li> (vertically flipped contrast, like a v would look backwards, would need to explore what it would mean for a b, like where the serif would go)</li>
+			</ul>
+			<button type="button" class="collapse">gridded font <span class="plus">+</span><span class="minus">–</span></button>
+			<ul class="item">
+				<li>like the early earlier cover sketch of type that was retro videogame-y, wherever that sketch went lol</li>
+			</ul>
+			<button type="button" class="collapse">bold grotesque <span class="plus">+</span><span class="minus">–</span></button>
+			<ul class="item">
+				<li>also make a grotesque font à la grotesque from peignot’s type foundry before they lost ownership—something designed optically for print, having an awkwardness in digital. start with bold weight?</li>
+			</ul>
+			<button type="button" class="collapse">just okay fonts <span class="plus">+</span><span class="minus">–</span></button>
+			<ul class="item">
+				<li>once a font is in a “finished” and good-ish place, i can just release it with the premise that it’s just okay</li>
+				<li>“these are my just okay fonts and i think that they’re just okay. some of them might be better one day, but for now they’re just okay and that’s okay.”</li>
+				<li>(kinda like future fonts)</li>
+			</ul>
 			<p class="item">is there a way to automatically update on the site if it’s something i’m designing in glyphs similar to working on a site? (maybe it’s just constantly exporting font files under the same name to the same github folder?)</p>
 			<p class="item">-----</p>
-			<p class="item">just ok fonts</p>
-			<p class="item">once a font is in a finished and good-ish place, i can just release it with the premise that it’s just okay</p>
-			<p class="item">“these are my just okay fonts and i think that they’re just okay. some of them might be better one day, but for now they’re just okay and that’s okay.”</p>
+			<button type="button" class="collapse">resources <span class="plus">+</span><span class="minus">–</span></button>
+			<ul class="item">
+				<a href="https://www.futurefonts.com/submissions" target="_blank"><li>future fonts submission page includes a bunch of links at the bottom for books, workshops, mentorships, etc.</li></a>
+			</ul>
 		</div>
 		<div class="shelf">
 			<p class="item underline">thingz 3: platez</p>
