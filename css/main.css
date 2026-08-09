@@ -126,7 +126,7 @@ ul > img.img-margin {
 }
 
 .frame {
-	height: 20vh;
+	height: 10vh;
 
 	background-color: white;
 	border: 1px solid black;
@@ -153,7 +153,7 @@ ul > .frame {
 }
 
 .expand {
-	width: 30vw;
+	width: 50vw;
 }
 
 .expand .frame {
@@ -329,7 +329,7 @@ button {
 
 
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1080px) {
 
 	.case {
 		height: 100vh;
@@ -339,7 +339,7 @@ button {
 	}
 
 	.shelf {
-		width: 30vw;
+		width: 20vw;
 
 /*		border: none;
 		outline: 1px dashed black;*/
@@ -350,7 +350,41 @@ button {
 	}
 
 	.expand {
-		width: 70vw;
+		width: 60vw;
+	}
+
+	.frame {
+		height: 16vh;
+	}
+
+	.expand .frame {
+		height: 40vh;
+	}
+
+}
+
+@media only screen and (max-width: 680px) {
+
+	.case {
+		height: 100vh;
+		grid-template-columns: repeat(9, 1fr);
+		overflow-y: hidden;
+		overflow-x: scroll;
+	}
+
+	.shelf {
+		width: 40vw;
+
+/*		border: none;
+		outline: 1px dashed black;*/
+	}
+
+	.shrink {
+		width: auto;
+	}
+
+	.expand {
+		width: 80vw;
 	}
 
 	.frame {
