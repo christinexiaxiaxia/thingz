@@ -100,7 +100,8 @@ body {
     overflow: hidden;
 }
 
-img {
+img,
+video {
 	width: calc(100%);
 	margin: calc(0.25rem - 1px) 0 calc(0.25rem - 0px) 0;
 
