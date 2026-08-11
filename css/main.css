@@ -126,7 +126,7 @@ ul > img.img-margin {
 }
 
 .frame {
-	height: 10vh;
+	height: 6vw;
 
 	background-color: white;
 	border: 1px solid black;
@@ -157,7 +157,7 @@ ul > .frame {
 }
 
 .expand .frame {
-	height: 30vh;
+	height: 30vw;
 }
 
 .expand .picture {
@@ -354,11 +354,11 @@ button {
 	}
 
 	.frame {
-		height: 16vh;
+		height: 12vw;
 	}
 
 	.expand .frame {
-		height: 40vh;
+		height: 36vw;
 	}
 
 }
@@ -388,11 +388,11 @@ button {
 	}
 
 	.frame {
-		height: 16vh;
+		height: 24vw;
 	}
 
 	.expand .frame {
-		height: 30vh;
+		height: 48vw;
 	}
 
 }
