@@ -109,7 +109,8 @@ video {
 	outline-line-style: inset;
 }
 
-ul > img {
+ul > img,
+ul > video {
 	width: calc(100% + 1rem - 1px);
 
 	margin-top: calc(-2px);
@@ -117,7 +118,7 @@ ul > img {
 	margin-bottom: -1.5px;
 }
 
-ul > img.img-margin {
+ul > .img-margin {
 	margin-top: calc(1rem - 2px);
 }
 

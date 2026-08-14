@@ -84,8 +84,119 @@
 				<li>maybe: add a typing cursor, maybe allows you to put the cursor anywhere and backspace from that position? once i can place the cursor based on where you click then backspacing should be easy by using .previous(). cursor placement can probably have you click on a .letter and it places the cursor before()</li>
 				<li>eventually make a non-typing specimen page? that could be the main page and this typing one is secondary. that way i can lead with a nicer-looking specimen page lol. can still be interactive! i’ll need to think about how to build it to achieve different scales since zoom is so unreliable. could it be using iframes of html files that have a different rem font size? or could it just be selecting children() (the .dots) of each section and changing the size there somehow? idk</li>
 			</ul>
-			<div class="item frame"><iframe src="2b/specimen/index.html" class="picture"></iframe></div>
-			<p class="caption">WIP non-typing specimen (gonna try out the series of iframes embedded in one another and set mix-blend-mode to exclusion or something)</p>
+			<button type="button" class="collapse">WIP non-typing specimen <span class="plus">+</span><span class="minus">–</span></button>
+			<ul class="item">
+				<div class="item frame"><iframe src="2b/specimen/index.html" class="picture"></iframe></div>
+				<li><a href="2b/specimen/index.html" target="_blank">full page here</a></li>
+				<li>wanna make something that is less interactive (no typing) and shows the font at different scales with the different styles</li>
+				<li>gonna try out the series of iframes embedded in one another and set mix-blend-mode to exclusion or something (currently removed the loop because of the lag so you need to refresh to reset it)</li>
+				<li>it’s generally pretty laggy and not really doing much to show off the font so will prob pivot to something where you just scroll through different blocks with different typesetting for the different styles</li>
+			</ul>
+			<button type="button" class="collapse">progress screenshots <span class="plus">+</span><span class="minus">–</span></button>
+			<ul class="item">
+				<li>took screenshots/screen recordings throughout the process; below is a bunch of them in chronological order</li>
+				<li>what isn’t apparent through the images and videos is my progress on manually coding a keyboard/text box for this interactive specimen. because i was just drawing letters using divs, i spent an excruciating amount of time doing that with javascript/jQuery (<a href="js/thingz2b.js" target="_blank">see here</a>)</li>
+				<br>
+				<img class="img-margin" src="2b/img/Screenshot 2026-06-16 at 9.43.17 PM.png">
+				<img class="img" src="2b/img/Screenshot 2026-06-16 at 10.44.41 PM.png">
+			<video muted autoplay playsinline loop class="">
+				<source src="2b/img/Screen Recording 2026-06-16 at 10.47.16 PM.mov" type="video/mp4">
+			</video>
+				<p class="caption-indent">2026.06.16</p>
+				<li>initial roughed in alphabet, testing blur effect, changing type size by changing the * font-size</li>
+				<br>
+				<br>
+				<img class="img" src="2b/img/Screenshot 2026-06-17 at 12.01.43 AM.png">
+				<p class="caption-indent">2026.06.17</p>
+				<br>
+				<!-- <img class="" src="2b/img/Screenshot 2026-06-19 at 5.39.59 PM.png">
+				<p class="caption-indent">2026.06.19 (would often screenshot individual nice looking letters before i adjusted them to fit in better with the overall system/weight)</p> -->
+				<img class="" src="2b/img/Screenshot 2026-06-20 at 7.53.33 PM.png">
+				<p class="caption-indent">2026.06.20</p>
+				<li>one of the things i haven’t been able to figure out so far is getting different quote marks to appear depending on whether it’s at the start or end of a word (i spent a loooong time failing at figuring this out)</li>
+				<br>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-06-22 at 9.23.54 PM.png">
+				<p class="caption-indent">2026.06.22</p>
+				<br>
+				<!-- <img class="" src="2b/img/Screenshot 2026-06-22 at 10.13.11 AM.png">
+				<img class="" src="2b/img/Screenshot 2026-06-22 at 12.04.45 AM.png">
+				<p class="caption-indent">2026.06.22 (trying to get the B right with a slanted stress, neither of these were right)</p> -->
+				<!-- <img class="" src="2b/img/Screenshot 2026-06-29 at 8.53.11 PM.png"> -->
+				<img class="" src="2b/img/Screenshot 2026-06-29 at 8.59.01 PM.png">
+			<video muted autoplay playsinline loop class="">
+				<source src="2b/img/Screen Recording 2026-06-29 at 8.52.34 PM.mov" type="video/mp4">
+			</video>
+				<p class="caption-indent">2026.06.29</p>
+				<li>cool glitches when trying to do interactive stuff with the dots</li>
+				<br>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-06-30 at 7.46.45 PM.png">
+				<p class="caption-indent">2026.06.30</p>
+				<li>finally made a version of the g that started feeling cool; was pretty happy with how much nuance i could get with the smaller details of the letter</li>
+				<br>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-06-30 at 9.40.55 PM.png">
+				<p class="caption-indent">2026.06.30</p>
+				<br>
+			<video muted autoplay playsinline loop class="">
+				<source src="2b/img/Screen Recording 2026-07-01 at 10.31.26 PM.mov" type="video/mp4">
+			</video>
+				<p class="caption-indent">2026.07.01</p>
+				<li>reversed things back to black on white</li>
+				<br>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-07-03 at 6.41.59 PM.png">
+				<p class="caption-indent">2026.07.03</p>
+				<li>added a short description to the page so the site could be a more standalone artifact</li>
+				<br>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-07-07 at 7.59.17 PM.png">
+				<p class="caption-indent">2026.07.08 (before)</p>
+				<img class="" src="2b/img/Screenshot 2026-07-08 at 3.54.21 PM.png">
+				<p class="caption-indent">2026.07.08 (after)</p>
+				<li>i wanted to width of the M to stay as is but that meant it was an even number and it was tough to get the point in the centre feeling sharp enough while having the overall shape feel symmetrical</li>
+				<br>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-07-14 at 10.57.53 PM.png">
+				<p class="caption-indent">2026.07.14 (comparing display)</p>
+				<img class="" src="2b/img/Screenshot 2026-07-14 at 11.00.33 PM.png">
+				<p class="caption-indent">2026.07.14 (comparing text)</p>
+				<li>comparing my progress since 2026.06.20 using both the display and text spacing. at this point, i’ve created buttons to select the different styles</li>
+				<br>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-07-14 at 11.37.15 AM.png">
+				<p class="caption-indent">2026.07.14</p>
+				<li>really debating on how to shape the a and figuring out how the bowls connect to the stems on the b and p</li>
+				<br>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-07-16 at 7.27.22 PM.png">
+				<p class="caption-indent">2026.07.16 (unedited)</p>
+				<img class="" src="2b/img/Screenshot 2026-07-16 at 7.27.22 PM_lessdots.png">
+				<p class="caption-indent">2026.07.16 (edited, less dots)</p>
+				<li>i thought about removing the smaller dots along all the vertical stems to clean things up a bit so i took a screenshot and saved a separate HTML and CSS file before doing so</li>
+				<li>i took the screenshot and manually erased the dots in photoshop to get a preview of what it would look like before committing to it. i think this was the first time i worked on this font not strictly in HTML/CSS/JS</li>
+				<li>i ended up removing all the dots pretty much to exactly what the edited screenshot looks like but as of when i am currently writing this (2026.08.14) i feel like i may need to bring the dots back to balance the weight of the stems with the curved letters and to bring back a bit more contrast to the font overall</li>
+				<br>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-07-18 at 3.59.08 AM.png">
+				<img class="" src="2b/img/Screenshot 2026-07-18 at 4.02.00 AM.png">
+				<p class="caption-indent">2026.07.18</p>
+				<li>cool glitches when i was trying to add a larger “bounding box” to the dots for hovering</li>
+				<br>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-07-19 at 2.44.18 PM.png">
+				<img class="" src="2b/img/Screenshot 2026-07-19 at 11.51.26 PM.png">
+				<p class="caption-indent">2026.07.19</p>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-07-20 at 1.58.36 AM.png">
+				<img class="" src="2b/img/Screenshot 2026-07-20 at 6.43.14 PM.png">
+				<p class="caption-indent">2026.07.20</p>
+				<br>
+				<img class="" src="2b/img/Screenshot 2026-07-22 at 11.26.22 PM.png">
+				<p class="caption-indent">2026.07.22</p>
+				<li>fun colour glitch when adjusting my blend modes for the non-typing specimen</li>
+			</ul>
 			<button type="button" class="collapse">more activation ideas <span class="plus">+</span><span class="minus">–</span></button>
 			<ul class="item">
 				<li>maybe: activate with a gesture, can display on portable 3:4 tv screen i have to add more softness + texture? the smaller supporting type could be a pixel font that aligns with the resolution of the screen</li>
@@ -120,7 +231,7 @@
 				<img src="2c/img/IMG_3215.jpg">
 				<p class="caption-indent">quick look at how the upright version might look (haha)</p>
 			</ul>
-			<button type="button" class="collapse">2026.08.05 <span class="plus">+</span><span class="minus">–</span></button>
+			<button type="button" class="collapse">update 2026.08.05 <span class="plus">+</span><span class="minus">–</span></button>
 			<ul class="item">
 				<img src="2c/img/Screenshot 2026-08-05 at 1.38.18 PM.png">
 				<p class="caption-indent">italic</p>
@@ -139,7 +250,7 @@
 				<li>weight (change the weight of the lines)</li>
 				<li>height (change the length of the lines; this one can have a couple options—one where you can stretch the full height including the horizontal bars and one where the horizontal bars stay the same height)</li>
 			</ul>
-			<button type="button" class="collapse button-open">2026.08.07 <span class="plus">+</span><span class="minus">–</span></button>
+			<button type="button" class="collapse button-open">update 2026.08.07 <span class="plus">+</span><span class="minus">–</span></button>
 			<ul class="item">
 				<img src="2c/img/Screenshot 2026-08-07 at 4.30.45 PM.png">
 				<p class="caption-indent">regular</p>
@@ -169,7 +280,7 @@
 				<source src="2c/img/Screen Recording 2026-08-08 at 11.31.49 PM smaller.mov" type="video/mp4">
 			</video>
 			<p class="caption">2026.08.08 testing in dinamo font gauntlet</p>
-			<button type="button" class="collapse button-open">2026.08.08 <span class="plus">+</span><span class="minus">–</span></button>
+			<button type="button" class="collapse button-open">update 2026.08.08 <span class="plus">+</span><span class="minus">–</span></button>
 			<ul class="item">
 				<li>after (mostly) cleaning up my masters, i threw my latest update into the dinamo font gauntlet</li>
 				<li>the drawings of the glyphs are all in a pretty good spot and the kerning is mostly ok but definitely still need to fix the expanded version since i just batch multiplied all the kerning pair values from the regular master</li>
@@ -195,6 +306,20 @@
 				<li>maybe open up the counters on the heavy weight? esp the for Q</li>
 				<li>crossbar of the e could be a bit shorter to open up the counter?</li>
 				<li>the z looks weird in variable form (something is happening with the interpolation of some of those centre lines) but it looks fine when exported as a static otf</li>
+			</ul>
+			<button type="button" class="collapse button-open">update 2026.08.14 <span class="plus">+</span><span class="minus">–</span></button>
+			<ul class="item">
+				<li>have been building out (way) more glyphs and adjusting the kerning/spacing as i go</li>
+				<li>getting a bit hard to document my progress with static images now with how many glyphs/masters/instances there are so will probably try and make a barebones HTML specimen that i can link a new file with @font-face for each exported iteration</li>
+				<li>below is mainly a summary of the glyphs i have made so far (currently working through translating the small caps to the different masters</li>
+				<li>have spent a bunch of time trying to learn how to do things properly software-wise and making different stylistic sets, ligatures, etc.</li>
+				<br>
+				<img src="2c/img/Screenshot 2026-08-14 at 1.14.35 AM.png">
+				<p class="caption-indent">narrow light (full alphabet, small caps)</p>
+				<img src="2c/img/Screenshot 2026-08-14 at 12.57.11 AM.png">
+				<p class="caption-indent">narrow light (ligatures, numbers, symbols, stylistic alternates)</p>
+				<img src="2c/img/Screenshot 2026-08-14 at 1.05.44 AM.png">
+				<p class="caption-indent">narrow light italic (ligatures)</p>
 			</ul>
 			<p class="item">-----</p>
 			<p class="item">cute cursive:</p>
