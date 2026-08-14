@@ -211,6 +211,12 @@ li {
 	list-style-position: outside;
 }
 
+li.list-divider {
+	/*list-style-type: "///";*/
+	list-style-type: "";
+	margin-bottom: -0.5rem;
+}
+
 p.caption {
 	margin-top: -2px;
 
