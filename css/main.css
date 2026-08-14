@@ -162,10 +162,12 @@ ul > .frame {
 }
 
 .expand .picture {
-	/*zoom: 0.3;*/
-	width: 335%;
+/*	width: 335%;
 	height: 335%;
-	transform: scale(0.3) translate(-117%,-117%);
+	transform: scale(0.3) translate(-117%,-117%);*/
+	width: 200%;
+	height: 200%;
+	transform: scale(0.5) translate(-50%,-50%);
 }
 
 .expand-type,
@@ -368,6 +370,12 @@ button {
 		height: 36vw;
 	}
 
+	.expand .picture {
+		width: 250%;
+		height: 250%;
+		transform: scale(0.4) translate(-75%,-75%);
+	}
+
 }
 
 @media only screen and (max-width: 680px) {
@@ -400,6 +408,12 @@ button {
 
 	.expand .frame {
 		height: 48vw;
+	}
+
+	.expand .picture {
+		width: 335%;
+		height: 335%;
+		transform: scale(0.3) translate(-117%,-117%);
 	}
 
 }
