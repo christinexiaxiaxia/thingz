@@ -216,7 +216,7 @@ li {
 li.list-divider {
 	/*list-style-type: "///";*/
 	list-style-type: "";
-	margin-bottom: -0.5rem;
+	margin-bottom: -0.25rem;
 }
 
 p.caption {
