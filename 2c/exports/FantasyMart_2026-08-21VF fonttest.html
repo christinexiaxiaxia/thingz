@@ -1,0 +1,842 @@
+﻿<html>
+	<!--<base href="..">--> <!-- uncomment for keeping the HTML in a subfolder -->
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<head>
+		<title>OTVar Test: FantasyMart_2026-08-21</title>
+		<style id="font-declaration">
+			@font-face {
+				font-family: "FantasyMart_2026-08-21";
+				src: url("FantasyMart_2026-08-21VF.ttf");
+			}
+		</style>
+		<style>
+			body {
+				padding: 0;
+				margin: auto;
+				overflow-x: hidden;
+			}
+			#flexbox {
+				display: flex;
+				flex-flow: column;
+				height: 100%;
+			}
+			#controls {
+				flex: 0 1 auto;
+				background-color: white;
+				margin: 2px 0 0 0;
+				padding: 0;
+				width: 100%;
+				border: 0px solid transparent;
+				height: auto;
+				user-select: none;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+			}
+
+/* OTVar Sliders: */
+			.labeldiv {
+				width: 49.2%;
+				padding: 0 0 0 0.2%;
+				margin: auto;
+				display: inline-block;
+			}
+			label {
+				z-index: 2;
+				position: absolute;
+				pointer-events: none;
+				height: 2em;
+				margin: 0;
+				padding: 0.5em 1em;
+				vertical-align: text-top;
+				font: x-small sans-serif;
+				color: black;
+				opacity: 0.5;
+			}
+			.slider {
+				z-index: 1;
+				position: relative;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				width: 100%;
+				height: 2em;
+				border-radius: 5px;
+				background: #eee;
+				padding: auto;
+				margin: auto;
+			}
+			.slider::-webkit-slider-thumb {
+				z-index: 3;
+				position: relative;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				width: 16px;
+				height: 2em;
+				border-radius: 5px;
+				background: #777;
+				cursor: auto;
+			}
+
+/* Slider play button: */
+			.sliderRow {
+				display: flex;
+				align-items: stretch;
+			}
+			.sliderRow .slider {
+				flex: 1;
+				min-width: 0;
+			}
+			.playBtn {
+				flex: 0 0 auto;
+				background: #eee;
+				border: none;
+				cursor: pointer;
+				width: 2em;
+				font-size: 0.85em;
+				border-radius: 0 5px 5px 0;
+				color: #555;
+				padding: 0;
+				user-select: none;
+				-webkit-user-select: none;
+			}
+			.playBtn:hover { background: #ccc; }
+
+/* Feature Buttons: */
+			#featureControls {
+				font-size: x-small;
+				font-family: sans-serif;
+				padding: 0 0.2%;
+			}
+			#featureControls .emojiButton {
+				vertical-align: -50%;
+				font-size: small;
+			}
+			.emojiButton {
+				cursor: pointer;
+				text-decoration: none;
+				display: inline-block;
+				margin: 0 .04em;
+			}
+			.otFeatureLabel, .otFeature {
+				font-size: small;
+				position: relative;
+				opacity: 1;
+				pointer-events: auto;
+				white-space: nowrap;
+			}
+			.otFeatureLabel, select {
+				padding: 0.2em 0.5em 0.3em 0.5em;
+				margin: 0 .04em;
+				line-height: 2em;
+				color: #666;
+				background-color: #ddd;
+				border-radius: 0.3em;
+				border: 0;
+				text-align: center;
+				z-index: 6;
+			}
+			select {
+				position: relative;
+				margin: 0.25em 0.15em;
+				height: 2.1em;
+				font: x-small sans-serif;
+				vertical-align: top;
+			}
+			.otFeature {
+				visibility: collapse;
+				margin: 0 -1em 0 0;
+			}
+			input[type=checkbox]:checked + label {
+				visibility: visible;
+				color: #eee;
+				background-color: #555;
+				position: relative;
+			}
+			.otFeatureLabel .tooltip {
+				visibility: hidden;
+				background-color: #333;
+				color: white;
+				text-align: center;
+				padding: 0px 5px;
+				top: -2em;
+				left: 0;
+				position: absolute;
+				z-index: 8;
+			}
+			.otFeatureLabel:hover .tooltip {
+				visibility: visible;
+			}
+
+/* Sample Text Area: */
+			#textarea {
+				flex: 1 1 auto;
+				border: 0 solid transparent;
+				margin: auto;
+				padding: 0 0 0.6em 0;
+				line-height: 1em;
+				width: 100%;
+				color: black;
+				font: 40px "FantasyMart_2026-08-21";
+				font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				-moz-font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				-webkit-font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				-ms-font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				-o-font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				font-variation-settings: "slnt" 0.0, "wght" 10.0, "wdth" 200.0;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				word-wrap: break-word;
+			}
+			.○ {
+				-webkit-text-stroke: 1px black;
+				-webkit-text-fill-color: #FFF0;
+			}
+			div:focus {
+				outline: 0px solid transparent;
+			}
+
+/* Grid View: */
+			#gridview {
+				flex: 1 1 auto;
+				flex-wrap: wrap;
+				align-content: flex-start;
+				overflow-y: scroll;
+				padding: 0.2em;
+				font-family: "FantasyMart_2026-08-21";
+				font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				-moz-font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				-webkit-font-feature-settings: "kern" on, "liga" on, "calt" on, "locl" on;
+				font-size: 40px;
+				font-variation-settings: "slnt" 0.0, "wght" 10.0, "wdth" 200.0;
+				color: black;
+			}
+			.gridCell {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				box-sizing: border-box;
+				flex: 0 0 auto;
+				width: var(--grid-cell-size, 56px);
+				height: var(--grid-cell-size, 56px);
+				border: 1px solid #eee;
+				line-height: 1;
+				cursor: default;
+			}
+			.gridCell:hover {
+				background: #eef;
+			}
+			#gridTooltip {
+				display: none;
+				position: fixed;
+				z-index: 30;
+				background: #333;
+				color: white;
+				padding: 0.4em 0.7em;
+				border-radius: 0.3em;
+				pointer-events: none;
+				font: 12px sans-serif;
+				line-height: 1.4;
+				text-align: center;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+			}
+			#gridTooltip .refGlyph {
+				font-family: "Noto Sans", "Noto Serif", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+				font-size: 2.5em;
+				line-height: 1.1;
+				font-variation-settings: normal;
+			}
+			#gridTooltip .cellMeta {
+				font: 12px sans-serif;
+			}
+
+/* Footer paragraph: */
+			#helptext {
+				position: fixed;
+				background: transparent;
+				bottom: 0;
+				width: 100%;
+				color: #888;
+				font: x-small sans-serif;
+			}
+			a {
+				color: #333;
+			}
+
+/* Print: */
+			@media print {
+				#helptext, #helptext *,
+				#controls, #controls *,
+				#featureControls,
+				#styleMenu, #styleMenu *,
+				.otFeature,
+				#gridview, #gridview * {
+					display: none !important;
+				}
+			}
+
+/* Dark Mode: */
+			@media (prefers-color-scheme: dark) {
+				body { background: #000; }
+				p { color: #eee; }
+				#textInput{
+					color: #eee;
+					background-color: #222;
+					background: #222;
+				}
+				label { color: #fff; }
+				.otFeatureLabel {
+					color: #999;
+					background-color: #333;
+				}
+				input[type=checkbox]:checked + label {
+					color: #111;
+					background-color: #888;
+				}
+
+				.slider { background: #333; }
+				.slider::-webkit-slider-thumb { background: #888; }
+				a { color: #ccc; }
+				.playBtn { background: #333; color: #aaa; }
+				.playBtn:hover { background: #555; }
+
+				#controls {
+					background-color: black;
+				}
+				#textarea {
+					color: white;
+					background-color: black;
+				}
+				#gridview {
+					color: white;
+					background-color: black;
+				}
+				.gridCell { border-color: #333; }
+				.gridCell:hover { background: #223; }
+				.○ {
+					-webkit-text-stroke: 1px white;
+					-webkit-text-fill-color: #0000;
+				}
+			}
+
+		</style>
+		<script>
+			document.addEventListener('keyup', keyAnalysis);
+			document.addEventListener('keyup', sliderPrecision);
+			document.addEventListener('keydown', sliderPrecision);
+
+			const sliders = document.getElementsByClassName('slider');
+			const glyphInfos = [{"c": 65, "u": "0041", "n": "A", "d": "LATIN CAPITAL LETTER A", "cat": "Letter"}, {"c": 193, "u": "00C1", "n": "Aacute", "d": "LATIN CAPITAL LETTER A WITH ACUTE", "cat": "Letter"}, {"c": 258, "u": "0102", "n": "Abreve", "d": "LATIN CAPITAL LETTER A WITH BREVE", "cat": "Letter"}, {"c": 461, "u": "01CD", "n": "Acaron", "d": "LATIN CAPITAL LETTER A WITH CARON", "cat": "Letter"}, {"c": 194, "u": "00C2", "n": "Acircumflex", "d": "LATIN CAPITAL LETTER A WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 196, "u": "00C4", "n": "Adieresis", "d": "LATIN CAPITAL LETTER A WITH DIAERESIS", "cat": "Letter"}, {"c": 192, "u": "00C0", "n": "Agrave", "d": "LATIN CAPITAL LETTER A WITH GRAVE", "cat": "Letter"}, {"c": 256, "u": "0100", "n": "Amacron", "d": "LATIN CAPITAL LETTER A WITH MACRON", "cat": "Letter"}, {"c": 260, "u": "0104", "n": "Aogonek", "d": "LATIN CAPITAL LETTER A WITH OGONEK", "cat": "Letter"}, {"c": 197, "u": "00C5", "n": "Aring", "d": "LATIN CAPITAL LETTER A WITH RING ABOVE", "cat": "Letter"}, {"c": 195, "u": "00C3", "n": "Atilde", "d": "LATIN CAPITAL LETTER A WITH TILDE", "cat": "Letter"}, {"c": 198, "u": "00C6", "n": "AE", "d": "LATIN CAPITAL LETTER AE", "cat": "Letter"}, {"c": 66, "u": "0042", "n": "B", "d": "LATIN CAPITAL LETTER B", "cat": "Letter"}, {"c": 67, "u": "0043", "n": "C", "d": "LATIN CAPITAL LETTER C", "cat": "Letter"}, {"c": 262, "u": "0106", "n": "Cacute", "d": "LATIN CAPITAL LETTER C WITH ACUTE", "cat": "Letter"}, {"c": 268, "u": "010C", "n": "Ccaron", "d": "LATIN CAPITAL LETTER C WITH CARON", "cat": "Letter"}, {"c": 199, "u": "00C7", "n": "Ccedilla", "d": "LATIN CAPITAL LETTER C WITH CEDILLA", "cat": "Letter"}, {"c": 266, "u": "010A", "n": "Cdotaccent", "d": "LATIN CAPITAL LETTER C WITH DOT ABOVE", "cat": "Letter"}, {"c": 68, "u": "0044", "n": "D", "d": "LATIN CAPITAL LETTER D", "cat": "Letter"}, {"c": 270, "u": "010E", "n": "Dcaron", "d": "LATIN CAPITAL LETTER D WITH CARON", "cat": "Letter"}, {"c": 272, "u": "0110", "n": "Dcroat", "d": "LATIN CAPITAL LETTER D WITH STROKE", "cat": "Letter"}, {"c": 208, "u": "00D0", "n": "Eth", "d": "LATIN CAPITAL LETTER ETH", "cat": "Letter"}, {"c": 69, "u": "0045", "n": "E", "d": "LATIN CAPITAL LETTER E", "cat": "Letter"}, {"c": 201, "u": "00C9", "n": "Eacute", "d": "LATIN CAPITAL LETTER E WITH ACUTE", "cat": "Letter"}, {"c": 282, "u": "011A", "n": "Ecaron", "d": "LATIN CAPITAL LETTER E WITH CARON", "cat": "Letter"}, {"c": 202, "u": "00CA", "n": "Ecircumflex", "d": "LATIN CAPITAL LETTER E WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 203, "u": "00CB", "n": "Edieresis", "d": "LATIN CAPITAL LETTER E WITH DIAERESIS", "cat": "Letter"}, {"c": 278, "u": "0116", "n": "Edotaccent", "d": "LATIN CAPITAL LETTER E WITH DOT ABOVE", "cat": "Letter"}, {"c": 200, "u": "00C8", "n": "Egrave", "d": "LATIN CAPITAL LETTER E WITH GRAVE", "cat": "Letter"}, {"c": 274, "u": "0112", "n": "Emacron", "d": "LATIN CAPITAL LETTER E WITH MACRON", "cat": "Letter"}, {"c": 280, "u": "0118", "n": "Eogonek", "d": "LATIN CAPITAL LETTER E WITH OGONEK", "cat": "Letter"}, {"c": 7868, "u": "1EBC", "n": "Etilde", "d": "LATIN CAPITAL LETTER E WITH TILDE", "cat": "Letter"}, {"c": 399, "u": "018F", "n": "Schwa", "d": "LATIN CAPITAL LETTER SCHWA", "cat": "Letter"}, {"c": 70, "u": "0046", "n": "F", "d": "LATIN CAPITAL LETTER F", "cat": "Letter"}, {"c": 71, "u": "0047", "n": "G", "d": "LATIN CAPITAL LETTER G", "cat": "Letter"}, {"c": 286, "u": "011E", "n": "Gbreve", "d": "LATIN CAPITAL LETTER G WITH BREVE", "cat": "Letter"}, {"c": 290, "u": "0122", "n": "Gcommaaccent", "d": "LATIN CAPITAL LETTER G WITH CEDILLA", "cat": "Letter"}, {"c": 288, "u": "0120", "n": "Gdotaccent", "d": "LATIN CAPITAL LETTER G WITH DOT ABOVE", "cat": "Letter"}, {"c": 7712, "u": "1E20", "n": "Gmacron", "d": "LATIN CAPITAL LETTER G WITH MACRON", "cat": "Letter"}, {"c": 72, "u": "0048", "n": "H", "d": "LATIN CAPITAL LETTER H", "cat": "Letter"}, {"c": 294, "u": "0126", "n": "Hbar", "d": "LATIN CAPITAL LETTER H WITH STROKE", "cat": "Letter"}, {"c": 73, "u": "0049", "n": "I", "d": "LATIN CAPITAL LETTER I", "cat": "Letter"}, {"c": 205, "u": "00CD", "n": "Iacute", "d": "LATIN CAPITAL LETTER I WITH ACUTE", "cat": "Letter"}, {"c": 463, "u": "01CF", "n": "Icaron", "d": "LATIN CAPITAL LETTER I WITH CARON", "cat": "Letter"}, {"c": 206, "u": "00CE", "n": "Icircumflex", "d": "LATIN CAPITAL LETTER I WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 207, "u": "00CF", "n": "Idieresis", "d": "LATIN CAPITAL LETTER I WITH DIAERESIS", "cat": "Letter"}, {"c": 304, "u": "0130", "n": "Idotaccent", "d": "LATIN CAPITAL LETTER I WITH DOT ABOVE", "cat": "Letter"}, {"c": 204, "u": "00CC", "n": "Igrave", "d": "LATIN CAPITAL LETTER I WITH GRAVE", "cat": "Letter"}, {"c": 298, "u": "012A", "n": "Imacron", "d": "LATIN CAPITAL LETTER I WITH MACRON", "cat": "Letter"}, {"c": 302, "u": "012E", "n": "Iogonek", "d": "LATIN CAPITAL LETTER I WITH OGONEK", "cat": "Letter"}, {"c": 296, "u": "0128", "n": "Itilde", "d": "LATIN CAPITAL LETTER I WITH TILDE", "cat": "Letter"}, {"c": 74, "u": "004A", "n": "J", "d": "LATIN CAPITAL LETTER J", "cat": "Letter"}, {"c": 75, "u": "004B", "n": "K", "d": "LATIN CAPITAL LETTER K", "cat": "Letter"}, {"c": 310, "u": "0136", "n": "Kcommaaccent", "d": "LATIN CAPITAL LETTER K WITH CEDILLA", "cat": "Letter"}, {"c": 76, "u": "004C", "n": "L", "d": "LATIN CAPITAL LETTER L", "cat": "Letter"}, {"c": 313, "u": "0139", "n": "Lacute", "d": "LATIN CAPITAL LETTER L WITH ACUTE", "cat": "Letter"}, {"c": 317, "u": "013D", "n": "Lcaron", "d": "LATIN CAPITAL LETTER L WITH CARON", "cat": "Letter"}, {"c": 315, "u": "013B", "n": "Lcommaaccent", "d": "LATIN CAPITAL LETTER L WITH CEDILLA", "cat": "Letter"}, {"c": 321, "u": "0141", "n": "Lslash", "d": "LATIN CAPITAL LETTER L WITH STROKE", "cat": "Letter"}, {"c": 77, "u": "004D", "n": "M", "d": "LATIN CAPITAL LETTER M", "cat": "Letter"}, {"c": 78, "u": "004E", "n": "N", "d": "LATIN CAPITAL LETTER N", "cat": "Letter"}, {"c": 323, "u": "0143", "n": "Nacute", "d": "LATIN CAPITAL LETTER N WITH ACUTE", "cat": "Letter"}, {"c": 327, "u": "0147", "n": "Ncaron", "d": "LATIN CAPITAL LETTER N WITH CARON", "cat": "Letter"}, {"c": 325, "u": "0145", "n": "Ncommaaccent", "d": "LATIN CAPITAL LETTER N WITH CEDILLA", "cat": "Letter"}, {"c": 209, "u": "00D1", "n": "Ntilde", "d": "LATIN CAPITAL LETTER N WITH TILDE", "cat": "Letter"}, {"c": 79, "u": "004F", "n": "O", "d": "LATIN CAPITAL LETTER O", "cat": "Letter"}, {"c": 211, "u": "00D3", "n": "Oacute", "d": "LATIN CAPITAL LETTER O WITH ACUTE", "cat": "Letter"}, {"c": 465, "u": "01D1", "n": "Ocaron", "d": "LATIN CAPITAL LETTER O WITH CARON", "cat": "Letter"}, {"c": 212, "u": "00D4", "n": "Ocircumflex", "d": "LATIN CAPITAL LETTER O WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 214, "u": "00D6", "n": "Odieresis", "d": "LATIN CAPITAL LETTER O WITH DIAERESIS", "cat": "Letter"}, {"c": 210, "u": "00D2", "n": "Ograve", "d": "LATIN CAPITAL LETTER O WITH GRAVE", "cat": "Letter"}, {"c": 336, "u": "0150", "n": "Ohungarumlaut", "d": "LATIN CAPITAL LETTER O WITH DOUBLE ACUTE", "cat": "Letter"}, {"c": 332, "u": "014C", "n": "Omacron", "d": "LATIN CAPITAL LETTER O WITH MACRON", "cat": "Letter"}, {"c": 216, "u": "00D8", "n": "Oslash", "d": "LATIN CAPITAL LETTER O WITH STROKE", "cat": "Letter"}, {"c": 213, "u": "00D5", "n": "Otilde", "d": "LATIN CAPITAL LETTER O WITH TILDE", "cat": "Letter"}, {"c": 338, "u": "0152", "n": "OE", "d": "LATIN CAPITAL LIGATURE OE", "cat": "Letter"}, {"c": 80, "u": "0050", "n": "P", "d": "LATIN CAPITAL LETTER P", "cat": "Letter"}, {"c": 222, "u": "00DE", "n": "Thorn", "d": "LATIN CAPITAL LETTER THORN", "cat": "Letter"}, {"c": 81, "u": "0051", "n": "Q", "d": "LATIN CAPITAL LETTER Q", "cat": "Letter"}, {"c": 82, "u": "0052", "n": "R", "d": "LATIN CAPITAL LETTER R", "cat": "Letter"}, {"c": 340, "u": "0154", "n": "Racute", "d": "LATIN CAPITAL LETTER R WITH ACUTE", "cat": "Letter"}, {"c": 344, "u": "0158", "n": "Rcaron", "d": "LATIN CAPITAL LETTER R WITH CARON", "cat": "Letter"}, {"c": 342, "u": "0156", "n": "Rcommaaccent", "d": "LATIN CAPITAL LETTER R WITH CEDILLA", "cat": "Letter"}, {"c": 83, "u": "0053", "n": "S", "d": "LATIN CAPITAL LETTER S", "cat": "Letter"}, {"c": 346, "u": "015A", "n": "Sacute", "d": "LATIN CAPITAL LETTER S WITH ACUTE", "cat": "Letter"}, {"c": 352, "u": "0160", "n": "Scaron", "d": "LATIN CAPITAL LETTER S WITH CARON", "cat": "Letter"}, {"c": 350, "u": "015E", "n": "Scedilla", "d": "LATIN CAPITAL LETTER S WITH CEDILLA", "cat": "Letter"}, {"c": 536, "u": "0218", "n": "Scommaaccent", "d": "LATIN CAPITAL LETTER S WITH COMMA BELOW", "cat": "Letter"}, {"c": 7838, "u": "1E9E", "n": "Germandbls", "d": "LATIN CAPITAL LETTER SHARP S", "cat": "Letter"}, {"c": 84, "u": "0054", "n": "T", "d": "LATIN CAPITAL LETTER T", "cat": "Letter"}, {"c": 356, "u": "0164", "n": "Tcaron", "d": "LATIN CAPITAL LETTER T WITH CARON", "cat": "Letter"}, {"c": 354, "u": "0162", "n": "Tcedilla", "d": "LATIN CAPITAL LETTER T WITH CEDILLA", "cat": "Letter"}, {"c": 538, "u": "021A", "n": "Tcommaaccent", "d": "LATIN CAPITAL LETTER T WITH COMMA BELOW", "cat": "Letter"}, {"c": 85, "u": "0055", "n": "U", "d": "LATIN CAPITAL LETTER U", "cat": "Letter"}, {"c": 218, "u": "00DA", "n": "Uacute", "d": "LATIN CAPITAL LETTER U WITH ACUTE", "cat": "Letter"}, {"c": 467, "u": "01D3", "n": "Ucaron", "d": "LATIN CAPITAL LETTER U WITH CARON", "cat": "Letter"}, {"c": 219, "u": "00DB", "n": "Ucircumflex", "d": "LATIN CAPITAL LETTER U WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 220, "u": "00DC", "n": "Udieresis", "d": "LATIN CAPITAL LETTER U WITH DIAERESIS", "cat": "Letter"}, {"c": 217, "u": "00D9", "n": "Ugrave", "d": "LATIN CAPITAL LETTER U WITH GRAVE", "cat": "Letter"}, {"c": 368, "u": "0170", "n": "Uhungarumlaut", "d": "LATIN CAPITAL LETTER U WITH DOUBLE ACUTE", "cat": "Letter"}, {"c": 362, "u": "016A", "n": "Umacron", "d": "LATIN CAPITAL LETTER U WITH MACRON", "cat": "Letter"}, {"c": 370, "u": "0172", "n": "Uogonek", "d": "LATIN CAPITAL LETTER U WITH OGONEK", "cat": "Letter"}, {"c": 366, "u": "016E", "n": "Uring", "d": "LATIN CAPITAL LETTER U WITH RING ABOVE", "cat": "Letter"}, {"c": 360, "u": "0168", "n": "Utilde", "d": "LATIN CAPITAL LETTER U WITH TILDE", "cat": "Letter"}, {"c": 86, "u": "0056", "n": "V", "d": "LATIN CAPITAL LETTER V", "cat": "Letter"}, {"c": 87, "u": "0057", "n": "W", "d": "LATIN CAPITAL LETTER W", "cat": "Letter"}, {"c": 7810, "u": "1E82", "n": "Wacute", "d": "LATIN CAPITAL LETTER W WITH ACUTE", "cat": "Letter"}, {"c": 372, "u": "0174", "n": "Wcircumflex", "d": "LATIN CAPITAL LETTER W WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 7812, "u": "1E84", "n": "Wdieresis", "d": "LATIN CAPITAL LETTER W WITH DIAERESIS", "cat": "Letter"}, {"c": 7808, "u": "1E80", "n": "Wgrave", "d": "LATIN CAPITAL LETTER W WITH GRAVE", "cat": "Letter"}, {"c": 88, "u": "0058", "n": "X", "d": "LATIN CAPITAL LETTER X", "cat": "Letter"}, {"c": 89, "u": "0059", "n": "Y", "d": "LATIN CAPITAL LETTER Y", "cat": "Letter"}, {"c": 221, "u": "00DD", "n": "Yacute", "d": "LATIN CAPITAL LETTER Y WITH ACUTE", "cat": "Letter"}, {"c": 374, "u": "0176", "n": "Ycircumflex", "d": "LATIN CAPITAL LETTER Y WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 376, "u": "0178", "n": "Ydieresis", "d": "LATIN CAPITAL LETTER Y WITH DIAERESIS", "cat": "Letter"}, {"c": 7922, "u": "1EF2", "n": "Ygrave", "d": "LATIN CAPITAL LETTER Y WITH GRAVE", "cat": "Letter"}, {"c": 7928, "u": "1EF8", "n": "Ytilde", "d": "LATIN CAPITAL LETTER Y WITH TILDE", "cat": "Letter"}, {"c": 90, "u": "005A", "n": "Z", "d": "LATIN CAPITAL LETTER Z", "cat": "Letter"}, {"c": 377, "u": "0179", "n": "Zacute", "d": "LATIN CAPITAL LETTER Z WITH ACUTE", "cat": "Letter"}, {"c": 381, "u": "017D", "n": "Zcaron", "d": "LATIN CAPITAL LETTER Z WITH CARON", "cat": "Letter"}, {"c": 379, "u": "017B", "n": "Zdotaccent", "d": "LATIN CAPITAL LETTER Z WITH DOT ABOVE", "cat": "Letter"}, {"c": 97, "u": "0061", "n": "a", "d": "LATIN SMALL LETTER A", "cat": "Letter"}, {"c": 225, "u": "00E1", "n": "aacute", "d": "LATIN SMALL LETTER A WITH ACUTE", "cat": "Letter"}, {"c": 259, "u": "0103", "n": "abreve", "d": "LATIN SMALL LETTER A WITH BREVE", "cat": "Letter"}, {"c": 462, "u": "01CE", "n": "acaron", "d": "LATIN SMALL LETTER A WITH CARON", "cat": "Letter"}, {"c": 226, "u": "00E2", "n": "acircumflex", "d": "LATIN SMALL LETTER A WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 228, "u": "00E4", "n": "adieresis", "d": "LATIN SMALL LETTER A WITH DIAERESIS", "cat": "Letter"}, {"c": 224, "u": "00E0", "n": "agrave", "d": "LATIN SMALL LETTER A WITH GRAVE", "cat": "Letter"}, {"c": 257, "u": "0101", "n": "amacron", "d": "LATIN SMALL LETTER A WITH MACRON", "cat": "Letter"}, {"c": 261, "u": "0105", "n": "aogonek", "d": "LATIN SMALL LETTER A WITH OGONEK", "cat": "Letter"}, {"c": 229, "u": "00E5", "n": "aring", "d": "LATIN SMALL LETTER A WITH RING ABOVE", "cat": "Letter"}, {"c": 227, "u": "00E3", "n": "atilde", "d": "LATIN SMALL LETTER A WITH TILDE", "cat": "Letter"}, {"c": 230, "u": "00E6", "n": "ae", "d": "LATIN SMALL LETTER AE", "cat": "Letter"}, {"c": 98, "u": "0062", "n": "b", "d": "LATIN SMALL LETTER B", "cat": "Letter"}, {"c": 99, "u": "0063", "n": "c", "d": "LATIN SMALL LETTER C", "cat": "Letter"}, {"c": 263, "u": "0107", "n": "cacute", "d": "LATIN SMALL LETTER C WITH ACUTE", "cat": "Letter"}, {"c": 269, "u": "010D", "n": "ccaron", "d": "LATIN SMALL LETTER C WITH CARON", "cat": "Letter"}, {"c": 231, "u": "00E7", "n": "ccedilla", "d": "LATIN SMALL LETTER C WITH CEDILLA", "cat": "Letter"}, {"c": 267, "u": "010B", "n": "cdotaccent", "d": "LATIN SMALL LETTER C WITH DOT ABOVE", "cat": "Letter"}, {"c": 100, "u": "0064", "n": "d", "d": "LATIN SMALL LETTER D", "cat": "Letter"}, {"c": 271, "u": "010F", "n": "dcaron", "d": "LATIN SMALL LETTER D WITH CARON", "cat": "Letter"}, {"c": 273, "u": "0111", "n": "dcroat", "d": "LATIN SMALL LETTER D WITH STROKE", "cat": "Letter"}, {"c": 240, "u": "00F0", "n": "eth", "d": "LATIN SMALL LETTER ETH", "cat": "Letter"}, {"c": 101, "u": "0065", "n": "e", "d": "LATIN SMALL LETTER E", "cat": "Letter"}, {"c": 233, "u": "00E9", "n": "eacute", "d": "LATIN SMALL LETTER E WITH ACUTE", "cat": "Letter"}, {"c": 283, "u": "011B", "n": "ecaron", "d": "LATIN SMALL LETTER E WITH CARON", "cat": "Letter"}, {"c": 234, "u": "00EA", "n": "ecircumflex", "d": "LATIN SMALL LETTER E WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 235, "u": "00EB", "n": "edieresis", "d": "LATIN SMALL LETTER E WITH DIAERESIS", "cat": "Letter"}, {"c": 279, "u": "0117", "n": "edotaccent", "d": "LATIN SMALL LETTER E WITH DOT ABOVE", "cat": "Letter"}, {"c": 232, "u": "00E8", "n": "egrave", "d": "LATIN SMALL LETTER E WITH GRAVE", "cat": "Letter"}, {"c": 275, "u": "0113", "n": "emacron", "d": "LATIN SMALL LETTER E WITH MACRON", "cat": "Letter"}, {"c": 281, "u": "0119", "n": "eogonek", "d": "LATIN SMALL LETTER E WITH OGONEK", "cat": "Letter"}, {"c": 7869, "u": "1EBD", "n": "etilde", "d": "LATIN SMALL LETTER E WITH TILDE", "cat": "Letter"}, {"c": 601, "u": "0259", "n": "schwa", "d": "LATIN SMALL LETTER SCHWA", "cat": "Letter"}, {"c": 102, "u": "0066", "n": "f", "d": "LATIN SMALL LETTER F", "cat": "Letter"}, {"c": 103, "u": "0067", "n": "g", "d": "LATIN SMALL LETTER G", "cat": "Letter"}, {"c": 287, "u": "011F", "n": "gbreve", "d": "LATIN SMALL LETTER G WITH BREVE", "cat": "Letter"}, {"c": 291, "u": "0123", "n": "gcommaaccent", "d": "LATIN SMALL LETTER G WITH CEDILLA", "cat": "Letter"}, {"c": 289, "u": "0121", "n": "gdotaccent", "d": "LATIN SMALL LETTER G WITH DOT ABOVE", "cat": "Letter"}, {"c": 7713, "u": "1E21", "n": "gmacron", "d": "LATIN SMALL LETTER G WITH MACRON", "cat": "Letter"}, {"c": 104, "u": "0068", "n": "h", "d": "LATIN SMALL LETTER H", "cat": "Letter"}, {"c": 295, "u": "0127", "n": "hbar", "d": "LATIN SMALL LETTER H WITH STROKE", "cat": "Letter"}, {"c": 105, "u": "0069", "n": "i", "d": "LATIN SMALL LETTER I", "cat": "Letter"}, {"c": 305, "u": "0131", "n": "idotless", "d": "LATIN SMALL LETTER DOTLESS I", "cat": "Letter"}, {"c": 237, "u": "00ED", "n": "iacute", "d": "LATIN SMALL LETTER I WITH ACUTE", "cat": "Letter"}, {"c": 464, "u": "01D0", "n": "icaron", "d": "LATIN SMALL LETTER I WITH CARON", "cat": "Letter"}, {"c": 238, "u": "00EE", "n": "icircumflex", "d": "LATIN SMALL LETTER I WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 239, "u": "00EF", "n": "idieresis", "d": "LATIN SMALL LETTER I WITH DIAERESIS", "cat": "Letter"}, {"c": 236, "u": "00EC", "n": "igrave", "d": "LATIN SMALL LETTER I WITH GRAVE", "cat": "Letter"}, {"c": 299, "u": "012B", "n": "imacron", "d": "LATIN SMALL LETTER I WITH MACRON", "cat": "Letter"}, {"c": 303, "u": "012F", "n": "iogonek", "d": "LATIN SMALL LETTER I WITH OGONEK", "cat": "Letter"}, {"c": 297, "u": "0129", "n": "itilde", "d": "LATIN SMALL LETTER I WITH TILDE", "cat": "Letter"}, {"c": 106, "u": "006A", "n": "j", "d": "LATIN SMALL LETTER J", "cat": "Letter"}, {"c": 567, "u": "0237", "n": "jdotless", "d": "LATIN SMALL LETTER DOTLESS J", "cat": "Letter"}, {"c": 107, "u": "006B", "n": "k", "d": "LATIN SMALL LETTER K", "cat": "Letter"}, {"c": 311, "u": "0137", "n": "kcommaaccent", "d": "LATIN SMALL LETTER K WITH CEDILLA", "cat": "Letter"}, {"c": 108, "u": "006C", "n": "l", "d": "LATIN SMALL LETTER L", "cat": "Letter"}, {"c": 314, "u": "013A", "n": "lacute", "d": "LATIN SMALL LETTER L WITH ACUTE", "cat": "Letter"}, {"c": 318, "u": "013E", "n": "lcaron", "d": "LATIN SMALL LETTER L WITH CARON", "cat": "Letter"}, {"c": 316, "u": "013C", "n": "lcommaaccent", "d": "LATIN SMALL LETTER L WITH CEDILLA", "cat": "Letter"}, {"c": 322, "u": "0142", "n": "lslash", "d": "LATIN SMALL LETTER L WITH STROKE", "cat": "Letter"}, {"c": 109, "u": "006D", "n": "m", "d": "LATIN SMALL LETTER M", "cat": "Letter"}, {"c": 110, "u": "006E", "n": "n", "d": "LATIN SMALL LETTER N", "cat": "Letter"}, {"c": 324, "u": "0144", "n": "nacute", "d": "LATIN SMALL LETTER N WITH ACUTE", "cat": "Letter"}, {"c": 328, "u": "0148", "n": "ncaron", "d": "LATIN SMALL LETTER N WITH CARON", "cat": "Letter"}, {"c": 326, "u": "0146", "n": "ncommaaccent", "d": "LATIN SMALL LETTER N WITH CEDILLA", "cat": "Letter"}, {"c": 241, "u": "00F1", "n": "ntilde", "d": "LATIN SMALL LETTER N WITH TILDE", "cat": "Letter"}, {"c": 111, "u": "006F", "n": "o", "d": "LATIN SMALL LETTER O", "cat": "Letter"}, {"c": 243, "u": "00F3", "n": "oacute", "d": "LATIN SMALL LETTER O WITH ACUTE", "cat": "Letter"}, {"c": 466, "u": "01D2", "n": "ocaron", "d": "LATIN SMALL LETTER O WITH CARON", "cat": "Letter"}, {"c": 244, "u": "00F4", "n": "ocircumflex", "d": "LATIN SMALL LETTER O WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 246, "u": "00F6", "n": "odieresis", "d": "LATIN SMALL LETTER O WITH DIAERESIS", "cat": "Letter"}, {"c": 242, "u": "00F2", "n": "ograve", "d": "LATIN SMALL LETTER O WITH GRAVE", "cat": "Letter"}, {"c": 337, "u": "0151", "n": "ohungarumlaut", "d": "LATIN SMALL LETTER O WITH DOUBLE ACUTE", "cat": "Letter"}, {"c": 333, "u": "014D", "n": "omacron", "d": "LATIN SMALL LETTER O WITH MACRON", "cat": "Letter"}, {"c": 248, "u": "00F8", "n": "oslash", "d": "LATIN SMALL LETTER O WITH STROKE", "cat": "Letter"}, {"c": 245, "u": "00F5", "n": "otilde", "d": "LATIN SMALL LETTER O WITH TILDE", "cat": "Letter"}, {"c": 339, "u": "0153", "n": "oe", "d": "LATIN SMALL LIGATURE OE", "cat": "Letter"}, {"c": 112, "u": "0070", "n": "p", "d": "LATIN SMALL LETTER P", "cat": "Letter"}, {"c": 254, "u": "00FE", "n": "thorn", "d": "LATIN SMALL LETTER THORN", "cat": "Letter"}, {"c": 113, "u": "0071", "n": "q", "d": "LATIN SMALL LETTER Q", "cat": "Letter"}, {"c": 114, "u": "0072", "n": "r", "d": "LATIN SMALL LETTER R", "cat": "Letter"}, {"c": 341, "u": "0155", "n": "racute", "d": "LATIN SMALL LETTER R WITH ACUTE", "cat": "Letter"}, {"c": 345, "u": "0159", "n": "rcaron", "d": "LATIN SMALL LETTER R WITH CARON", "cat": "Letter"}, {"c": 343, "u": "0157", "n": "rcommaaccent", "d": "LATIN SMALL LETTER R WITH CEDILLA", "cat": "Letter"}, {"c": 115, "u": "0073", "n": "s", "d": "LATIN SMALL LETTER S", "cat": "Letter"}, {"c": 347, "u": "015B", "n": "sacute", "d": "LATIN SMALL LETTER S WITH ACUTE", "cat": "Letter"}, {"c": 353, "u": "0161", "n": "scaron", "d": "LATIN SMALL LETTER S WITH CARON", "cat": "Letter"}, {"c": 351, "u": "015F", "n": "scedilla", "d": "LATIN SMALL LETTER S WITH CEDILLA", "cat": "Letter"}, {"c": 537, "u": "0219", "n": "scommaaccent", "d": "LATIN SMALL LETTER S WITH COMMA BELOW", "cat": "Letter"}, {"c": 223, "u": "00DF", "n": "germandbls", "d": "LATIN SMALL LETTER SHARP S", "cat": "Letter"}, {"c": 116, "u": "0074", "n": "t", "d": "LATIN SMALL LETTER T", "cat": "Letter"}, {"c": 357, "u": "0165", "n": "tcaron", "d": "LATIN SMALL LETTER T WITH CARON", "cat": "Letter"}, {"c": 355, "u": "0163", "n": "tcedilla", "d": "LATIN SMALL LETTER T WITH CEDILLA", "cat": "Letter"}, {"c": 539, "u": "021B", "n": "tcommaaccent", "d": "LATIN SMALL LETTER T WITH COMMA BELOW", "cat": "Letter"}, {"c": 117, "u": "0075", "n": "u", "d": "LATIN SMALL LETTER U", "cat": "Letter"}, {"c": 250, "u": "00FA", "n": "uacute", "d": "LATIN SMALL LETTER U WITH ACUTE", "cat": "Letter"}, {"c": 468, "u": "01D4", "n": "ucaron", "d": "LATIN SMALL LETTER U WITH CARON", "cat": "Letter"}, {"c": 251, "u": "00FB", "n": "ucircumflex", "d": "LATIN SMALL LETTER U WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 252, "u": "00FC", "n": "udieresis", "d": "LATIN SMALL LETTER U WITH DIAERESIS", "cat": "Letter"}, {"c": 249, "u": "00F9", "n": "ugrave", "d": "LATIN SMALL LETTER U WITH GRAVE", "cat": "Letter"}, {"c": 369, "u": "0171", "n": "uhungarumlaut", "d": "LATIN SMALL LETTER U WITH DOUBLE ACUTE", "cat": "Letter"}, {"c": 363, "u": "016B", "n": "umacron", "d": "LATIN SMALL LETTER U WITH MACRON", "cat": "Letter"}, {"c": 371, "u": "0173", "n": "uogonek", "d": "LATIN SMALL LETTER U WITH OGONEK", "cat": "Letter"}, {"c": 367, "u": "016F", "n": "uring", "d": "LATIN SMALL LETTER U WITH RING ABOVE", "cat": "Letter"}, {"c": 361, "u": "0169", "n": "utilde", "d": "LATIN SMALL LETTER U WITH TILDE", "cat": "Letter"}, {"c": 118, "u": "0076", "n": "v", "d": "LATIN SMALL LETTER V", "cat": "Letter"}, {"c": 119, "u": "0077", "n": "w", "d": "LATIN SMALL LETTER W", "cat": "Letter"}, {"c": 7811, "u": "1E83", "n": "wacute", "d": "LATIN SMALL LETTER W WITH ACUTE", "cat": "Letter"}, {"c": 373, "u": "0175", "n": "wcircumflex", "d": "LATIN SMALL LETTER W WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 7813, "u": "1E85", "n": "wdieresis", "d": "LATIN SMALL LETTER W WITH DIAERESIS", "cat": "Letter"}, {"c": 7809, "u": "1E81", "n": "wgrave", "d": "LATIN SMALL LETTER W WITH GRAVE", "cat": "Letter"}, {"c": 120, "u": "0078", "n": "x", "d": "LATIN SMALL LETTER X", "cat": "Letter"}, {"c": 121, "u": "0079", "n": "y", "d": "LATIN SMALL LETTER Y", "cat": "Letter"}, {"c": 253, "u": "00FD", "n": "yacute", "d": "LATIN SMALL LETTER Y WITH ACUTE", "cat": "Letter"}, {"c": 375, "u": "0177", "n": "ycircumflex", "d": "LATIN SMALL LETTER Y WITH CIRCUMFLEX", "cat": "Letter"}, {"c": 255, "u": "00FF", "n": "ydieresis", "d": "LATIN SMALL LETTER Y WITH DIAERESIS", "cat": "Letter"}, {"c": 7923, "u": "1EF3", "n": "ygrave", "d": "LATIN SMALL LETTER Y WITH GRAVE", "cat": "Letter"}, {"c": 7929, "u": "1EF9", "n": "ytilde", "d": "LATIN SMALL LETTER Y WITH TILDE", "cat": "Letter"}, {"c": 122, "u": "007A", "n": "z", "d": "LATIN SMALL LETTER Z", "cat": "Letter"}, {"c": 378, "u": "017A", "n": "zacute", "d": "LATIN SMALL LETTER Z WITH ACUTE", "cat": "Letter"}, {"c": 382, "u": "017E", "n": "zcaron", "d": "LATIN SMALL LETTER Z WITH CARON", "cat": "Letter"}, {"c": 380, "u": "017C", "n": "zdotaccent", "d": "LATIN SMALL LETTER Z WITH DOT ABOVE", "cat": "Letter"}, {"c": 64257, "u": "FB01", "n": "fi", "d": "LATIN SMALL LIGATURE FI", "cat": "Letter", "sub": "Ligature"}, {"c": 64258, "u": "FB02", "n": "fl", "d": "LATIN SMALL LIGATURE FL", "cat": "Letter", "sub": "Ligature"}, {"c": 170, "u": "00AA", "n": "ordfeminine", "d": "FEMININE ORDINAL INDICATOR", "cat": "Letter", "sub": "Superscript"}, {"c": 186, "u": "00BA", "n": "ordmasculine", "d": "MASCULINE ORDINAL INDICATOR", "cat": "Letter", "sub": "Superscript"}, {"c": 48, "u": "0030", "n": "zero", "d": "DIGIT ZERO", "cat": "Number", "sub": "Decimal Digit"}, {"c": 49, "u": "0031", "n": "one", "d": "DIGIT ONE", "cat": "Number", "sub": "Decimal Digit"}, {"c": 50, "u": "0032", "n": "two", "d": "DIGIT TWO", "cat": "Number", "sub": "Decimal Digit"}, {"c": 51, "u": "0033", "n": "three", "d": "DIGIT THREE", "cat": "Number", "sub": "Decimal Digit"}, {"c": 52, "u": "0034", "n": "four", "d": "DIGIT FOUR", "cat": "Number", "sub": "Decimal Digit"}, {"c": 53, "u": "0035", "n": "five", "d": "DIGIT FIVE", "cat": "Number", "sub": "Decimal Digit"}, {"c": 54, "u": "0036", "n": "six", "d": "DIGIT SIX", "cat": "Number", "sub": "Decimal Digit"}, {"c": 55, "u": "0037", "n": "seven", "d": "DIGIT SEVEN", "cat": "Number", "sub": "Decimal Digit"}, {"c": 56, "u": "0038", "n": "eight", "d": "DIGIT EIGHT", "cat": "Number", "sub": "Decimal Digit"}, {"c": 57, "u": "0039", "n": "nine", "d": "DIGIT NINE", "cat": "Number", "sub": "Decimal Digit"}, {"c": 8260, "u": "2044", "n": "fraction", "d": "FRACTION SLASH", "cat": "Number", "sub": "Fraction"}, {"c": 189, "u": "00BD", "n": "onehalf", "d": "VULGAR FRACTION ONE HALF", "cat": "Number", "sub": "Fraction"}, {"c": 188, "u": "00BC", "n": "onequarter", "d": "VULGAR FRACTION ONE QUARTER", "cat": "Number", "sub": "Fraction"}, {"c": 190, "u": "00BE", "n": "threequarters", "d": "VULGAR FRACTION THREE QUARTERS", "cat": "Number", "sub": "Fraction"}, {"c": 8304, "u": "2070", "n": "zerosuperior", "d": "SUPERSCRIPT ZERO", "cat": "Number", "sub": "Small"}, {"c": 185, "u": "00B9", "n": "onesuperior", "d": "SUPERSCRIPT ONE", "cat": "Number", "sub": "Small"}, {"c": 178, "u": "00B2", "n": "twosuperior", "d": "SUPERSCRIPT TWO", "cat": "Number", "sub": "Small"}, {"c": 179, "u": "00B3", "n": "threesuperior", "d": "SUPERSCRIPT THREE", "cat": "Number", "sub": "Small"}, {"c": 8308, "u": "2074", "n": "foursuperior", "d": "SUPERSCRIPT FOUR", "cat": "Number", "sub": "Small"}, {"c": 8309, "u": "2075", "n": "fivesuperior", "d": "SUPERSCRIPT FIVE", "cat": "Number", "sub": "Small"}, {"c": 8310, "u": "2076", "n": "sixsuperior", "d": "SUPERSCRIPT SIX", "cat": "Number", "sub": "Small"}, {"c": 8311, "u": "2077", "n": "sevensuperior", "d": "SUPERSCRIPT SEVEN", "cat": "Number", "sub": "Small"}, {"c": 8312, "u": "2078", "n": "eightsuperior", "d": "SUPERSCRIPT EIGHT", "cat": "Number", "sub": "Small"}, {"c": 8313, "u": "2079", "n": "ninesuperior", "d": "SUPERSCRIPT NINE", "cat": "Number", "sub": "Small"}, {"c": 46, "u": "002E", "n": "period", "d": "FULL STOP", "cat": "Punctuation"}, {"c": 44, "u": "002C", "n": "comma", "d": "COMMA", "cat": "Punctuation"}, {"c": 58, "u": "003A", "n": "colon", "d": "COLON", "cat": "Punctuation"}, {"c": 59, "u": "003B", "n": "semicolon", "d": "SEMICOLON", "cat": "Punctuation"}, {"c": 8230, "u": "2026", "n": "ellipsis", "d": "HORIZONTAL ELLIPSIS", "cat": "Punctuation"}, {"c": 33, "u": "0021", "n": "exclam", "d": "EXCLAMATION MARK", "cat": "Punctuation"}, {"c": 161, "u": "00A1", "n": "exclamdown", "d": "INVERTED EXCLAMATION MARK", "cat": "Punctuation"}, {"c": 63, "u": "003F", "n": "question", "d": "QUESTION MARK", "cat": "Punctuation"}, {"c": 191, "u": "00BF", "n": "questiondown", "d": "INVERTED QUESTION MARK", "cat": "Punctuation"}, {"c": 183, "u": "00B7", "n": "periodcentered", "d": "MIDDLE DOT", "cat": "Punctuation"}, {"c": 8226, "u": "2022", "n": "bullet", "d": "BULLET", "cat": "Punctuation"}, {"c": 42, "u": "002A", "n": "asterisk", "d": "ASTERISK", "cat": "Punctuation"}, {"c": 35, "u": "0023", "n": "numbersign", "d": "NUMBER SIGN", "cat": "Punctuation"}, {"c": 47, "u": "002F", "n": "slash", "d": "SOLIDUS", "cat": "Punctuation"}, {"c": 92, "u": "005C", "n": "backslash", "d": "REVERSE SOLIDUS", "cat": "Punctuation"}, {"c": 8273, "u": "2051", "n": "twoasterisksvertical", "d": "TWO ASTERISKS ALIGNED VERTICALLY", "cat": "Punctuation"}, {"c": 45, "u": "002D", "n": "hyphen", "d": "HYPHEN-MINUS", "cat": "Punctuation", "sub": "Dash"}, {"c": 8211, "u": "2013", "n": "endash", "d": "EN DASH", "cat": "Punctuation", "sub": "Dash"}, {"c": 8212, "u": "2014", "n": "emdash", "d": "EM DASH", "cat": "Punctuation", "sub": "Dash"}, {"c": 95, "u": "005F", "n": "underscore", "d": "LOW LINE", "cat": "Punctuation", "sub": "Dash"}, {"c": 40, "u": "0028", "n": "parenleft", "d": "LEFT PARENTHESIS", "cat": "Punctuation", "sub": "Parenthesis"}, {"c": 41, "u": "0029", "n": "parenright", "d": "RIGHT PARENTHESIS", "cat": "Punctuation", "sub": "Parenthesis"}, {"c": 123, "u": "007B", "n": "braceleft", "d": "LEFT CURLY BRACKET", "cat": "Punctuation", "sub": "Parenthesis"}, {"c": 125, "u": "007D", "n": "braceright", "d": "RIGHT CURLY BRACKET", "cat": "Punctuation", "sub": "Parenthesis"}, {"c": 91, "u": "005B", "n": "bracketleft", "d": "LEFT SQUARE BRACKET", "cat": "Punctuation", "sub": "Parenthesis"}, {"c": 93, "u": "005D", "n": "bracketright", "d": "RIGHT SQUARE BRACKET", "cat": "Punctuation", "sub": "Parenthesis"}, {"c": 8218, "u": "201A", "n": "quotesinglbase", "d": "SINGLE LOW-9 QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 8222, "u": "201E", "n": "quotedblbase", "d": "DOUBLE LOW-9 QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 8220, "u": "201C", "n": "quotedblleft", "d": "LEFT DOUBLE QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 8221, "u": "201D", "n": "quotedblright", "d": "RIGHT DOUBLE QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 8216, "u": "2018", "n": "quoteleft", "d": "LEFT SINGLE QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 8217, "u": "2019", "n": "apostrophe", "d": "RIGHT SINGLE QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 171, "u": "00AB", "n": "guillemetleft", "d": "LEFT-POINTING DOUBLE ANGLE QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 187, "u": "00BB", "n": "guillemetright", "d": "RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 8249, "u": "2039", "n": "guilsinglleft", "d": "SINGLE LEFT-POINTING ANGLE QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 8250, "u": "203A", "n": "guilsinglright", "d": "SINGLE RIGHT-POINTING ANGLE QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 34, "u": "0022", "n": "quotedbl", "d": "QUOTATION MARK", "cat": "Punctuation", "sub": "Quote"}, {"c": 39, "u": "0027", "n": "quotesingle", "d": "APOSTROPHE", "cat": "Punctuation", "sub": "Quote"}, {"c": 3647, "u": "0E3F", "n": "baht", "d": "THAI CURRENCY SYMBOL BAHT", "cat": "Symbol", "sub": "Currency"}, {"c": 64, "u": "0040", "n": "at", "d": "COMMERCIAL AT", "cat": "Symbol"}, {"c": 38, "u": "0026", "n": "ampersand", "d": "AMPERSAND", "cat": "Symbol"}, {"c": 182, "u": "00B6", "n": "paragraph", "d": "PILCROW SIGN", "cat": "Symbol"}, {"c": 167, "u": "00A7", "n": "section", "d": "SECTION SIGN", "cat": "Symbol"}, {"c": 169, "u": "00A9", "n": "copyright", "d": "COPYRIGHT SIGN", "cat": "Symbol"}, {"c": 174, "u": "00AE", "n": "registered", "d": "REGISTERED SIGN", "cat": "Symbol"}, {"c": 8482, "u": "2122", "n": "trademark", "d": "TRADE MARK SIGN", "cat": "Symbol"}, {"c": 176, "u": "00B0", "n": "degree", "d": "DEGREE SIGN", "cat": "Symbol"}, {"c": 124, "u": "007C", "n": "bar", "d": "VERTICAL LINE", "cat": "Symbol"}, {"c": 166, "u": "00A6", "n": "brokenbar", "d": "BROKEN BAR", "cat": "Symbol"}, {"c": 8224, "u": "2020", "n": "dagger", "d": "DAGGER", "cat": "Symbol"}, {"c": 8225, "u": "2021", "n": "daggerdbl", "d": "DOUBLE DAGGER", "cat": "Symbol"}, {"c": 162, "u": "00A2", "n": "cent", "d": "CENT SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 164, "u": "00A4", "n": "currency", "d": "CURRENCY SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 36, "u": "0024", "n": "dollar", "d": "DOLLAR SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 8364, "u": "20AC", "n": "euro", "d": "EURO SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 8372, "u": "20B4", "n": "hryvnia", "d": "HRYVNIA SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 8381, "u": "20BD", "n": "ruble", "d": "RUBLE SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 8377, "u": "20B9", "n": "rupeeIndian", "d": "INDIAN RUPEE SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 8362, "u": "20AA", "n": "sheqel", "d": "NEW SHEQEL SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 163, "u": "00A3", "n": "sterling", "d": "POUND SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 8361, "u": "20A9", "n": "won", "d": "WON SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 165, "u": "00A5", "n": "yen", "d": "YEN SIGN", "cat": "Symbol", "sub": "Currency"}, {"c": 43, "u": "002B", "n": "plus", "d": "PLUS SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 8722, "u": "2212", "n": "minus", "d": "MINUS SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 215, "u": "00D7", "n": "multiply", "d": "MULTIPLICATION SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 247, "u": "00F7", "n": "divide", "d": "DIVISION SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 61, "u": "003D", "n": "equal", "d": "EQUALS SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 8800, "u": "2260", "n": "notequal", "d": "NOT EQUAL TO", "cat": "Symbol", "sub": "Math"}, {"c": 62, "u": "003E", "n": "greater", "d": "GREATER-THAN SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 60, "u": "003C", "n": "less", "d": "LESS-THAN SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 8805, "u": "2265", "n": "greaterequal", "d": "GREATER-THAN OR EQUAL TO", "cat": "Symbol", "sub": "Math"}, {"c": 8804, "u": "2264", "n": "lessequal", "d": "LESS-THAN OR EQUAL TO", "cat": "Symbol", "sub": "Math"}, {"c": 177, "u": "00B1", "n": "plusminus", "d": "PLUS-MINUS SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 8776, "u": "2248", "n": "approxequal", "d": "ALMOST EQUAL TO", "cat": "Symbol", "sub": "Math"}, {"c": 126, "u": "007E", "n": "asciitilde", "d": "TILDE", "cat": "Symbol", "sub": "Math"}, {"c": 172, "u": "00AC", "n": "logicalnot", "d": "NOT SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 94, "u": "005E", "n": "asciicircum", "d": "ASCII CIRCUMFLEX ACCENT", "cat": "Symbol", "sub": "Math"}, {"c": 8734, "u": "221E", "n": "infinity", "d": "INFINITY", "cat": "Symbol", "sub": "Math"}, {"c": 37, "u": "0025", "n": "percent", "d": "PERCENT SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 8240, "u": "2030", "n": "perthousand", "d": "PER MILLE SIGN", "cat": "Symbol", "sub": "Math"}, {"c": 9674, "u": "25CA", "n": "lozenge", "d": "LOZENGE", "cat": "Symbol", "sub": "Geometry"}, {"c": 168, "u": "00A8", "n": "dieresis", "d": "DIAERESIS", "cat": "Mark", "sub": "Spacing"}, {"c": 729, "u": "02D9", "n": "dotaccent", "d": "DOT ABOVE", "cat": "Mark", "sub": "Spacing"}, {"c": 96, "u": "0060", "n": "grave", "d": "GRAVE ACCENT", "cat": "Mark", "sub": "Spacing"}, {"c": 180, "u": "00B4", "n": "acute", "d": "ACUTE ACCENT", "cat": "Mark", "sub": "Spacing"}, {"c": 733, "u": "02DD", "n": "hungarumlaut", "d": "DOUBLE ACUTE ACCENT", "cat": "Mark", "sub": "Spacing"}, {"c": 710, "u": "02C6", "n": "circumflex", "d": "CIRCUMFLEX ACCENT", "cat": "Mark", "sub": "Spacing"}, {"c": 711, "u": "02C7", "n": "caron", "d": "CARON", "cat": "Mark", "sub": "Spacing"}, {"c": 728, "u": "02D8", "n": "breve", "d": "BREVE", "cat": "Mark", "sub": "Spacing"}, {"c": 730, "u": "02DA", "n": "ring", "d": "RING ABOVE", "cat": "Mark", "sub": "Spacing"}, {"c": 732, "u": "02DC", "n": "tilde", "d": "TILDE", "cat": "Mark", "sub": "Spacing"}, {"c": 175, "u": "00AF", "n": "macron", "d": "MACRON", "cat": "Mark", "sub": "Spacing"}, {"c": 184, "u": "00B8", "n": "cedilla", "d": "CEDILLA", "cat": "Mark", "sub": "Spacing"}, {"c": 731, "u": "02DB", "n": "ogonek", "d": "OGONEK", "cat": "Mark", "sub": "Spacing"}];
+			const plainFormat = {label: "TT", suffix: "ttf"};
+
+			const animStates = {};
+			const animFreq = [0, 1/2.1, 1/1.3, 1/0.8]; // cycles/second for speeds 0-3
+			function setAxisSpeed(axisTag, newSpeed) {
+				if (!animStates[axisTag]) {
+					animStates[axisTag] = {speed: 0, animId: null, startTime: 0, phaseOffset: 0};
+				}
+				const state = animStates[axisTag];
+				const now = performance.now();
+				let currentPhase;
+				if (state.speed > 0) {
+					const t = (now - state.startTime) / 1000;
+					currentPhase = 2 * Math.PI * animFreq[state.speed] * t + state.phaseOffset;
+				} else {
+					const slider = document.getElementById(axisTag);
+					const minV = parseFloat(slider.min), maxV = parseFloat(slider.max);
+					const center = (minV + maxV) / 2, amplitude = (maxV - minV) / 2;
+					const ratio = amplitude > 0 ? (parseFloat(slider.value) - center) / amplitude : 0;
+					currentPhase = Math.acos(Math.max(-1, Math.min(1, ratio)));
+				}
+				if (state.animId) { cancelAnimationFrame(state.animId); state.animId = null; }
+				state.speed = newSpeed;
+				const btn = document.getElementById('play_' + axisTag);
+				const symbols = ['▶', '①', '②', '③'];
+				if (btn) btn.textContent = symbols[state.speed];
+				if (state.speed === 0) { updatePlayAllButton(); return; }
+				state.startTime = now;
+				state.phaseOffset = currentPhase;
+				function animFrame(time) {
+					const s = animStates[axisTag];
+					if (!s || s.speed === 0) return;
+					const slider = document.getElementById(axisTag);
+					const minV = parseFloat(slider.min), maxV = parseFloat(slider.max);
+					const center = (minV + maxV) / 2, amplitude = (maxV - minV) / 2;
+					const t = (time - s.startTime) / 1000;
+					slider.value = center + amplitude * Math.cos(s.phaseOffset + 2 * Math.PI * animFreq[s.speed] * t);
+					updateSlider();
+					s.animId = requestAnimationFrame(animFrame);
+				}
+				state.animId = requestAnimationFrame(animFrame);
+				updatePlayAllButton();
+			}
+			function toggleAnimation(axisTag) {
+				const current = animStates[axisTag] ? animStates[axisTag].speed : 0;
+				setAxisSpeed(axisTag, (current + 1) % 4);
+			}
+			function pauseAllAnimations() {
+				for (const axisTag in animStates) {
+					const state = animStates[axisTag];
+					if (state.speed > 0) {
+						if (state.animId) { cancelAnimationFrame(state.animId); state.animId = null; }
+						state.speed = 0;
+						const btn = document.getElementById('play_' + axisTag);
+						if (btn) btn.textContent = '▶';
+					}
+				}
+				updatePlayAllButton();
+			}
+			function anyAxisAnimating() {
+				for (const axisTag in animStates) {
+					if (animStates[axisTag].speed > 0) return true;
+				}
+				return false;
+			}
+			function updatePlayAllButton() {
+				const btn = document.getElementById('playAll');
+				if (btn) btn.textContent = anyAxisAnimating() ? '⏸️' : '▶️';
+			}
+			function playAllAxes() {
+				// speeds cycle 1,2,3,1,2,3,… so multiple axes cover more of the design space
+				const btns = document.getElementsByClassName('playBtn');
+				for (let i = 0; i < btns.length; i++) {
+					const axisTag = btns[i].id.substring(5); // strip "play_"
+					setAxisSpeed(axisTag, (i % 3) + 1);
+				}
+			}
+			function togglePlayAll() {
+				if (anyAxisAnimating()) {
+					pauseAllAnimations();
+				} else {
+					playAllAxes();
+				}
+			}
+			let gridTooltip = null;
+			function ensureGridTooltip() {
+				if (!gridTooltip) {
+					gridTooltip = document.createElement('div');
+					gridTooltip.id = 'gridTooltip';
+					document.body.appendChild(gridTooltip);
+				}
+				return gridTooltip;
+			}
+			function buildGridView() {
+				const grid = document.getElementById('gridview');
+				grid.innerHTML = '';
+				const tooltip = ensureGridTooltip();
+				for (const info of glyphInfos) {
+					const ch = String.fromCodePoint(info.c);
+					const cell = document.createElement('div');
+					cell.className = 'gridCell';
+					cell.textContent = ch;
+					cell.addEventListener('mouseenter', function() {
+						tooltip.innerHTML = '';
+						const refGlyph = document.createElement('div');
+						refGlyph.className = 'refGlyph';
+						refGlyph.textContent = ch;
+						tooltip.appendChild(refGlyph);
+						const metaLines = [];
+						if (info.u) metaLines.push('U+' + info.u);
+						if (info.d) metaLines.push(info.d);
+						if (info.cat) metaLines.push(info.cat);
+						if (info.sub) metaLines.push(info.sub);
+						for (const line of metaLines) {
+							const l = document.createElement('div');
+							l.className = 'cellMeta';
+							l.textContent = line;
+							tooltip.appendChild(l);
+						}
+						tooltip.style.display = 'block';
+					});
+					cell.addEventListener('mousemove', function(e) {
+						tooltip.style.left = (e.clientX + 14) + 'px';
+						tooltip.style.top = (e.clientY + 14) + 'px';
+					});
+					cell.addEventListener('mouseleave', function() {
+						tooltip.style.display = 'none';
+					});
+					cell.addEventListener('dblclick', function() {
+						openTextInGlyphs(info.n ? '/' + info.n : ch, 1);
+					});
+					grid.appendChild(cell);
+				}
+			}
+			function toggleGridView() {
+				const textarea = document.getElementById('textarea');
+				const gridview = document.getElementById('gridview');
+				const gridToggle = document.getElementById('gridToggle');
+				if (gridview.style.display === 'flex') {
+					gridview.style.display = 'none';
+					if (gridTooltip) gridTooltip.style.display = 'none';
+					textarea.style.display = '';
+					textarea.focus();
+					if (gridToggle) gridToggle.textContent = '🔡';
+				} else {
+					buildGridView();
+					updateSlider();
+					gridview.style.display = 'flex';
+					textarea.style.display = 'none';
+					if (gridToggle) gridToggle.textContent = '🔤';
+				}
+			}
+
+			function sliderPrecision(event) {
+				if (event.shiftKey) {
+					for (i = 0; i < sliders.length; i++) {
+						sliders[i].step = 0.005;
+					}
+				} else {
+					for (i = 0; i < sliders.length; i++) {
+						if (sliders[i].id == "ital") {
+							sliders[i].step = 0.05;
+						} else {
+							sliders[i].step = 1;
+						}
+					}
+				}
+			}
+			function version() {
+				let version = new Date().getTime();
+				return version;
+			}
+			function currentSuffix() {
+				const link = document.getElementById("type");
+				if (link.textContent == "W1") return "woff";
+				if (link.textContent == "W2") return "woff2";
+				return plainFormat.suffix;
+			}
+			function reloadFontFace() {
+				let fontFace = new FontFace("FantasyMart_2026-08-21", `url('FantasyMart_2026-08-21VF.${currentSuffix()}?v=${version()}')`);
+				fontFace.load().then(function(loadedFontFace) {
+					document.fonts.add(loadedFontFace);
+					console.log('Font reloaded');
+				}).catch(function(error) {
+					console.error('Failed to reload font:', error);
+				});
+			}
+			function keyAnalysis(event) {
+				const sizeSlider = document.getElementById("fontsize");
+				const lineheightSlider = document.getElementById("lineheight");
+				const styleMenu = document.getElementById("styleMenu");
+				const styleMenuLength = styleMenu.options.length;
+
+				if (event.metaKey && event.altKey && event.shiftKey && event.code == 'KeyE') {
+					openSelectionInGlyphs();
+				} else if (event.ctrlKey) {
+					if (event.code == 'KeyR') {
+						resetParagraph();
+					} else if (event.code == 'KeyU') {
+						reloadFontFace();
+					} else if (event.code == 'KeyL') {
+						setLat1();
+					} else if (event.code == 'KeyJ') {
+						toggleLeftRight();
+					} else if (event.code == 'KeyX') {
+						toggleInverse();
+					} else if (event.code == 'KeyC') {
+						toggleCenter();
+					} else if (event.code == 'KeyM') {
+						toggleMenu();
+					} else if (event.code == 'KeyG') {
+						toggleGridView();
+					} else if (event.code == 'KeyP') {
+						togglePlayAll();
+					} else if (event.code == 'Period') {
+						styleMenu.selectedIndex = (styleMenu.selectedIndex + 1) % styleMenuLength;
+						setStyle(styleMenu.value);
+					} else if (event.code == 'Comma') {
+						var newIndex = styleMenu.selectedIndex - 1;
+						if (newIndex<0) {
+							newIndex = styleMenuLength - 1;
+						}
+						styleMenu.selectedIndex = newIndex;
+						setStyle(styleMenu.value);
+					} else if (event.key == '+') {
+						sizeSlider.value = Math.round(sizeSlider.value*1.25);
+						if (sizeSlider.value > parseInt(sizeSlider.max)) {
+							sizeSlider.value = sizeSlider.max;
+						}
+						updateSlider();
+					} else if (event.key == '-') {
+						sizeSlider.value = Math.round(sizeSlider.value*0.8);
+						if (sizeSlider.value < parseInt(sizeSlider.min)) {
+							sizeSlider.value = sizeSlider.min;
+						}
+						updateSlider();
+					} else if (event.key == '1') {
+						lineheightSlider.value = Math.round(parseInt(lineheightSlider.value)-20);
+						if (lineheightSlider.value < parseInt(lineheightSlider.min)) {
+							lineheightSlider.value = lineheightSlider.min;
+						}
+						updateSlider();
+					} else if (event.key == '2') {
+						lineheightSlider.value = Math.round(parseInt(lineheightSlider.value)+20);
+						if (lineheightSlider.value > parseInt(lineheightSlider.max)) {
+							lineheightSlider.value = lineheightSlider.max;
+						}
+						updateSlider();
+					}
+				}
+			}
+			function zoomForTextLength(textLength) {
+				textLength = Math.max(2, Math.min(10, textLength));
+				return 5 * textLength * textLength - 135 * textLength + 1050;
+			}
+			function openTextInGlyphs(text, textLength) {
+				// requires the GlyphsApp Server plug-in: https://github.com/mekkablue/glyphsapp-server
+				if (!text) return;
+				const zoom = zoomForTextLength(textLength ? textLength : text.length);
+				fetch('http://127.0.0.1:49152/frontmostfont/newtab/?text=' + encodeURIComponent(text) + '&zoom=' + zoom).catch(function(error) {
+					console.error('Could not reach GlyphsApp Server:', error);
+				});
+			}
+			function openSelectionInGlyphs() {
+				openTextInGlyphs(window.getSelection().toString());
+			}
+			function setLanguage(lang) {
+				document.body.setAttribute('lang',lang);
+			}
+			function updateFeatures() {
+				// update features based on user input:
+				var testtext = getTestText();
+				var codeLine = "";
+				var checkboxes = document.getElementsByClassName("otFeature")
+				for (i = 0; i < checkboxes.length; i++) {
+					var checkbox = checkboxes[i];
+					if (i != 0) { codeLine += ", " };
+					codeLine += '"'+checkbox.name+'" ';
+					codeLine += checkbox.checked ? '1' : '0';
+					if (checkbox.name=="kern") {
+						testtext.style.setProperty("font-kerning", checkbox.checked ? 'normal' : 'none');
+					} else if (checkbox.name=="liga") {
+						testtext.style.setProperty("font-variant-ligatures", checkbox.checked ? 'common-ligatures contextual' : 'no-common-ligatures no-contextual');
+					} else if (checkbox.name=="dlig") {
+						testtext.style.setProperty("font-variant-ligatures", checkbox.checked ? 'discretionary-ligatures' : 'no-discretionary-ligatures');
+					} else if (checkbox.name=="hlig") {
+						testtext.style.setProperty("font-variant-ligatures", checkbox.checked ? 'historical-ligatures' : 'no-historical-ligatures');
+					} else if (checkbox.name=="case") {
+						testtext.style.textTransform = checkbox.checked ? "uppercase" : "none";
+					}
+				}
+				testtext.style.setProperty("font-feature-settings", codeLine);
+				document.getElementById("gridview").style.setProperty("font-feature-settings", codeLine);
+			}
+			function resetParagraph() {
+				const defaulttext = "&#x0041; &#x00C1; &#x0102; &#x01CD; &#x00C2; &#x00C4; &#x00C0; &#x0100; &#x0104; &#x00C5; &#x00C3; &#x00C6; &#x0042; &#x0043; &#x0106; &#x010C; &#x00C7; &#x010A; &#x0044; &#x010E; &#x0110; &#x00D0; &#x0045; &#x00C9; &#x011A; &#x00CA; &#x00CB; &#x0116; &#x00C8; &#x0112; &#x0118; &#x1EBC; &#x018F; &#x0046; &#x0047; &#x011E; &#x0122; &#x0120; &#x1E20; &#x0048; &#x0126; &#x0049; &#x00CD; &#x01CF; &#x00CE; &#x00CF; &#x0130; &#x00CC; &#x012A; &#x012E; &#x0128; &#x004A; &#x004B; &#x0136; &#x004C; &#x0139; &#x013D; &#x013B; &#x0141; &#x004D; &#x004E; &#x0143; &#x0147; &#x0145; &#x00D1; &#x004F; &#x00D3; &#x01D1; &#x00D4; &#x00D6; &#x00D2; &#x0150; &#x014C; &#x00D8; &#x00D5; &#x0152; &#x0050; &#x00DE; &#x0051; &#x0052; &#x0154; &#x0158; &#x0156; &#x0053; &#x015A; &#x0160; &#x015E; &#x0218; &#x1E9E; &#x0054; &#x0164; &#x0162; &#x021A; &#x0055; &#x00DA; &#x01D3; &#x00DB; &#x00DC; &#x00D9; &#x0170; &#x016A; &#x0172; &#x016E; &#x0168; &#x0056; &#x0057; &#x1E82; &#x0174; &#x1E84; &#x1E80; &#x0058; &#x0059; &#x00DD; &#x0176; &#x0178; &#x1EF2; &#x1EF8; &#x005A; &#x0179; &#x017D; &#x017B; &#x0061; &#x00E1; &#x0103; &#x01CE; &#x00E2; &#x00E4; &#x00E0; &#x0101; &#x0105; &#x00E5; &#x00E3; &#x00E6; &#x0062; &#x0063; &#x0107; &#x010D; &#x00E7; &#x010B; &#x0064; &#x010F; &#x0111; &#x00F0; &#x0065; &#x00E9; &#x011B; &#x00EA; &#x00EB; &#x0117; &#x00E8; &#x0113; &#x0119; &#x1EBD; &#x0259; &#x0066; &#x0067; &#x011F; &#x0123; &#x0121; &#x1E21; &#x0068; &#x0127; &#x0069; &#x0131; &#x00ED; &#x01D0; &#x00EE; &#x00EF; &#x00EC; &#x012B; &#x012F; &#x0129; &#x006A; &#x0237; &#x006B; &#x0137; &#x006C; &#x013A; &#x013E; &#x013C; &#x0142; &#x006D; &#x006E; &#x0144; &#x0148; &#x0146; &#x00F1; &#x006F; &#x00F3; &#x01D2; &#x00F4; &#x00F6; &#x00F2; &#x0151; &#x014D; &#x00F8; &#x00F5; &#x0153; &#x0070; &#x00FE; &#x0071; &#x0072; &#x0155; &#x0159; &#x0157; &#x0073; &#x015B; &#x0161; &#x015F; &#x0219; &#x00DF; &#x0074; &#x0165; &#x0163; &#x021B; &#x0075; &#x00FA; &#x01D4; &#x00FB; &#x00FC; &#x00F9; &#x0171; &#x016B; &#x0173; &#x016F; &#x0169; &#x0076; &#x0077; &#x1E83; &#x0175; &#x1E85; &#x1E81; &#x0078; &#x0079; &#x00FD; &#x0177; &#x00FF; &#x1EF3; &#x1EF9; &#x007A; &#x017A; &#x017E; &#x017C; &#xFB01; &#xFB02; &#x00AA; &#x00BA; &#x0030; &#x0031; &#x0032; &#x0033; &#x0034; &#x0035; &#x0036; &#x0037; &#x0038; &#x0039; &#x2044; &#x00BD; &#x00BC; &#x00BE; &#x2070; &#x00B9; &#x00B2; &#x00B3; &#x2074; &#x2075; &#x2076; &#x2077; &#x2078; &#x2079; &#x002E; &#x002C; &#x003A; &#x003B; &#x2026; &#x0021; &#x00A1; &#x003F; &#x00BF; &#x00B7; &#x2022; &#x002A; &#x0023; &#x002F; &#x005C; &#x2051; &#x002D; &#x2013; &#x2014; &#x005F; &#x0028; &#x0029; &#x007B; &#x007D; &#x005B; &#x005D; &#x201A; &#x201E; &#x201C; &#x201D; &#x2018; &#x2019; &#x00AB; &#x00BB; &#x2039; &#x203A; &#x0022; &#x0027; &#x0E3F; &#x0040; &#x0026; &#x00B6; &#x00A7; &#x00A9; &#x00AE; &#x2122; &#x00B0; &#x007C; &#x00A6; &#x2020; &#x2021; &#x00A2; &#x00A4; &#x0024; &#x20AC; &#x20B4; &#x20BD; &#x20B9; &#x20AA; &#x00A3; &#x20A9; &#x00A5; &#x002B; &#x2212; &#x00D7; &#x00F7; &#x003D; &#x2260; &#x003E; &#x003C; &#x2265; &#x2264; &#x00B1; &#x2248; &#x007E; &#x00AC; &#x005E; &#x221E; &#x0025; &#x2030; &#x25CA; &#x00A8; &#x02D9; &#x0060; &#x00B4; &#x02DD; &#x02C6; &#x02C7; &#x02D8; &#x02DA; &#x02DC; &#x00AF; &#x00B8; &#x02DB;";
+				const testtext = getTestText();
+				testtext.innerHTML = defaulttext;
+			}
+			function setLat1() {
+				const lat1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz &Agrave;&Aacute;&Acirc;&Atilde;&Auml;&Aring;&AElig;&Ccedil;&Egrave;&Eacute;&Ecirc;&Euml;&Igrave;&Iacute;&Icirc;&Iuml;&ETH;&Ntilde;&Ograve;&Oacute;&Ocirc;&Otilde;&Ouml;&Oslash;&OElig;&THORN;&Ugrave;&Uacute;&Ucirc;&Uuml;&Yacute;&Yuml; &agrave;&aacute;&acirc;&atilde;&auml;&aring;&aelig;&ccedil;&egrave;&eacute;&ecirc;&euml;&igrave;&iacute;&icirc;&iuml;&eth;&ntilde;&ograve;&oacute;&ocirc;&otilde;&ouml;&oslash;&oelig;&thorn;&szlig;&ugrave;&uacute;&ucirc;&uuml;&yacute;&yuml; .,:;&middot;&hellip;&iquest;?&iexcl;!&laquo;&raquo;&lsaquo;&rsaquo; /|&brvbar;\()[]{}_-&ndash;&mdash;&sbquo;&bdquo;&lsquo;&rsquo;&ldquo;&rdquo;&quot;&#x27; #&amp;&sect;@&bull;&shy;*&dagger;&Dagger;&para; +&times;&divide;&plusmn;=&lt;&gt;&not;&mu; ^~&acute;`&circ;&macr;&tilde;&uml;&cedil; &yen;&euro;&pound;$&cent;&curren;&fnof; &trade;&reg;&copy; 1234567890 &ordf;&ordm;&deg;%&permil; &sup1;&sup2;&sup3;&frac14;&frac12;&frac34;";
+				const testtext = getTestText();
+				testtext.innerHTML = lat1;
+			}
+			function getTestText() {
+				return document.getElementById("textarea");
+			}
+			function updateSlider() {
+				var body = getTestText();
+				var gridview = document.getElementById("gridview");
+				var sliders = document.getElementsByClassName("slider");
+				var settingtext = "";
+				for (var i = 0; i < sliders.length; i++) {
+					var sliderID = sliders[i].id;
+					var sliderValue = sliders[i].value;
+					var label = document.getElementById("label_"+sliderID);
+					var labelName = label.getAttribute("name");
+
+					label.textContent = ""+labelName+": "+sliderValue;
+
+					if (sliderID == "fontsize") {
+						// Text Size Slider
+						body.style.setProperty("font-size", ""+sliderValue+"px");
+						gridview.style.setProperty("font-size", ""+sliderValue+"px");
+						document.documentElement.style.setProperty('--grid-cell-size', Math.round(parseFloat(sliderValue) * 1.4) + 'px');
+						label.textContent += "px";
+					} else if (sliderID == "lineheight") {
+						// Line Height Slider
+						body.style.setProperty("line-height", ""+sliderValue/100.0+"em");
+						label.textContent += "%";
+					} else {
+						// OTVar Slider: collect settings
+						if (settingtext != "") { settingtext += ", " };
+						settingtext += '"' + sliderID + '" ' + sliderValue;
+					}
+				}
+				// apply OTVar slider settings:
+				body.style.setProperty("font-variation-settings", settingtext);
+				gridview.style.setProperty("font-variation-settings", settingtext);
+			}
+			function vanish(item) {
+				item.style.setProperty("display", "none");
+			}
+			function toggleLeftRight() {
+				const waterfall = document.getElementById("textarea");
+				if (waterfall.dir != "rtl") {
+					waterfall.dir = "rtl";
+					waterfall.align = "right";
+				} else {
+					waterfall.dir = "";
+					waterfall.align = "";
+				}
+			}
+			function toggleCenter() {
+				const waterfall = document.getElementById("textarea");
+				if (waterfall.align != "center") {
+					waterfall.align = "center";
+				} else {
+					if (waterfall.dir == "rtl") {
+						waterfall.align = "right";
+					} else {
+						waterfall.align = "left";
+					}
+				}
+			}
+			function toggleInverse() {
+				const testText = document.getElementById("textarea");
+				const gridview = document.getElementById("gridview");
+				if (testText) {
+					const link = document.getElementById("invert");
+					if (testText.className == "●") {
+						testText.className = "○";
+						if (gridview) gridview.className = "○";
+						link.textContent = "🔳";
+					} else {
+						testText.className = "●";
+						if (gridview) gridview.className = "●";
+						link.textContent = "🔲";
+					}
+				}
+			}
+			function toggleMenu() {
+				const menu = document.getElementById("featureControls");
+				menu.hidden = !menu.hidden;
+			}
+			function setFontTypeTo(suffix) {
+				const styleId = "font-declaration";
+				var fontStyleSheet = document.getElementById(styleId);
+				var newFontStyleSheet = document.createElement("style");
+				newFontStyleSheet.id = styleId;
+				newFontStyleSheet.textContent = `
+				@font-face {
+					font-family: "FantasyMart_2026-08-21";
+					src: url("FantasyMart_2026-08-21VF.${suffix}");
+				}`;
+				fontStyleSheet.replaceWith(newFontStyleSheet);
+			}
+			function toggleType() {
+				const link = document.getElementById("type");
+				if (link.textContent == plainFormat.label) {
+					link.textContent = "W1";
+					setFontTypeTo("woff");
+				} else if (link.textContent == "W1") {
+					link.textContent = "W2";
+					setFontTypeTo("woff2");
+				} else {
+					link.textContent = plainFormat.label;
+					setFontTypeTo(plainFormat.suffix);
+				}
+			}
+			function setStyle(styleString) {
+				const axisStrings = styleString.split(",");
+				for (var i = axisStrings.length - 1; i >= 0; i--) {
+					const axisSetting = axisStrings[i].split(":");
+					const axisTag = axisSetting[0];
+					const axisValue = parseInt(axisSetting[1]);
+					document.getElementById(axisTag).value=axisValue;
+					updateSlider();
+				}
+			}
+		</script>
+	</head>
+	<body onload="updateSlider();resetParagraph();document.getElementById('textarea').focus()">
+	<div id="flexbox">
+		<div id="controls">
+			<!-- OTVar sliders -->
+			<div class="labeldiv"><label class="sliderlabel" id="label_fontsize" name="Font Size">Font Size</label><input type="range" min="10" max="1000" value="40" class="slider" id="fontsize" oninput="updateSlider();"></div>
+			<div class="labeldiv"><label class="sliderlabel" id="label_lineheight" name="Line Height">Line Height</label><input type="range" min="30" max="300" value="120" class="slider" id="lineheight" oninput="updateSlider();"></div>
+			<div class='labeldiv'><label class='sliderlabel' id='label_slnt' name='Slant'>Slant</label><div class='sliderRow'><input type='range' min='-60' max='60' value='0' class='slider' id='slnt' oninput='updateSlider();'><button class='playBtn' id='play_slnt' onclick='toggleAnimation("slnt")'>&#9654;</button></div></div>
+			<div class='labeldiv'><label class='sliderlabel' id='label_wght' name='Weight'>Weight</label><div class='sliderRow'><input type='range' min='10' max='240' value='10' class='slider' id='wght' oninput='updateSlider();'><button class='playBtn' id='play_wght' onclick='toggleAnimation("wght")'>&#9654;</button></div></div>
+			<div class='labeldiv'><label class='sliderlabel' id='label_wdth' name='Width'>Width</label><div class='sliderRow'><input type='range' min='200' max='600' value='200' class='slider' id='wdth' oninput='updateSlider();'><button class='playBtn' id='play_wdth' onclick='toggleAnimation("wdth")'>&#9654;</button></div></div>
+
+			<div id="featureControls">
+			<!-- style menu -->
+			<select id='styleMenu' name='styleMenu' onchange='setStyle(this.value);'>
+				<option value='slnt: 0.0,wght: 10.0,wdth: 200.0'>Origin</option>
+				<option value='slnt: 0.0,wght: 18.0,wdth: 200.0'>Narrow</option>
+				<option value='slnt: 30.0,wght: 17.0,wdth: 200.0'>Narrow Italic</option>
+				<option value='slnt: 60.0,wght: 14.0,wdth: 200.0'>Narrow Italic Extreme</option>
+				<option value='slnt: -30.0,wght: 17.0,wdth: 200.0'>Narrow Retalic</option>
+				<option value='slnt: -60.0,wght: 14.0,wdth: 200.0'>Narrow Retalic Extreme</option>
+				<option value='slnt: 0.0,wght: 96.0,wdth: 200.0'>Narrow Heavy</option>
+				<option value='slnt: 30.0,wght: 93.0,wdth: 200.0'>Narrow Heavy Italic</option>
+				<option value='slnt: 60.0,wght: 90.0,wdth: 200.0'>Narrow Heavy Italic Extreme</option>
+				<option value='slnt: -30.0,wght: 93.0,wdth: 200.0'>Narrow Heavy Retalic</option>
+				<option value='slnt: -60.0,wght: 90.0,wdth: 200.0'>Narrow Heavy Retalic Extreme</option>
+				<option value='slnt: 0.0,wght: 200.0,wdth: 200.0'>Narrow Blackout</option>
+				<option value='slnt: 0.0,wght: 18.0,wdth: 300.0'>Condensed</option>
+				<option value='slnt: 0.0,wght: 18.0,wdth: 400.0'>Regular</option>
+				<option value='slnt: 0.0,wght: 50.0,wdth: 400.0'>Medium</option>
+				<option value='slnt: 30.0,wght: 48.0,wdth: 400.0'>Medium Italic</option>
+				<option value='slnt: 0.0,wght: 80.0,wdth: 400.0'>SemiBold</option>
+				<option value='slnt: 0.0,wght: 130.0,wdth: 400.0'>Bold</option>
+				<option value='slnt: 0.0,wght: 190.0,wdth: 400.0'>Heavy</option>
+				<option value='slnt: 0.0,wght: 240.0,wdth: 400.0'>Blackout</option>
+				<option value='slnt: 0.0,wght: 33.0,wdth: 600.0'>Expanded</option>
+				<option value='slnt: 30.0,wght: 32.0,wdth: 600.0'>Expanded Italic</option>
+				<option value='slnt: 60.0,wght: 31.0,wdth: 600.0'>Expanded Italic Extreme</option>
+				<option value='slnt: -30.0,wght: 32.0,wdth: 600.0'>Expanded Retalic</option>
+				<option value='slnt: -60.0,wght: 31.0,wdth: 600.0'>Expanded Retalic Extreme</option>
+				<option value='slnt: 0.0,wght: 236.0,wdth: 600.0'>Heavy Expanded</option>
+				<option value='slnt: 30.0,wght: 236.0,wdth: 600.0'>Heavy Expanded Italic</option>
+				<option value='slnt: 60.0,wght: 232.0,wdth: 600.0'>Heavy Expanded Italic Extreme</option>
+				<option value='slnt: -30.0,wght: 236.0,wdth: 600.0'>Heavy Expanded Retalic</option>
+				<option value='slnt: -60.0,wght: 232.0,wdth: 600.0'>Heavy Expanded Retalic Extreme</option>
+			</select>
+
+			<!-- file type -->
+				<a onclick="toggleType();" id="type" class="emojiButton" title="Switch font format (TTF/OTF, WOFF, WOFF2)">TT</a>
+				<a onclick="reloadFontFace();" id="reload" class="emojiButton" title="Reload the font from disk (Ctrl-U)">🔄</a>
+				<a onclick="toggleGridView();" id="gridToggle" class="emojiButton" title="Toggle grid view of all glyphs (Ctrl-G)">🔡</a>
+				<a onclick="togglePlayAll();" id="playAll" class="emojiButton" title="Animate all axes / pause (Ctrl-P)">▶️</a>
+
+			<!-- Samsa -->
+				<!-- placeholder for external links, hold down OPTION and SHIFT while running the script -->
+
+			<!-- display type (x-ray vs. filled) -->
+				<a onclick="toggleInverse();" id="invert" class="emojiButton" title="Toggle x-ray (outline) display (Ctrl-X)">🔲</a>
+
+			<!-- OT features -->
+				<input type="checkbox" name="kern" id="kern" value="kern" class="otFeature" onchange="updateFeatures()" checked><label for="kern" class="otFeatureLabel" title="Kerning (kern)">kern</label>
+				<input type="checkbox" name="liga" id="liga" value="liga" class="otFeature" onchange="updateFeatures()" checked><label for="liga" class="otFeatureLabel" title="Standard Ligatures (liga)">liga</label>
+				<input type="checkbox" name="calt" id="calt" value="calt" class="otFeature" onchange="updateFeatures()" checked><label for="calt" class="otFeatureLabel" title="Contextual Alternates (calt)">calt</label>
+				<input type="checkbox" name="case" id="case" value="case" class="otFeature" onchange="updateFeatures()"><label for="case" class="otFeatureLabel" title="Case-Sensitive Forms">case</label>
+				<input type="checkbox" name="ss01" id="ss01" value="ss01" class="otFeature" onchange="updateFeatures()"><label for="ss01" class="otFeatureLabel" title="Stylistic Set 1 (Alternate A)">ss01</label>
+				<input type="checkbox" name="ss02" id="ss02" value="ss02" class="otFeature" onchange="updateFeatures()"><label for="ss02" class="otFeatureLabel" title="Stylistic Set 2 (Symmetrical I and T)">ss02</label>
+				<input type="checkbox" name="ss03" id="ss03" value="ss03" class="otFeature" onchange="updateFeatures()"><label for="ss03" class="otFeatureLabel" title="Stylistic Set 3 (Alternate Y and y)">ss03</label>
+				<input type="checkbox" name="ss06" id="ss06" value="ss06" class="otFeature" onchange="updateFeatures()"><label for="ss06" class="otFeatureLabel" title="Stylistic Set 6 (Centred Asterisk)">ss06</label>
+				<input type="checkbox" name="ss07" id="ss07" value="ss07" class="otFeature" onchange="updateFeatures()"><label for="ss07" class="otFeatureLabel" title="Stylistic Set 7 (Alternate Ampersand)">ss07</label>
+				<input type="checkbox" name="ss09" id="ss09" value="ss09" class="otFeature" onchange="updateFeatures()"><label for="ss09" class="otFeatureLabel" title="Stylistic Set 9 (ct and st Ligatures)">ss09</label>
+				<input type="checkbox" name="smcp" id="smcp" value="smcp" class="otFeature" onchange="updateFeatures()"><label for="smcp" class="otFeatureLabel" title="Small Capitals">smcp</label>
+				<input type="checkbox" name="c2sc" id="c2sc" value="c2sc" class="otFeature" onchange="updateFeatures()"><label for="c2sc" class="otFeatureLabel" title="Small Capitals From Capitals">c2sc</label>
+
+			</div>
+		</div>
+
+		<!-- Test Text -->
+		<div contenteditable="true" spellcheck="false" autocomplete="true" id="textarea" class="●">
+		</div>
+
+		<!-- Grid View -->
+		<div id="gridview" style="display:none;">
+		</div>
+	</div>
+
+	<!-- Disclaimer -->
+	<p id="helptext" onmouseleave="vanish(this);">
+		<strong>Ctrl-period/comma</strong> step through styles <strong>Ctrl-R</strong> reset charset <strong>Ctrl-U</strong> update font <strong>Ctrl-L</strong> Lat-1 <strong>Ctrl-J</strong> LTR/RTL <strong>Ctrl-C</strong> center <strong>Ctrl-G</strong> grid view <strong>Ctrl-P</strong> play/pause all <strong>Cmd-Opt-Shift-E</strong> selection in Glyphs <strong>2×click</strong> grid glyph in Glyphs <strong>Ctrl-M</strong> toggle menu <strong>Ctrl-X</strong> x-ray <strong>Ctrl +/−</strong> size <strong>Ctrl-1/2</strong> linegap <strong>Shift</strong> high slider precision <em>Not working? Try newer macOS or <a href="https://www.google.com/chrome/">latest Chrome</a>. Hover mouse above this note to make it disappear.</em>
+	</p>
+	</body>
+</html>
