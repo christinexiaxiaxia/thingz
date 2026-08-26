@@ -100,8 +100,7 @@ body {
     overflow: hidden;
 }
 
-img,
-video {
+img {
 	width: calc(100%);
 	margin: calc(0.25rem - 1px) 0 calc(0.25rem - 0px) 0;
 
@@ -109,7 +108,26 @@ video {
 	outline-line-style: inset;
 }
 
-ul > img,
+ul > img {
+	width: calc(100% + 1rem - 1px);
+
+	margin-top: calc(-2px);
+	margin-left: calc(-1rem);
+	margin-bottom: -1.5px;
+}
+
+video {
+	width: calc(100% - 2px);
+	margin: calc(0.25rem - 0px) 1px calc(0.25rem - 0px) 1px;
+
+	outline: solid black 1px;
+	outline-line-style: inset;
+}
+
+video.no-margin {
+	margin: calc(0.25rem - 0px) 1px 0px 1px;
+}
+
 ul > video {
 	width: calc(100% + 1rem - 1px);
 
