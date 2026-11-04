@@ -80,14 +80,26 @@ body {
 }
 
 .blur {
-	filter: blur(0.25rem) brightness(70%) contrast(5000%);
+	filter: blur(0.75rem) brightness(90%) contrast(130%);
 }
 
 .blur-display {
-	filter: blur(0.25rem) brightness(70%) contrast(5000%);
+	filter: blur(0.75rem) brightness(90%) contrast(130%);
 }
 
 .blur-text {
+	filter: blur(0.15rem) brightness(90%) contrast(130%);
+}
+
+.blot {
+	filter: blur(0.25rem) brightness(70%) contrast(5000%);
+}
+
+.blot-display {
+	filter: blur(0.25rem) brightness(70%) contrast(5000%);
+}
+
+.blot-text {
 	filter: blur(0.05rem) brightness(70%) contrast(5000%);
 }
 

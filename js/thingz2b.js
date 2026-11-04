@@ -164,6 +164,12 @@ $('.button-text').click(function(){
 		$('.specimen').removeClass('blur-display');
 		$('.paper').removeClass('blur-display');
 	}
+	if ($('.specimen').hasClass('blot-display')) {
+		$('.specimen').addClass('blot-text');
+		$('.paper').addClass('blot-text');
+		$('.specimen').removeClass('blot-display');
+		$('.paper').removeClass('blot-display');
+	}
 	// $('.specimen').css('font-size', '1.25px')
 	// $('.letter').css('font-size', '1.25px')
 })
@@ -179,6 +185,12 @@ $('.button-display').click(function(){
 		$('.specimen').removeClass('blur-text');
 		$('.paper').removeClass('blur-text');
 	}
+	if ($('.specimen').hasClass('blot-text')) {
+		$('.specimen').addClass('blot-display');
+		$('.paper').addClass('blot-display');
+		$('.specimen').removeClass('blot-text');
+		$('.paper').removeClass('blot-text');
+	}
 })
 
 $('.button-condensed').click(function(){
@@ -189,17 +201,52 @@ $('.button-condensed').click(function(){
 
 $('.button-blurred').click(function(){
 	$('.button-blurred').toggleClass('button-selected')
+	$('.button-blotted').removeClass('button-selected')
 	if ($('.letter').hasClass('zoom-display')) {
 		$('.specimen').toggleClass('blur-display');
 		$('.paper').toggleClass('blur-display');
 		$('.specimen').removeClass('blur-text');
 		$('.paper').removeClass('blur-text');
+		$('.specimen').removeClass('blot-display');
+		$('.paper').removeClass('blot-display');
+		$('.specimen').removeClass('blot-text');
+		$('.paper').removeClass('blot-text');
 	}
 	if (!$('.letter').hasClass('zoom-display')) {
 		$('.specimen').toggleClass('blur-text');
 		$('.paper').toggleClass('blur-text');
 		$('.specimen').removeClass('blur-display');
 		$('.paper').removeClass('blur-display');
+		$('.specimen').removeClass('blot-display');
+		$('.paper').removeClass('blot-display');
+		$('.specimen').removeClass('blot-text');
+		$('.paper').removeClass('blot-text');
+	}
+	$('*').removeClass('no-transition');
+})
+
+$('.button-blotted').click(function(){
+	$('.button-blotted').toggleClass('button-selected')
+	$('.button-blurred').removeClass('button-selected')
+	if ($('.letter').hasClass('zoom-display')) {
+		$('.specimen').toggleClass('blot-display');
+		$('.paper').toggleClass('blot-display');
+		$('.specimen').removeClass('blot-text');
+		$('.paper').removeClass('blot-text');
+		$('.specimen').removeClass('blur-display');
+		$('.paper').removeClass('blur-display');
+		$('.specimen').removeClass('blur-text');
+		$('.paper').removeClass('blur-text');
+	}
+	if (!$('.letter').hasClass('zoom-display')) {
+		$('.specimen').toggleClass('blot-text');
+		$('.paper').toggleClass('blot-text');
+		$('.specimen').removeClass('blot-display');
+		$('.paper').removeClass('blot-display');
+		$('.specimen').removeClass('blur-display');
+		$('.paper').removeClass('blur-display');
+		$('.specimen').removeClass('blur-text');
+		$('.paper').removeClass('blur-text');
 	}
 	$('*').removeClass('no-transition');
 })
