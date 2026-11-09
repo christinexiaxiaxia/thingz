@@ -1,3 +1,19 @@
+@keyframes cursor {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	200% {
+		opacity: 1;
+	}
+}
+
+
+
 * {
 	font-size: 10px;
 	font-family: sans-serif;
@@ -12,6 +28,15 @@ body {
 	margin-left: 0rem;
 }
 
+
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: inline-flex;
+}
 
 
 
@@ -215,6 +240,12 @@ body {
 
 
 
+.dot.uniform {
+	transform: scale(1.0);
+}
+
+
+
 
 .dot-0-25 {
 	transform: scale(0.25);
@@ -249,7 +280,17 @@ body {
 }
 
 
+/* TYPING CURSOR */
 
+#type-cursor {
+	width: 1px;
+	height: calc(12rem + 0.25rem*11);
+	margin: -1rem 0 -12.5rem -1px;
+
+	background-color: black;
+
+	animation: cursor 1s infinite;
+}
 
 
 .letter {
@@ -523,7 +564,7 @@ body {
 	grid-template-columns: repeat(7, 1rem);
 
 	margin-left: -0.5rem;
-	margin-right: -1rem;
+	margin-right: -1.25rem;
 }
 
 #l-lower {
@@ -817,7 +858,7 @@ body {
 	grid-template-rows: repeat(10, 1rem);
 	grid-template-columns: repeat(7, 1rem);
 
-	margin-left: -0.75rem;
+	margin-left: -1rem;
 	margin-right: -0.75rem;
 }
 

@@ -257,15 +257,17 @@ $('.button-inverted').click(function(){
 	$('*').removeClass('no-transition');
 })
 
-function toggleUniform(){	
+// function toggleUniform(){	
 
-}
+// }
 
 $('.button-uniform').click(function(){
+	console
 	$('.button-uniform').toggleClass('button-selected')
-	$('.dot-0-25').removeClass('dot-0-25').addClass('dot-uniform-0-25')
-}, function(){
-	$('.dot-uniform-0-25').addClass('dot-0-25').removeClass('dot-uniform-0-25')
+	$('.dot').toggleClass('uniform')
+// 	$('.dot-0-25').removeClass('dot-0-25').addClass('dot-uniform-0-25')
+// }, function(){
+// 	$('.dot-uniform-0-25').addClass('dot-0-25').removeClass('dot-uniform-0-25')
 })
 
 
@@ -309,6 +311,11 @@ function displayPaper() {
 
 	$('.paper').removeClass('back');
 	$('.paper').addClass('front');
+
+	$('#type-cursor').removeClass('hidden');
+	$('#type-cursor').addClass('visible');
+    $('.word').last().append($('#type-cursor'));
+
 }
 
 
@@ -319,6 +326,9 @@ $(document).on('keypress', function(e) {
 	// KEYCODE INPUT
     console.log(e.keyCode);
 
+    // APPEND CURSOR TO LAST CHILD POSITION WITH EACH KEY PRESS
+    // $('.word').last().append($('#type-cursor')); // nvm i think i have to put it after each individual thing
+
 
 	// CREATING WORDS (to create proper line/word breaks?)
 
@@ -326,51 +336,66 @@ $(document).on('keypress', function(e) {
 	if (e.keyCode == 32) {
 		var word = $('<div class="word"></div>');
 
-    	$('.word').last().append($('#space').clone());
+    	$('.word').last().append($('#space').clone()); // from before typing cursor
     	$('.paper').append(word);
+		$('.word').last().append($('#type-cursor'));
+    	// $('#type-cursor').siblings(":last").append($('#space').clone());
+    	// $('.paper').find('#type-cursor').before(append(word));
 	}
 
 	// TYPING LETTERS
     for (i = 0; i < 26; i++) {
     	if (event.keyCode == i+97) {
+    		// $('#type-cursor').siblings(":last").append($(keyLower[i]).clone());
     		$('.word').last().append($(keyLower[i]).clone());
+			$('.word').last().append($('#type-cursor'));
     	}
     	if (event.keyCode == i+65) {
+    		// $('#type-cursor').before($(keyUpper[i]).clone());
     		$('.word').last().append($(keyUpper[i]).clone());
+			$('.word').last().append($('#type-cursor'));
     	}
     }
 
 	// TYPING NUMBERS
     for (i = 0; i < 10; i++) {
     	if (event.keyCode == i+48) {
+    		// $('#type-cursor').before($(numberLining[i]).clone());
     		$('.word').last().append($(numberLining[i]).clone());
+			$('.word').last().append($('#type-cursor'));
     	}
     }
 
 	// TYPING PUNCTUATION
     for (i = 0; i < 33; i++) {
     	if (event.keyCode == i+33) {
+    		// $('#type-cursor').before($(punctuationA[i]).clone());
     		$('.word').last().append($(punctuationA[i]).clone());
+			$('.word').last().append($('#type-cursor'));
     	}
     }
     for (i = 0; i < 2; i++) {
     	if (event.keyCode == i+8211) {
+    		// $('#type-cursor').before($(punctuationB[i]).clone());
     		$('.word').last().append($(punctuationB[i]).clone());
+			$('.word').last().append($('#type-cursor'));
     	}
     }
     for (i = 0; i < 5; i++) {
     	if (event.keyCode == i+92) {
+    		// $('#type-cursor').before($(punctuationC[i]).clone());
     		$('.word').last().append($(punctuationC[i]).clone());
+			$('.word').last().append($('#type-cursor'));
     	}
     }
     // for (i = 0; i < 1; i++) {
     // 	if (event.keyCode == 230) {
-    // 		$('.word').last().append($(quoteSingle[i]).clone());
+    // 		$('#type-cursor').before($(quoteSingle[i]).clone());
     // 	}
     // }
     // for (i = 0; i < 1; i++) {
     // 	if (event.keyCode == 198) {
-    // 		$('.word').last().append($(quoteDouble[i]).clone());
+    // 		$('#type-cursor').before($(quoteDouble[i]).clone());
     // 	}
     // }
 
@@ -396,13 +421,31 @@ $(document).on('keypress', function(e) {
 $(document).keydown(function(e){
 	if (e.keyCode == 8) {
     	console.log("backspace");
-    	$('.word').last().children().last().remove();
 
-    	if ($('.word').last().is(':empty') && $('.paper').children().length > 1) {
+    	// backspace the last character
+    	$('#type-cursor').prev($('.word').children().last()).remove();
+		$('.word').last().append($('#type-cursor'));
+
+		// delete the "word" container class if it's empty
+    	// if ($('.word').last().length == 1 && $('.paper').children().length > 1) {
+    	// if ($('#type-cursor').prev($('.word')).is(':empty') && $('.paper').children().length > 1) {
+    	if ($('#type-cursor').siblings().length == 0 && $('.paper').children().length > 1) {
+			$('.word').last().prev().append($('#type-cursor'));
     		$('.paper').children().last().remove();
+    		// if ($('#type-cursor').prev($('.word').children().last()).remove()){
+    		// };
     	}
 
-    	if ($('.word').last().is(':empty') && $('.paper').children().length == 1) {
+    	// delete the word container with backspace if it only contains a space (invisible character)
+    	// if ($('#type-cursor').siblings('.space').length == 1 && $('.paper').children().length > 1) {
+		// 	$('.word').last().prev().append($('#type-cursor'));
+    	// 	$('.paper').children().last().remove();
+    	// }
+
+    	// switch back to the specimen view if you delete the last word
+    	// if ($('.word').last().length == 1 && $('.paper').children().length == 1) {
+    	// if ($('#type-cursor').prev($('.word')).is(':empty') && $('.paper').children().length == 1) {
+    	if ($('#type-cursor').siblings().length == 0 && $('.paper').children().length == 1) {
 			$('*').addClass('no-transition');
 
 			$('.specimen').css('opacity','1');
@@ -411,7 +454,19 @@ $(document).keydown(function(e){
 
 		    $('.paper').removeClass('front');
 		   	$('.paper').addClass('back');
+
+		$('#type-cursor').removeClass('visible');
+		$('#type-cursor').addClass('hidden');
     	}
 	}
 })  
+
+
+
+// PLACE THE CURSOR
+
+$('.letter').on("click", function(){
+	console.log("placing cursor");
+	// $(this).after('#type-cursor');
+})
 
